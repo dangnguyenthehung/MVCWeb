@@ -1,0 +1,46 @@
+﻿@{
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+    <div id="begin" class="fullScr">
+        <input type="button" value="Bắt đầu" onclick="begin()">
+    </div>
+
+    <div id="container" class="hidden">
+        @RenderBody()
+    </div>
+    <div class="ketqua" id="ketqua">
+        @*<div class="resultButton" id="resultButton" onclick="hideRightPanel();">
+            <i id="resultButtonLabel" class="fa fa-arrow-right" aria-hidden="true"></i>
+        </div>*@
+        <p class="PanelHeader">Kết quả</p>
+        <p>Tổng số câu: 100 </p>
+        <p>Số câu đúng: <span id="trueNumber"></span></p>
+        <p>Điểm: <span id="mark"></span></p>
+        <p>Xếp loại: <span id="qualtity"></span></p>
+    </div>
+    <div class="checkedTracking" id="checkedTracking">
+        @*<div class="trackingButton" id="trackingButton" onclick="hideLeftPanel();">
+            <i id="trackingButtonLabel" class="fa fa-arrow-left" aria-hidden="true"></i>
+        </div>*@
+        <p class="PanelHeader">Các câu chưa chọn:</p>
+        <ul id="uncheckList"></ul>
+        <div class="btndone" id="check">
+            <input type="button" value="Kiểm tra" onclick="Kiemtra()">
+        </div>
+    </div>
+    <div id="timeout" class="fullScr">
+        <p>Hết giờ!</p>
+    </div>
+    <div id="countdown" class="countdownClock hidden">
+        <span id="timer">60:00</span>
+    </div>
+    @*<div class="nav" id="mobile-nav">
+        <p style="color: white; text-align: center; font-size: 14px; margin: 1px; padding-left: 0px;">Ôn tập kiểm tra trắc nghiệm</p>
+        <div class="navBtn" onclick="Kiemtra_Mobile()">
+            <i id="navButtonLabel" class="fa fa-bars" aria-hidden="true"></i>
+        </div>
+    </div>*@
+
+
+

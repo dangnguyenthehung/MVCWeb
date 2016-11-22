@@ -1,0 +1,362 @@
+body {
+	background-color: #ecf0f1;
+	margin: 0;
+	font-family: Arial, Helvetica, monospace; 
+	font-size: 17pt;
+}
+#container {	
+	width: 750px;
+	margin: auto;
+	margin-bottom: 50px;
+	background-color: white;
+	padding: 30px 30px 30px 50px;
+	position: relative;
+	z-index: 1;
+}
+
+.hidden {
+	display: none !important;
+}
+.title {
+	color: #2980b9;
+	text-align: center;
+	margin-top: 40px;
+}
+.question {
+}
+.true { 
+	color: #0099ff; 
+	font-size:18pt; 
+} 
+.false { 
+	color: #C00; 
+	font-size:18pt; 
+}
+h3 {
+	text-align: justify;
+}
+p {
+	text-align: justify;
+	padding-left: 75px;
+	position: relative;
+	text-indent: -55px;
+}
+.checkBox {
+	width: 18px;
+	height: 18px;
+	position: relative;
+	top: 2px;
+	left: 0px;
+}
+.btndone {
+	width: 100%;
+	height: 100px;
+	text-align: center;
+}
+.btndone input {
+	height: 60px;
+	width: 135px;
+	border: none;
+	color: white;
+	font-size: 18px;
+	font-weight: bold;
+	background-color: #3498db;
+	transition: 0.4s;
+	-webkit-transition: 0.4s;
+	-moz-transition: 0.4s;
+}
+.btndone input:hover {
+	height: 70px;
+	width: 150px;
+	color: white;
+	font-size: 20px;
+	background-color: #C00;
+	cursor: pointer;
+}
+#check input {
+	height: 50px;
+	width: 140px;
+	background-color: #c00;
+}
+#check input:hover {
+	height: 50px;
+	width: 140px;
+	color: white;
+	font-size: 18px;
+	background-color: #8e44ad;
+	cursor: pointer;
+}
+.ketqua {
+	width: 220px;
+	padding: 5px;
+	font-size: 22px;
+	font-weight: bold;
+	position: fixed;
+	top: 65px;
+	right: 0px;
+	display: none;
+	color: white;
+	z-index: 2;
+	background-color: #16a085;
+}
+.ketqua_hide {
+	right: -220px;
+}
+.ketqua p {
+	text-align: center;
+	padding-left: 0px;
+	text-indent: 0px;
+}
+.resultButton {
+	width: 45px;
+	height: 35px;
+	position: relative;
+	left: -50px;
+	top: 135px;
+	background-color: #2980b9;
+	text-align: center;
+	transition: 1s;
+	padding-top: 7px;
+	color: white;
+	cursor: pointer;
+}
+@keyframes hide_right {
+	0% {right: 0px;}
+	100% {right: -220px;}
+}
+@keyframes show_right {
+	0% {right: -220px;}
+	100% {right: 0px;}
+}
+.hideRightPanel {
+	animation-name: hide_right;
+	animation-duration: 1s;
+	right: -220px;
+}
+.showRightPanel {
+	animation-name: show_right;
+	animation-duration: 1s;
+	right: 0px;
+}
+
+.checkedTracking {
+	width: 220px;
+	padding: 5px;
+	font-size: 22px;
+	font-weight: bold;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	display: none;
+	color: white;
+	z-index: 2;
+	background-color: #16a085;
+}
+.checkedTracking_hide {
+	left: -220px;
+}
+.checkedTracking p {
+	text-align: center;
+	padding-left: 0px;
+	text-indent: 0px;
+}
+.trackingButton {
+	width: 45px;
+	height: 35px;
+	position: relative;
+	right: -225px;
+	top: 135px;
+	background-color: #2980b9;
+	text-align: center;
+	transition: 1s;
+	padding-top: 7px;
+	color: white;
+	cursor: pointer;
+}
+@keyframes hide_left {
+	0% {left: 0px;}
+	100% {left: -220px;}
+}@keyframes show_left {
+	0% {left: -220px;}
+	100% {left: 0px;}
+}
+.hideLeftPanel {
+	animation-name: hide_left;
+	animation-duration: 1s;
+	left: -228px;
+}
+.showLeftPanel {
+	animation-name: show_left;
+	animation-duration: 1s;
+	left: 0px;
+}
+ul {
+	list-style: none;
+}
+#uncheckList {
+    height: 480px;
+    overflow: hidden;
+	overflow-y: scroll;
+}
+.PanelHeader,
+#trueNumber, 
+#mark,
+#qualtity {
+	font-size: 32px;
+	color: #e2ff00;
+}
+.fullScr {
+	top: 0px;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(189, 195, 199,0.7);
+	z-index: 20;
+	text-align: center;
+}
+#begin input {
+	height: 80px;
+	width: 200px;
+	border: none;
+	color: white;
+	font-size: 26px;
+	font-weight: bold;
+	background-color: #3498db;
+	transition: 0.5s;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	vertical-align: middle;
+	margin-top: 250px;
+	cursor: pointer;
+}
+#begin input:hover {
+	height: 120px;
+	width: 250px;
+	color: white;
+	font-size: 32px;
+	background-color: #C00;
+	margin-top: 230px;
+}
+.countdownClock {
+	position: fixed;
+	top: 10px;
+	right: 00px;
+	width: 150px;
+	height: 50px;
+	margin: 0;
+	font-size: 45px;
+	color: #2980b9;
+	font-weight: bold;
+	z-index: 12;
+}
+#timeout {
+	display: none;	
+	background-color: rgba(189, 195, 199,0.8);
+}
+#timeout p {
+	text-align: center;
+	color: #2980b9;
+	font-size: 60px;
+	font-weight: bold;
+	transition: 0.5s;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	vertical-align: middle;
+	margin-top: 250px;
+}
+#passForm input {
+	height: 50px;
+	width: 300px;
+	border: none;
+	font-size: 20px;
+	vertical-align: middle;
+	margin-top: 250px;
+}
+@media screen and (max-width: 767px) {
+body {
+	font-size:14pt;
+	position: relative;
+}
+/*.nav {
+	display: inline;
+	width: 100%;
+	height: 40px;
+	position: fixed;
+	top: 0px;
+	background-color: #34495e;
+	color: white;
+	z-index: 11;
+
+}*/
+/*.navBtn {
+	width: 35px;
+	height: 35px;
+	float: left;
+	padding-left: 5px;
+    padding-top: 0px;
+}*/
+#trackingButton {
+	display: none;
+}
+.checkedTracking {
+	padding-top: 25px;
+	width: 120px;
+}
+.checkedTracking #check {
+	display: none;
+}
+#uncheckList {
+	height: 480px;
+}
+#container {
+	width: 100%;
+	margin: auto;
+	margin-bottom: 0px;
+	padding: 10px 5px 10px 5px;
+}
+#passForm input {
+	height: 30px;
+	width: 90%;
+	border: none;
+	font-size: 18px;
+	vertical-align: middle;
+	margin-top: 35%;
+}
+.question {
+	width: 95%;
+}
+p {
+	text-align: justify;
+	padding-left: 25px;
+	position: relative;
+	text-indent: -15px;
+}
+.countdownClock {
+	position: fixed;
+	right: 10px;
+	width: 60px;
+	height: 50px;
+	margin: 0;
+	font-size: 18px;
+	color: #2980b9;
+	font-weight: bold;
+	top: 10px;
+}
+.ketqua {
+	width: auto;
+	height: auto;
+	font-size: 20px;
+	font-weight: bold;
+	position: initial;
+	top: 0px;
+	display: none;
+	color: #2c3e50;
+	background-color: #ecf0f1;
+}
+.PanelHeader,
+#trueNumber, 
+#mark,
+#qualtity {
+	font-size: 22px;
+}
+}
