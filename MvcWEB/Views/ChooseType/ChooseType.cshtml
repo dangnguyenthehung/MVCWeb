@@ -21,7 +21,7 @@
                             <div class="btn-group typeChoosen">
                                 <div class="form-group">
                                     @Html.LabelFor(m => m.ThanhPhan)
-                                    @Html.DropDownListFor(m => m.ThanhPhan, // 1. Store selected value in Model.State;
+                                    @Html.DropDownListFor(m => m.ThanhPhan, // 1. Store selected value in Model.State
                                                                         // when page is rendered after postback,
                                                                         // take selected value from Model.State.
 
@@ -37,7 +37,7 @@
 
                                 <div class="form-group">
                                     @Html.LabelFor(m => m.HoTen)
-                                    @Html.DropDownListFor(m => m.HoTen, // 1. Store selected value in Model.State;
+                                    @Html.DropDownListFor(m => m.HoTen, // 1. Store selected value in Model.State
                                                                         // when page is rendered after postback,
                                                                         // take selected value from Model.State.
 
@@ -53,7 +53,7 @@
 
                                 <!-- dropdown menu links -->
                                 @*
-                                        { var ds = new Model.DanhSachModel().ListAll();
+                                        { var ds = new Model.DanhSachModel().ListAll()
 
                                         foreach (var item in ds)
                                         {

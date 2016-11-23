@@ -12,7 +12,7 @@ namespace MvcWEB.Models
     public class ChooseTypeModel
     {
 
-        public string ID { get; set; }
+        public int ID { get; set; }
 
         // This property will hold a type, name selected by user
         [Required]

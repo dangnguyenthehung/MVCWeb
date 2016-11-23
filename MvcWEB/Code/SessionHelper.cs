@@ -9,11 +9,12 @@ namespace MvcWEB.Code
     {
         public static void SetSession(UserSession session)
         {
-            HttpContext.Current.Session["loginSession"] = session;
+            //HttpContext.Current.Session["loginSession"] = session;
+            HttpContext.Current.Session["examSession"] = session;
         }
         public static UserSession GetSession()
         {
-            var session = HttpContext.Current.Session["loginSession"];
+            var session = HttpContext.Current.Session["examSession"];
             if (session == null)
             {
                 return null;

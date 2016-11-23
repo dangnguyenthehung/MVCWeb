@@ -41,33 +41,35 @@ namespace MvcWEB.Controllers
             //Get all type again
             var type = GetAllType();
             var name = GetAllName();
-
+            ;
             // Set these type on the model. We need to do this because
             // only the selected value from the DropDownList is posted back, not the whole
             // list of types.
             model.Type = GetSelectListItems(type);
             model.Name = GetSelectListItems(name);
 
+            var id = GetID(model.HoTen);
+            model.ID = id;
             // In case everything is fine - i.e. both "Name" and "Type" are entered/selected,
-            // redirect user to the "Done" page, and pass the user object along via Session
+            // redirect user to the "Target" page, and pass the user object along via Session
 
-            //if (ModelState.IsValid)
-            //{
-            //   Session["ChooseTypeModel"] = model;
-            //    return RedirectToAction("HSQ","Test");
-            //}
-
-            // Something is not right - so render the registration page again,
-            // keeping the data user has entered by supplying the model.
             if (model.ThanhPhan == "SQ")
             {
                 return RedirectToAction("Index", "SQ");
             }
             else if (model.ThanhPhan == "QNCN")
             {
-                return RedirectToAction("QNCN", "Test");
+                return RedirectToAction("Index", "QNCN");
             }
-            return RedirectToAction("HSQ", "Test");
+            else if (model.ThanhPhan == "HSQ")
+            {
+                return RedirectToAction("Index", "HSQ", model);
+            }
+            else
+            {
+                return RedirectToAction("Index", "SQ");
+            }
+           
 
         }
 
@@ -102,6 +104,20 @@ namespace MvcWEB.Controllers
             }
 
             return nameList;
+        }
+        private int GetID(string HoTen)
+        {
+            int id = 0;
+            var model = new DanhSachModel();
+            var modelList = model.ListAll();
+            foreach(var item in modelList)
+            {
+                if (item.HoTen == HoTen)
+                {
+                    id = item.IDQN;
+                }
+            } 
+            return id;
         }
 
         // This is one of the most important parts in the whole example.

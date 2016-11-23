@@ -8,8 +8,9 @@
 		
 function LamXong(){
 	
-	var caudung
-	caudung = 0
+    var caudung = 0;
+    var diem = 0;
+	
 	for (i=1;i<=numberOfQuestion;i++){
 		if (traloi[i]==dapan[i]) {
 			caudung++;
@@ -31,14 +32,23 @@ function LamXong(){
 		qualtity = "Đạt yêu cầu"
 	} else {
 		qualtity = "Không đạt yêu cầu!"
-	};	
+	};
+	diem = caudung * (10 / numberOfQuestion).toFixed(2);
+	var KQ = document.getElementById("KQ");
+	var XL = document.getElementById("XepLoai");
+	KQ.setAttribute("value", diem);
+	KQ.setAttribute("placeholder", diem);
+	//XL.setAttribute("value", qualtity);
+	//XL.setAttribute("placeholder", qualtity);
+
 	// hien thi ket qua
 	document.getElementById("trueNumber").innerHTML = caudung;
-	document.getElementById("mark").innerHTML = caudung*(10/numberOfQuestion).toFixed(2);
+	document.getElementById("mark").innerHTML = diem;
 	document.getElementById("qualtity").innerHTML = qualtity;
 	document.getElementById("ketqua").style.display = "inline";
 	document.getElementById("done").style.display = "none";
 	isDone = true;
+	return diem;
 };
 function Kiemtra() {
 	countArray();
@@ -93,7 +103,7 @@ function countdown(){ // dong ho dem nguoc
     };
 function begin (){
     document.getElementById("begin").style.display = "none";
-    document.getElementById("container").removeAttribute("class");
+   // document.getElementById("container").removeAttribute("class");
    // document.getElementById("mobile-nav").setAttribute("class", "nav");
     document.getElementById("countdown").setAttribute("class", "countdownClock");
 	countdown();

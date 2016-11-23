@@ -11,8 +11,7 @@ namespace MvcWEB.Controllers
     {
         //
         // GET: /SQ/
-
-
+        
         public ActionResult Index()
         {
             //string path1 = Directory.GetCurrentDirectory() + "/Views/SQ";

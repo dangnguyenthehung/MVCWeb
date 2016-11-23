@@ -58,6 +58,7 @@
     <Compile Include="Framework\d38dbContext.cs" />
     <Compile Include="Framework\DanhSach.cs" />
     <Compile Include="Framework\KetQuaKiemTra.cs" />
+    <Compile Include="KetQuaKiemTraModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

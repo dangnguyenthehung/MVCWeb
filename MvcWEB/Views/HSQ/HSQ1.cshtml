@@ -1,10 +1,17 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "HSQ1";
     Layout = "~/Views/Shared/_LayoutClient.cshtml";
 }
+@model MvcWEB.Models.KetQuaModel
 
+    @{ 
+        var currentSession = Session["examSession"] as MvcWEB.Code.UserSession;
+        
+        //var session = currentSession["examSession"];
+
+    }
 <h2 class="title">Đối tượng HSQ-BS - 1</h2>
+<h2>@currentSession.ID <br /> @currentSession.DeSo </h2>
 <div class="question">
     <h3>
         <b>
@@ -2469,4 +2476,37 @@
 <div class="btndone" id="check">
     <input type="button" value="Kiểm tra" onclick="Kiemtra()">
 </div>
+@{ 
+//string strID = Session["ID"].ToString();
+//string strDeSo = Session["DeSo"].ToString();
+//int ID = Int32.Parse(strID);
+//int DeSo = Int32.Parse(strDeSo);
+
+
+}
+@using (Html.BeginForm())
+{
+    @*@Html.TextBoxFor(KQ => KQ.IDQN, strID, new { @placeholder = ID})
+    @Html.TextBoxFor(KQ => KQ.KQ, new { @value = "", @name = "KQ", @placeholder = "" })
+    @Html.TextBoxFor(KQ => KQ.XepLoai, new { @value = "", @name = "XepLoai", @placeholder = "" })
+    @Html.TextBoxFor(KQ => KQ.DeSo, strDeSo, new { @placeholder = DeSo })*@
+<fieldset>
+    <div class="form-group">
+        @Html.TextBoxFor(model => model.IDQN, new { @class = "form-control", Value = currentSession.ID })
+    </div>
+    <div class="form-group">
+        @Html.TextBoxFor(model => model.KQ, new { @class = "form-control", @placeholder = "" })
+    </div>
+    @*<div class="form-group">
+        @Html.TextBoxFor(model => model.XepLoai, new { @class = "form-control", @placeholder = "" })
+    </div>*@
+    <div class="form-group">
+        @Html.TextBoxFor(model => model.DeSo, new { @class = "form-control", Value = currentSession.DeSo })
+    </div>
+    <!-- Change this to a button or input when using this as a form -->
+    <button type="submit" class="btn btn-lg btn-success btn-block">
+        Login
+    </button>
+</fieldset>
+}
 

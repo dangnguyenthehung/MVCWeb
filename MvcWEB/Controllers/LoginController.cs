@@ -22,8 +22,9 @@ namespace MvcWEB.Controllers
             // var result = new AccountModel().Login(model.UserName, model.Pass);
             if (Membership.ValidateUser(model.UserName, model.Pass) && ModelState.IsValid && model.UserName != "admin")
             {
-                SessionHelper.SetSession(new UserSession() { UserName = model.UserName });
-                FormsAuthentication.SetAuthCookie(model.UserName, model.RememberMe);
+                //SessionHelper.SetSession(new UserSession() { UserName = model.UserName });
+                //FormsAuthentication.SetAuthCookie(model.UserName, model.RememberMe);
+                
                 return RedirectToAction("ChooseType", "ChooseType");
             }
             else
