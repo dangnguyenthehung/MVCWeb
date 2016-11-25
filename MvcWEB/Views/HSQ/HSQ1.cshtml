@@ -2494,14 +2494,17 @@
     <div class="form-group">
         @Html.TextBoxFor(model => model.IDQN, new { @class = "form-control", Value = currentSession.ID })
     </div>
-    <div class="form-group">
-        @Html.TextBoxFor(model => model.KQ, new { @class = "form-control", @placeholder = "" })
-    </div>
+    @*<div class="form-group">
+        @Html.TextBoxFor(model => model.KQ, new { @class = "form-control" })
+    </div>*@
     @*<div class="form-group">
         @Html.TextBoxFor(model => model.XepLoai, new { @class = "form-control", @placeholder = "" })
     </div>*@
     <div class="form-group">
         @Html.TextBoxFor(model => model.DeSo, new { @class = "form-control", Value = currentSession.DeSo })
+    </div>
+    <div class="form-group">
+        @Html.TextBoxFor(model => model.TraLoi, new { @class = "form-control" })
     </div>
     <!-- Change this to a button or input when using this as a form -->
     <button type="submit" class="btn btn-lg btn-success btn-block">

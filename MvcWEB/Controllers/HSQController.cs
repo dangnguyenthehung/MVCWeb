@@ -13,14 +13,14 @@ namespace MvcWEB.Controllers
     public class HSQController : Controller
     {
         //
-        
+
         // GET: /HSQ/
-        
+
         public ActionResult Index(ChooseTypeModel model)
         {
             //Return path of Views part to count files
             string path = HttpContext.Server.MapPath("");
-            string RePath = path.Replace("HSQ\\Index","Views\\HSQ");
+            string RePath = path.Replace("HSQ\\Index", "Views\\HSQ");
             int fCount = Directory.GetFiles(RePath, "*", SearchOption.TopDirectoryOnly).Length;
             System.Diagnostics.Debug.WriteLine(fCount);
             Random rdm = new Random();
@@ -42,7 +42,7 @@ namespace MvcWEB.Controllers
             SessionHelper.SetSession(new UserSession() { ID = model.ID, DeSo = rdmView });
             //Session.Add("ID", model.ID);
             //Session.Add("DeSo", rdmView);
-            
+
             return RedirectToAction("HSQ1");
         }
 
@@ -139,6 +139,42 @@ namespace MvcWEB.Controllers
             }
         }
         //return Views
+
+        public void MainAction(KetQuaModel model)
+        {
+            var answer = new UserAnswer();
+            string correctAns = CorrectAnswerHelper.GetCorrectAnswer(answer.Object);
+            answer.Object = "HSQ" + model.DeSo;
+            answer.UAnswer = model.TraLoi;
+            answer.CorrectAnswer = correctAns;
+
+            decimal mark = CorrectAnswerHelper.Calculate(answer);
+
+            decimal k = Convert.ToDecimal(6.5);
+            if (8 <= mark)
+            {
+                model.XepLoai = "G";
+            }
+            else if (k <= mark)
+            {
+                model.XepLoai = "K";
+            }
+            else if (5 <= mark)
+            {
+                model.XepLoai = "Đ";
+            }
+            else
+            {
+                model.XepLoai = "KĐ";
+            }
+            model.KQ = mark;
+            model.DapAn = correctAns;
+            //insert
+            CorrectAnswerHelper.Insert(model);
+        }
+
+
+
         [HttpGet]
         public ActionResult HSQ1()
         {
@@ -152,32 +188,22 @@ namespace MvcWEB.Controllers
         [HttpPost]
         public ActionResult HSQ1(KetQuaModel model)
         {
-            var insert = new KetQuaKiemTraModel();
-            decimal k =Convert.ToDecimal(6.5);
-            if (8 <= model.KQ)
-            {
-                model.XepLoai = "G";
-            }
-            else if  ( k <= model.KQ)
-            {
-                model.XepLoai = "K";
-            }
-            else if (5 <= model.KQ)
-            {
-                model.XepLoai = "Đ";
-            }
-            else
-            {
-                model.XepLoai = "KĐ";
-            }
-            // call insert method 
-            insert.InsertResult(model.IDQN, model.KQ, model.XepLoai, model.DeSo);
+            // var insert = new KetQuaKiemTraModel();
+            
 
-            System.Diagnostics.Debug.WriteLine("------Begin------");
-            System.Diagnostics.Debug.WriteLine(model.IDQN);
-            System.Diagnostics.Debug.WriteLine(model.KQ);
-            System.Diagnostics.Debug.WriteLine(model.DeSo);
-            System.Diagnostics.Debug.WriteLine("------End------");
+            // calculate
+            MainAction(model);
+
+            //end calculate
+            // call insert method 
+            //insert.InsertResult(model.IDQN, model.KQ, model.XepLoai, model.DeSo);
+
+            //System.Diagnostics.Debug.WriteLine("------Begin------");
+            //System.Diagnostics.Debug.WriteLine(model.IDQN);
+            //System.Diagnostics.Debug.WriteLine(model.KQ);
+            //System.Diagnostics.Debug.WriteLine(model.DeSo);
+            //System.Diagnostics.Debug.WriteLine(model.TraLoi);
+            //System.Diagnostics.Debug.WriteLine("------End------");
 
 
             return View();

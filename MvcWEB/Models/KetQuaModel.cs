@@ -11,5 +11,7 @@ namespace MvcWEB.Models
         public decimal KQ { get; set; }
         public string XepLoai { get; set; }
         public int DeSo { get; set; }
+        public string TraLoi { get; set; }
+        public string DapAn { get; set; }
     }
 }

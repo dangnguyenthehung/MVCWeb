@@ -15,16 +15,18 @@ namespace Model
         {
             context = new d38dbContext();
         }
-        public int InsertResult(int IDQN, decimal KQ, string XepLoai, int DeSo )
+        public int InsertResult(int IDQN, decimal KQ, string XepLoai, int DeSo, string TraLoi, string DapAn )
         {
             object[] sqlParams =
             {
                 new SqlParameter("@IDQN", IDQN),
                 new SqlParameter("@KQ", KQ),
                 new SqlParameter("@XepLoai", XepLoai),
-                new SqlParameter("@DeSo", DeSo)
+                new SqlParameter("@DeSo", DeSo),
+                new SqlParameter("@TraLoi", TraLoi),
+                new SqlParameter("@DapAn", DapAn)
             };
-            var res = context.Database.ExecuteSqlCommand("Sp_InsertKQKT @IDQN,@KQ,@XepLoai,@DeSo",sqlParams);
+            var res = context.Database.ExecuteSqlCommand("Sp_InsertKQKT @IDQN,@KQ,@XepLoai,@DeSo,@TraLoi,@DapAn",sqlParams);
             return res;
         }
     }

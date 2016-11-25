@@ -7,7 +7,14 @@
 		var numberOfQuestion = 100;
 		
 function LamXong(){
-	
+    var userAnswerString = "";
+    var i = 1;
+    for (i = 1; i <= numberOfQuestion; i++) {
+        if (traloi[i] == null) {
+            traloi[i] = "-";
+        }
+        userAnswerString += i + traloi[i] + ".";
+    }
     var caudung = 0;
     var diem = 0;
 	
@@ -34,10 +41,11 @@ function LamXong(){
 		qualtity = "Không đạt yêu cầu!"
 	};
 	diem = caudung * (10 / numberOfQuestion).toFixed(2);
-	var KQ = document.getElementById("KQ");
+	//var KQ = document.getElementById("KQ");
 	var XL = document.getElementById("XepLoai");
-	KQ.setAttribute("value", diem);
-	KQ.setAttribute("placeholder", diem);
+	var TraLoi = document.getElementById("TraLoi");
+	//KQ.setAttribute("value", diem);
+	TraLoi.setAttribute("value", userAnswerString);
 	//XL.setAttribute("value", qualtity);
 	//XL.setAttribute("placeholder", qualtity);
 
