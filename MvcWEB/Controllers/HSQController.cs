@@ -152,12 +152,33 @@ namespace MvcWEB.Controllers
         [HttpPost]
         public ActionResult HSQ1(KetQuaModel model)
         {
+            var insert = new KetQuaKiemTraModel();
+            decimal k =Convert.ToDecimal(6.5);
+            if (8 <= model.KQ)
+            {
+                model.XepLoai = "G";
+            }
+            else if  ( k <= model.KQ)
+            {
+                model.XepLoai = "K";
+            }
+            else if (5 <= model.KQ)
+            {
+                model.XepLoai = "Đ";
+            }
+            else
+            {
+                model.XepLoai = "KĐ";
+            }
+            // call insert method 
+            insert.InsertResult(model.IDQN, model.KQ, model.XepLoai, model.DeSo);
+
             System.Diagnostics.Debug.WriteLine("------Begin------");
             System.Diagnostics.Debug.WriteLine(model.IDQN);
             System.Diagnostics.Debug.WriteLine(model.KQ);
-            System.Diagnostics.Debug.WriteLine(model.XepLoai);
             System.Diagnostics.Debug.WriteLine(model.DeSo);
             System.Diagnostics.Debug.WriteLine("------End------");
+
 
             return View();
         }

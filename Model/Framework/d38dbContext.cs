@@ -13,7 +13,6 @@ namespace Model.Framework
         }
 
         public virtual DbSet<Account> Accounts { get; set; }
-        public virtual DbSet<BaiLam> BaiLams { get; set; }
         public virtual DbSet<DanhSach> DanhSaches { get; set; }
         public virtual DbSet<KetQuaKiemTra> KetQuaKiemTras { get; set; }
 
@@ -27,15 +26,6 @@ namespace Model.Framework
                 .Property(e => e.pass)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<BaiLam>()
-                .Property(e => e.TraLoi)
-                .IsFixedLength()
-                .IsUnicode(false);
-
-            modelBuilder.Entity<BaiLam>()
-                .HasOptional(e => e.KetQuaKiemTra)
-                .WithRequired(e => e.BaiLam);
-
             modelBuilder.Entity<DanhSach>()
                 .HasMany(e => e.KetQuaKiemTras)
                 .WithRequired(e => e.DanhSach)
@@ -44,6 +34,11 @@ namespace Model.Framework
             modelBuilder.Entity<KetQuaKiemTra>()
                 .Property(e => e.KQ)
                 .HasPrecision(2, 1);
+
+            modelBuilder.Entity<KetQuaKiemTra>()
+                .Property(e => e.TraLoi)
+                .IsFixedLength()
+                .IsUnicode(false);
         }
     }
 }

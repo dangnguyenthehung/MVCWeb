@@ -5,6 +5,5 @@ D:\Files\Project\MvcWEB\Model\bin\Debug\EntityFramework.dll
 D:\Files\Project\MvcWEB\Model\bin\Debug\EntityFramework.SqlServer.dll
 D:\Files\Project\MvcWEB\Model\bin\Debug\EntityFramework.xml
 D:\Files\Project\MvcWEB\Model\bin\Debug\EntityFramework.SqlServer.xml
-D:\Files\Project\MvcWEB\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
 D:\Files\Project\MvcWEB\Model\obj\Debug\Model.dll
 D:\Files\Project\MvcWEB\Model\obj\Debug\Model.pdb

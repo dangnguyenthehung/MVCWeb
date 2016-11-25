@@ -54,7 +54,6 @@
     <Compile Include="AccountModel.cs" />
     <Compile Include="DanhSachModel.cs" />
     <Compile Include="Framework\Account.cs" />
-    <Compile Include="Framework\BaiLam.cs" />
     <Compile Include="Framework\d38dbContext.cs" />
     <Compile Include="Framework\DanhSach.cs" />
     <Compile Include="Framework\KetQuaKiemTra.cs" />

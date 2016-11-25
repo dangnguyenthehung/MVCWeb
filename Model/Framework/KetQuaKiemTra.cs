@@ -21,7 +21,13 @@ namespace Model.Framework
         [StringLength(2)]
         public string XepLoai { get; set; }
 
-        public virtual BaiLam BaiLam { get; set; }
+        public int? DeSo { get; set; }
+
+        [StringLength(400)]
+        public string TraLoi { get; set; }
+
+        [StringLength(400)]
+        public string DapAn { get; set; }
 
         public virtual DanhSach DanhSach { get; set; }
     }
