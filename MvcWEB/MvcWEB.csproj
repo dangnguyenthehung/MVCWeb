@@ -157,6 +157,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HSQController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\ResultController.cs" />
     <Compile Include="Controllers\SQController.cs" />
     <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Global.asax.cs">
@@ -165,6 +166,7 @@
     <Compile Include="Models\ChooseTypeModel.cs" />
     <Compile Include="Models\KetQuaModel.cs" />
     <Compile Include="Models\LoginModel.cs" />
+    <Compile Include="Models\ShowResultModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -405,6 +407,7 @@
     <Content Include="Views\HSQ\HSQ2.cshtml" />
     <Content Include="Views\HSQ\HSQ3.cshtml" />
     <Content Include="Views\HSQ\HSQ4.cshtml" />
+    <Content Include="Views\Result\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

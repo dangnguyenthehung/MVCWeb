@@ -1,13 +1,48 @@
 ﻿@{
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
+@model MvcWEB.Models.KetQuaModel
 
+@{
+    var currentSession = Session["examSession"] as MvcWEB.Code.UserSession;
+}
     <div id="begin" class="fullScr">
         <input type="button" value="Bắt đầu" onclick="begin()">
     </div>
 
     <div id="container">
         @RenderBody()
+        <div class="btndone" id="done">
+            <input type="button" value="Làm xong" onclick="LamXong()">
+        </div>
+        <div class="btndone" id="check">
+            <input type="button" value="Kiểm tra" onclick="Kiemtra()">
+        </div>
+
+        @using (Html.BeginForm())
+        {
+            <fieldset>
+                <div class="form-group">
+                    @Html.TextBoxFor(model => model.IDQN, new { @class = "form-control", Value = currentSession.ID })
+                </div>
+                @*<div class="form-group">
+                    @Html.TextBoxFor(model => model.KQ, new { @class = "form-control" })
+                </div>*@
+                @*<div class="form-group">
+                    @Html.TextBoxFor(model => model.XepLoai, new { @class = "form-control", @placeholder = "" })
+                </div>*@
+                <div class="form-group">
+                    @Html.TextBoxFor(model => model.DeSo, new { @class = "form-control", Value = currentSession.DeSo })
+                </div>
+                <div class="form-group">
+                    @Html.TextBoxFor(model => model.TraLoi, new { @class = "form-control" })
+                </div>
+                <!-- Change this to a button or input when using this as a form -->
+                <button type="submit" class="btn btn-lg btn-success btn-block">
+                    Login
+                </button>
+            </fieldset>
+        }
     </div>
     <div class="ketqua" id="ketqua">
         @*<div class="resultButton" id="resultButton" onclick="hideRightPanel();">

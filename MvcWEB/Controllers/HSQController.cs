@@ -24,7 +24,7 @@ namespace MvcWEB.Controllers
             int fCount = Directory.GetFiles(RePath, "*", SearchOption.TopDirectoryOnly).Length;
             System.Diagnostics.Debug.WriteLine(fCount);
             Random rdm = new Random();
-            int rdmView = rdm.Next(fCount) + 1;
+            int rdmView = rdm.Next(fCount)+1;
             //print to output for test
             System.Diagnostics.Debug.WriteLine(rdmView);
             System.Diagnostics.Debug.WriteLine(model.HoTen);
@@ -43,7 +43,7 @@ namespace MvcWEB.Controllers
             //Session.Add("ID", model.ID);
             //Session.Add("DeSo", rdmView);
 
-            return RedirectToAction("HSQ1");
+            return RedirectToAction(rdmAction);
         }
 
         //
@@ -140,7 +140,7 @@ namespace MvcWEB.Controllers
         }
         //return Views
 
-        public void MainAction(KetQuaModel model)
+        public ActionResult MainAction(KetQuaModel model)
         {
             var answer = new UserAnswer();
             string correctAns = CorrectAnswerHelper.GetCorrectAnswer(answer.Object);
@@ -171,28 +171,64 @@ namespace MvcWEB.Controllers
             model.DapAn = correctAns;
             //insert
             CorrectAnswerHelper.Insert(model);
+            var show = new ShowResultModel();
+            show.mark = model.KQ;
+            switch (model.XepLoai)
+            {
+                case "G":
+                    show.quality = "Giỏi";
+                    break;
+                case "K":
+                    show.quality = "Khá";
+                    break;
+                case "Đ":
+                    show.quality = "Đạt yêu cầu";
+                    break;
+                default:
+                    show.quality = "Không đạt yêu cầu";
+                    break;
+            }
+            
+            return RedirectToAction("Index","Result",show);
         }
-
-
 
         [HttpGet]
         public ActionResult HSQ1()
         {
-            var model = new KetQuaModel();
+            //var model = new KetQuaModel();
             var session = SessionHelper.GetSession();
-            System.Diagnostics.Debug.WriteLine(session.ID);
-            System.Diagnostics.Debug.WriteLine(session.DeSo);
+            //System.Diagnostics.Debug.WriteLine(session.ID);
+            //System.Diagnostics.Debug.WriteLine(session.DeSo);
 
-            return View("HSQ1");
+            return View();
         }
+        [HttpGet]
+        public ActionResult HSQ2()
+        {
+            var session = SessionHelper.GetSession();
+            return View();
+        }
+        [HttpGet]
+        public ActionResult HSQ3()
+        {
+            var session = SessionHelper.GetSession();
+            return View();
+        }
+        [HttpGet]
+        public ActionResult HSQ4()
+        {
+            var session = SessionHelper.GetSession();
+            return View();
+        }
+
         [HttpPost]
         public ActionResult HSQ1(KetQuaModel model)
         {
             // var insert = new KetQuaKiemTraModel();
-            
+
 
             // calculate
-            MainAction(model);
+            //MainAction(model);
 
             //end calculate
             // call insert method 
@@ -206,20 +242,22 @@ namespace MvcWEB.Controllers
             //System.Diagnostics.Debug.WriteLine("------End------");
 
 
-            return View();
+            return RedirectToAction("MainAction", model);
         }
-
-        public ActionResult HSQ2()
+        [HttpPost]
+        public ActionResult HSQ2(KetQuaModel model)
         {
-            return View();
+            return RedirectToAction("MainAction", model);
         }
-        public ActionResult HSQ3()
+        [HttpPost]
+        public ActionResult HSQ3(KetQuaModel model)
         {
-            return View();
+            return RedirectToAction("MainAction", model);
         }
-        public ActionResult HSQ4()
+        [HttpPost]
+        public ActionResult HSQ4(KetQuaModel model)
         {
-            return View();
+            return RedirectToAction("MainAction", model);
         }
     }
 }
