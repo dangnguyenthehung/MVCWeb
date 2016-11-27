@@ -149,6 +149,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Code\CorrectAnswerHelper.cs" />
+    <Compile Include="Code\CreateResultFile.cs" />
     <Compile Include="Code\CustomMembershipProviders.cs" />
     <Compile Include="Code\UserAnswer.cs" />
     <Compile Include="Code\SessionHelper.cs" />
@@ -166,6 +167,7 @@
     <Compile Include="Models\ChooseTypeModel.cs" />
     <Compile Include="Models\KetQuaModel.cs" />
     <Compile Include="Models\LoginModel.cs" />
+    <Compile Include="Models\ResultPageModel.cs" />
     <Compile Include="Models\ShowResultModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -411,6 +413,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Result\HSQ\" />
+    <Folder Include="Views\Result\QNCN\" />
+    <Folder Include="Views\Result\SQ\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

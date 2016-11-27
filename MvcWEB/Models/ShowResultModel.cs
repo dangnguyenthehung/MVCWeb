@@ -7,6 +7,8 @@ namespace MvcWEB.Models
 {
     public class ShowResultModel
     {
+        public string type { get; set; }
+        public string fileName { get; set; }
         public decimal mark { get; set; }
         public string quality { get; set; }
     }

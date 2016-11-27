@@ -39,7 +39,7 @@ namespace MvcWEB.Controllers
             //KQ.IDQN = model.ID;
             //KQ.DeSo = rdmView;
             //GetInfo(KQ);
-            SessionHelper.SetSession(new UserSession() { ID = model.ID, DeSo = rdmView });
+            SessionHelper.SetSession(new UserSession() { UserName = model.HoTen, ID = model.ID, DeSo = rdmView });
             //Session.Add("ID", model.ID);
             //Session.Add("DeSo", rdmView);
 
@@ -142,13 +142,15 @@ namespace MvcWEB.Controllers
 
         public ActionResult MainAction(KetQuaModel model)
         {
+            string path = HttpContext.Server.MapPath("");
+            string RePath = path.Replace("HSQ", "Views\\HSQ");
             var answer = new UserAnswer();
             string correctAns = CorrectAnswerHelper.GetCorrectAnswer(answer.Object);
             answer.Object = "HSQ" + model.DeSo;
             answer.UAnswer = model.TraLoi;
             answer.CorrectAnswer = correctAns;
 
-            decimal mark = CorrectAnswerHelper.Calculate(answer);
+            decimal mark = CorrectAnswerHelper.Calculate(answer, RePath);
 
             decimal k = Convert.ToDecimal(6.5);
             if (8 <= mark)
@@ -188,7 +190,9 @@ namespace MvcWEB.Controllers
                     show.quality = "Không đạt yêu cầu";
                     break;
             }
-            
+            string desAction = model.IDQN + "_HSQ" + model.DeSo;
+            show.fileName = desAction;
+            show.type = "HSQ";
             return RedirectToAction("Index","Result",show);
         }
 

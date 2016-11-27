@@ -12,7 +12,8 @@ namespace MvcWEB.Controllers
         // GET: Result
         public ActionResult Index(ShowResultModel model)
         {
-            return View(model);
+            string ViewName = model.type + "/" + model.fileName;
+            return View(ViewName, model);
         }
         
     }

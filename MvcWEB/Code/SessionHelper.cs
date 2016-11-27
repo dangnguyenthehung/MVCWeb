@@ -24,5 +24,18 @@ namespace MvcWEB.Code
                 return session as UserSession;
             }
         }
+        public static UserSession GetInfo()
+        {
+            var session = HttpContext.Current.Session["examSession"];
+            var sessionObj= session as UserSession;
+            if (session == null)
+            {
+                return null;
+            }
+            else
+            {
+                return sessionObj;
+            }
+        }
     }
 }

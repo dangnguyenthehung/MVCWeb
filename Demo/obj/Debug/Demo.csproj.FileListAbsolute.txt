@@ -1,0 +1,5 @@
+D:\Files\Project\MvcWEB\Demo\bin\Debug\Demo.exe.config
+D:\Files\Project\MvcWEB\Demo\bin\Debug\Demo.exe
+D:\Files\Project\MvcWEB\Demo\bin\Debug\Demo.pdb
+D:\Files\Project\MvcWEB\Demo\obj\Debug\Demo.exe
+D:\Files\Project\MvcWEB\Demo\obj\Debug\Demo.pdb

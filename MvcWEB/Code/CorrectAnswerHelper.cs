@@ -10,7 +10,7 @@ namespace MvcWEB.Code
 {
     public class CorrectAnswerHelper
     {
-        public static decimal Calculate (UserAnswer answer)
+        public static decimal Calculate (UserAnswer answer, string path)
         {
             int count = 0;
             decimal mark = 0;
@@ -18,6 +18,11 @@ namespace MvcWEB.Code
             var userAnswer = answer.UAnswer;
             string[] correctString = correctAnswer.Split('.');
             string[] userString = userAnswer.Split('.');
+
+            //
+            var ResultPageInfo = new ResultPageModel();
+            List<int> wrongStr = new List<int>();
+            List<string> trueAns = new List<string>();
             // calculate mark
             var i = 0;
             for (i = 0; i < correctString.Length; i++)
@@ -26,8 +31,21 @@ namespace MvcWEB.Code
                 {
                     count++;
                 }
+                else // save user wrong choices for display in result page
+                {
+                    wrongStr.Add(i+1);
+                    var s = correctString[i].Remove(0,correctString[i].Length-1);
+                    trueAns.Add(s);
+                }
                 System.Diagnostics.Debug.WriteLine(userString[i] + "------->" + correctString[i]);
             }
+
+            ResultPageInfo.ExamObj = answer.Object;
+            ResultPageInfo.WrongNumber = wrongStr.ToArray();
+            ResultPageInfo.TrueAns = trueAns.ToArray();
+            // call create result page action
+            CreateResultFile.Action(ResultPageInfo, path);
+
             mark =  (decimal)count * 10 / correctString.Length;
             //end calculate
             // test
