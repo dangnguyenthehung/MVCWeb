@@ -9,6 +9,17 @@ body {
 #wrapper {
   width: 100%;
 }
+.navbar-default {
+    background-color: #337ab7;
+    border-color: #337ab7;
+}
+.navbar-default .navbar-brand {
+    color: #fff;
+}
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover {
+    color: #fff;
+    background-color: transparent;
+}
 #page-wrapper {
   padding: 0 15px;
   min-height: 568px;

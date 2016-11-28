@@ -1,0 +1,46 @@
+#wrapper {
+	position: fixed;
+	top: 0;
+	z-index: 20;
+}
+.info {
+    width: 325px;
+    height: 100%;
+    background-color: White;
+    position: fixed;
+    right: 0px;
+    text-align: center;	
+    color: #149080;
+    border-left: solid 3px;
+}
+.info > h1 {
+	font-weight: bold;
+    font-size: 34px;
+}
+.info > h2 {
+	color: #c0392b;
+	font-weight: bold;
+}
+.info > h3 {
+	text-align: center;
+	font-weight: bold;
+	color: #2980b9;
+}
+.wrongAns {
+	width: 950px;
+	float: left;
+}
+.wrongAns > h1 {
+	text-align: center;
+	font-weight: bold;
+	color: #2980b9;
+}
+.invisible {
+	display: none;
+}
+@media (min-width: 1200px) {
+	.container {
+	    width: 1300px;
+	    margin-top: 63px;
+}
+}

@@ -18,12 +18,15 @@ namespace MvcWEB.Code
             string SavePath = ResultPath + "\\" + userInfo.ID + "_" + model.ExamObj+ ".cshtml";
             string CopyContent = File.ReadAllText(Sourcepath);
             // init file
-            string beginFile = "@{\nLayout = \"~/Views/Shared/_MainLayout.cshtml\";\n} \n" +
+            string beginFile = "@{\nLayout = \"~/Views/Shared/_ResultLayout.cshtml\";\n} \n" +
                 "@model MvcWEB.Models.ShowResultModel \n" +
+                "<div class=\"info\">" +
                 "<h1>" + userInfo.UserName + "</h1>\n" +
-                "<h2>Result</h2> \n" +
-                "<h3>Điểm: @Model.mark</h3> \n" +
-                "<h3>Xếp loại: @Model.quality</h3> \n";
+                "<h3>Điểm: <h2>@Model.mark</h2></h3> \n" +
+                "<h3>Xếp loại: <h2>@Model.quality</h2></h3> \n" +
+                "</div>\n" +
+                "<div class=\"wrongAns\">\n" +
+                "<h1>Các câu trả lời sai:</h1>\n";
 
             string finalStr = beginFile;
             try
@@ -42,8 +45,6 @@ namespace MvcWEB.Code
                     //the number of array is from 0-100 (0 is the content before the first <div>, the needed contents is from 1 to 100)
                     var i = 1;
 
-                    //int[] wrong = { 5, 9, 13, 22, 50 };
-                    //string[] dapan = { "A", "C", "A", "D", "B" };
                     int[] wrong = model.WrongNumber;
                     string[] dapan = model.TrueAns;
                     int falseNumber = wrong.Length;
@@ -54,10 +55,14 @@ namespace MvcWEB.Code
 
                         string oldStr = "<div id=\"DapAn" + j + "\">";
                         string trueAns = oldStr + "<h2 class='false'><b>Đáp án : " + dapan[i] + "</b></h2>";
+                        string oldClass = "checkBox";
+                        string newClass = "checkBox invisible";
 
                         seperate[j] = seperate[j].Replace(oldStr, trueAns);
+                        seperate[j] = seperate[j].Replace(oldClass, newClass);
                         finalStr += ("<div class=\"question\">" + seperate[j]);      
                     }
+                    finalStr += "</div>";
                     file.WriteLine(finalStr);
                 }
 

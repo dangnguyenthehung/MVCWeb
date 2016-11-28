@@ -8,24 +8,17 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+    <meta name="description" content="Display user exam result">
+    <meta name="author" content="Đặng Nguyễn Thế Hưng">
+    <title>Result Page</title>
     <!-- Bootstrap Core CSS -->
     <link href="~/Assets/Client/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <!-- MetisMenu CSS -->
-    <link href="~/Assets/Client/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link href="~/Assets/Client/dist/css/sb-admin-2.css" rel="stylesheet">
-    <!-- Morris Charts CSS -->
-    <link href="~/Assets/Client/vendor/morrisjs/morris.css" rel="stylesheet">
     <!-- Custom Fonts -->
     <link href="~/Assets/Client/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    
+    <link href="~/Assets/Client/dist/css/sb-admin-2.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="~/Assets/Client/css/style.css">
-    <link rel="stylesheet" type="text/css" href="~/Assets/Client/css/TypeChoosenStyle.css">
+    <link rel="stylesheet" type="text/css" href="~/Assets/Client/css/Result.css">
 
-    <script type="text/javascript" src="~/Assets/Client/js/test.js"></script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -57,19 +50,17 @@
             <!-- /.navbar-top-links -->
             <!-- /.navbar-static-side -->
         </nav>
-        
-     </div>
-    @RenderBody()
-    <!-- /#wrapper -->
-    <!-- jQuery -->
-    <script src="/Assets/Client/vendor/jquery/jquery.min.js"></script>
-    <!-- Bootstrap Core JavaScript -->
-    <script src="/Assets/Client/vendor/bootstrap/js/bootstrap.min.js"></script>
-    <!-- Metis Menu Plugin JavaScript -->
-    <script src="/Assets/Client/vendor/metisMenu/metisMenu.min.js"></script>
-    <!-- Morris Charts JavaScript -->
 
-    <!-- Custom Theme JavaScript -->
-    <script src="/Assets/Client/dist/js/sb-admin-2.js"></script>
+    </div>
+    <!-- /#wrapper -->
+    <!-- .Container-->
+    <div class="container">
+        @RenderBody()
+    </div>
+    
+    <!-- /.Container-->
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/Assets/Client/vendor/jquery/jquery.min.js"></script>
+    <script src="/Assets/Client/vendor/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

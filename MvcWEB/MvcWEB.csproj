@@ -172,6 +172,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Client\css\Result.css" />
     <Content Include="Assets\Client\css\style.css" />
     <Content Include="Assets\Client\css\TypeChoosenStyle.css" />
     <Content Include="Assets\Client\data\flot-data.js" />
@@ -410,6 +411,7 @@
     <Content Include="Views\HSQ\HSQ3.cshtml" />
     <Content Include="Views\HSQ\HSQ4.cshtml" />
     <Content Include="Views\Result\Index.cshtml" />
+    <Content Include="Views\Shared\_ResultLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

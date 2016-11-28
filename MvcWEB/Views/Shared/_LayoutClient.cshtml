@@ -12,9 +12,9 @@
 
     <div id="container">
         @RenderBody()
-        <div class="btndone" id="done">
+        @*<div class="btndone" id="done">
             <input type="button" value="Làm xong" onclick="LamXong()">
-        </div>
+        </div>*@
         <div class="btndone" id="check">
             <input type="button" value="Kiểm tra" onclick="Kiemtra()">
         </div>
@@ -22,38 +22,35 @@
         @using (Html.BeginForm())
         {
             <fieldset>
-                <div class="form-group">
+                <div class="form-group hidden">
                     @Html.TextBoxFor(model => model.IDQN, new { @class = "form-control", Value = currentSession.ID })
                 </div>
-                @*<div class="form-group">
-                    @Html.TextBoxFor(model => model.KQ, new { @class = "form-control" })
-                </div>*@
-                @*<div class="form-group">
-                    @Html.TextBoxFor(model => model.XepLoai, new { @class = "form-control", @placeholder = "" })
-                </div>*@
-                <div class="form-group">
+                <div class="form-group hidden">
                     @Html.TextBoxFor(model => model.DeSo, new { @class = "form-control", Value = currentSession.DeSo })
                 </div>
-                <div class="form-group">
+                <div class="form-group hidden">
                     @Html.TextBoxFor(model => model.TraLoi, new { @class = "form-control" })
                 </div>
                 <!-- Change this to a button or input when using this as a form -->
-                <button type="submit" class="btn btn-lg btn-success btn-block">
-                    Login
-                </button>
+                <div class="btndone" id="done">
+                    <button type="submit" class="btn btn-lg btn-success btn-block" id="done" onclick="LamXong()">
+                        Làm xong
+                    </button>
+                </div>
+                
             </fieldset>
         }
     </div>
-    <div class="ketqua" id="ketqua">
-        @*<div class="resultButton" id="resultButton" onclick="hideRightPanel();">
+    @*<div class="ketqua" id="ketqua">
+        <div class="resultButton" id="resultButton" onclick="hideRightPanel();">
             <i id="resultButtonLabel" class="fa fa-arrow-right" aria-hidden="true"></i>
-        </div>*@
+        </div>*
         <p class="PanelHeader">Kết quả</p>
         <p>Tổng số câu: 100 </p>
         <p>Số câu đúng: <span id="trueNumber"></span></p>
         <p>Điểm: <span id="mark"></span></p>
         <p>Xếp loại: <span id="qualtity"></span></p>
-    </div>
+    </div>*@
     <div class="checkedTracking" id="checkedTracking">
         @*<div class="trackingButton" id="trackingButton" onclick="hideLeftPanel();">
             <i id="trackingButtonLabel" class="fa fa-arrow-left" aria-hidden="true"></i>
