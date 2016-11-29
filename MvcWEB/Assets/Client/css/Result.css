@@ -42,5 +42,24 @@
 	.container {
 	    width: 1300px;
 	    margin-top: 63px;
+    }
+    
 }
+@media (max-width: 1199px) {
+    .info {
+        display: inline;
+        height: initial;
+        position: relative;
+        width: 100%;
+        top: 35px;
+    }
+    .wrongAns {
+        float: none;
+        width: 100%;
+    }
+    .wrongAns > h1 {
+        padding-top: 10px;
+        border-top: solid 4px #149080;
+    }
+    
 }

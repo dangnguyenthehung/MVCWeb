@@ -172,6 +172,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\HSQ\HSQ1.txt" />
+    <Content Include="App_Data\HSQ\HSQ2.txt" />
+    <Content Include="App_Data\HSQ\HSQ3.txt" />
+    <Content Include="App_Data\HSQ\HSQ4.txt" />
     <Content Include="Assets\Client\css\Result.css" />
     <Content Include="Assets\Client\css\style.css" />
     <Content Include="Assets\Client\css\TypeChoosenStyle.css" />
@@ -414,7 +418,6 @@
     <Content Include="Views\Shared\_ResultLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Views\Result\HSQ\" />
     <Folder Include="Views\Result\QNCN\" />
     <Folder Include="Views\Result\SQ\" />

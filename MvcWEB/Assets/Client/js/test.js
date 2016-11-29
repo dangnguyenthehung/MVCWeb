@@ -18,48 +18,6 @@ function LamXong(){
     var TraLoi = document.getElementById("TraLoi");
     TraLoi.setAttribute("value", userAnswerString);
     isDone = true;
-    //var caudung = 0;
-    //var diem = 0;
-	
-	//for (i=1;i<=numberOfQuestion;i++){
-	//	if (traloi[i]==dapan[i]) {
-	//		caudung++;
-	//		//document.getElementById("DapAn" + i).innerHTML = "<h2 class='true'><b>Đáp án : " + dapan[i] + "</b></h2>"; //hien thi dap dan
-	//		}
-	//	else
-	//		{
-	//		//document.getElementById("DapAn" + i).innerHTML = "<h2 class='false'><b>Đáp án : " + dapan[i] + "</b></h2>";// hien thi dap an
-	//		}
-	//};
-	// xep loai
-	//if (caudung == numberOfQuestion) {
-	//	qualtity = "Xuất sắc"
-	//} else if (caudung >= (numberOfQuestion*0.8)){
-	//	qualtity = "Giỏi" 
-	//} else if (caudung >= (numberOfQuestion*0.65)){
-	//	qualtity = "Khá" 
-	//} else if (caudung >= (numberOfQuestion*0.5)) {
-	//	qualtity = "Đạt yêu cầu"
-	//} else {
-	//	qualtity = "Không đạt yêu cầu!"
-	//};
-	//diem = caudung * (10 / numberOfQuestion).toFixed(2);
-	//var KQ = document.getElementById("KQ");
-	//var XL = document.getElementById("XepLoai");
-	
-	//KQ.setAttribute("value", diem);
-	
-	//XL.setAttribute("value", qualtity);
-	//XL.setAttribute("placeholder", qualtity);
-
-	// hien thi ket qua
-	//document.getElementById("trueNumber").innerHTML = caudung;
-	//document.getElementById("mark").innerHTML = diem;
-	//document.getElementById("qualtity").innerHTML = qualtity;
-	//document.getElementById("ketqua").style.display = "inline";
-	//document.getElementById("done").style.display = "none";
-	
-	//return diem;
 };
 function Kiemtra() {
 	countArray();
@@ -120,24 +78,6 @@ function begin (){
 	countdown();
 };
 
-//function hideRightPanel() {
-//	var resultPanel = document.getElementById("ketqua");
-//	var resultButtonLabel = document.getElementById("resultButtonLabel")
-//	if (isHide == false) {
-//		resultPanel.setAttribute("class","ketqua hideRightPanel");	
-//		setTimeout(function(){
-//			resultButtonLabel.setAttribute("class","fa fa-arrow-left");	
-//		},1000);
-		
-//		isHide = true;
-//	} else {
-//		resultPanel.setAttribute("class","ketqua showRightPanel");
-//		setTimeout(function() {
-//			resultButtonLabel.setAttribute("class","fa fa-arrow-right");
-//		},1000);
-//		isHide = false;	
-//	}
-//}
 function hideLeftPanel() {
 	var checkedTracking = document.getElementById("checkedTracking");
 	var trackingButtonLabel = document.getElementById("trackingButtonLabel")
@@ -179,12 +119,18 @@ function countArray() {
 	var uncheckList = document.getElementById("uncheckList");
 	uncheckList.innerHTML = "";
 	for (i=1;i<=numberOfQuestion;i++) {
-		var node = document.createElement("li");
-		var textNode;
+	    var node = document.createElement("li");
+	    var textNode;
+	    var nodeLink = document.createElement("a");
+	    var nodeAttr = document.createAttribute("href");
+	    
 		if (traloi[i] === undefined || traloi[i] === null) {
-			countUnchecked++;
-			textNode = document.createTextNode(i);
-			node.appendChild(textNode);
+		    countUnchecked++;
+		    nodeAttr.value = "#" + i;
+		    nodeLink.setAttributeNode(nodeAttr);
+		    textNode = document.createTextNode(i);
+		    nodeLink.appendChild(textNode);
+			node.appendChild(nodeLink);
 			uncheckList.appendChild(node);
 			console.log(i);
 		}

@@ -6,6 +6,11 @@
    width: 100%;
    font-size: 80%;
    color: #0e0e0e;
+   background-color: #ddd;
+   height: 40px;
+   border-radius: 2px;
+   border: solid 1px #81c5ff;
+   overflow: scroll;
 }
 .label > option {
    font-size: 18px;
