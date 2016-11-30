@@ -13,6 +13,7 @@ namespace Model.Framework
         public DanhSach()
         {
             KetQuaKiemTras = new HashSet<KetQuaKiemTra>();
+            Permissions = new HashSet<Permission>();
         }
 
         [Key]
@@ -40,5 +41,8 @@ namespace Model.Framework
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<KetQuaKiemTra> KetQuaKiemTras { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Permission> Permissions { get; set; }
     }
 }

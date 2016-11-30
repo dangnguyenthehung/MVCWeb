@@ -57,8 +57,12 @@
     <Compile Include="Framework\d38dbContext.cs" />
     <Compile Include="Framework\DanhSach.cs" />
     <Compile Include="Framework\KetQuaKiemTra.cs" />
+    <Compile Include="Framework\Permission.cs" />
+    <Compile Include="Framework\sysdiagram.cs" />
+    <Compile Include="Framework\ViewKQ.cs" />
     <Compile Include="KetQuaKiemTraModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StatisticModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

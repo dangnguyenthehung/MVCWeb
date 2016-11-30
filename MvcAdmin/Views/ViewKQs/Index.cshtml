@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Model.Framework.ViewKQ>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>Tổng hợp</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IDQN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HoTen)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NgayKT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DeSo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KQ)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.XepLoai)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IDQN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HoTen)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NgayKT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DeSo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KQ)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.XepLoai)
+        </td>
+        <td>
+            @*@Html.ActionLink("Delete", "Delete", new {  id=item.IDQN })*@
+        </td>
+    </tr>
+}
+
+</table>

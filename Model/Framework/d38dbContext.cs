@@ -15,6 +15,9 @@ namespace Model.Framework
         public virtual DbSet<Account> Accounts { get; set; }
         public virtual DbSet<DanhSach> DanhSaches { get; set; }
         public virtual DbSet<KetQuaKiemTra> KetQuaKiemTras { get; set; }
+        public virtual DbSet<Permission> Permissions { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+        public virtual DbSet<ViewKQ> ViewKQs { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -39,6 +42,10 @@ namespace Model.Framework
                 .Property(e => e.TraLoi)
                 .IsFixedLength()
                 .IsUnicode(false);
+
+            modelBuilder.Entity<ViewKQ>()
+                .Property(e => e.KQ)
+                .HasPrecision(2, 1);
         }
     }
 }
