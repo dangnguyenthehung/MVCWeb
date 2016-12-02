@@ -1,4 +1,5 @@
 ﻿using Model;
+using Model.Framework;
 using MvcWEB.Models;
 using System.Collections.Generic;
 using System.Web.Mvc;
@@ -50,6 +51,18 @@ namespace MvcWEB.Controllers
 
             var id = GetID(model.HoTen);
             model.ID = id;
+            var permission = new PermissionModel();
+            var res = check(id);
+            
+            if (res == 1)
+            {
+                permission.SetLogStatus(id);
+            }
+            else
+            {
+                return View("ChooseType", model);
+            }
+            
             // In case everything is fine - i.e. both "Name" and "Type" are entered/selected,
             // redirect user to the "Target" page, and pass the user object along via Session
 
@@ -72,7 +85,20 @@ namespace MvcWEB.Controllers
            
 
         }
-
+        public int check (int id)
+        {
+            var permission = new PermissionModel();
+            ViewPermission res = new ViewPermission();
+            res = permission.CheckPermission(id);
+            if (res.Permission == 1 && res.LogStatus == 0)
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
+        }
         public ActionResult Done()
         {
             // Get Choosen information from the session
