@@ -2,6 +2,7 @@
 using Model.Framework;
 using MvcWEB.Models;
 using System.Collections.Generic;
+using System.Linq;
 using System.Web.Mvc;
 
 namespace MvcWEB.Controllers
@@ -13,9 +14,10 @@ namespace MvcWEB.Controllers
 
         public ActionResult ChooseType()
         {
+            var tp = "SQ";
             // Let's get all type that we need for a DropDownList
             var type = GetAllType();
-            var name = GetAllName();
+            var name = GetAllName(tp);
 
             var model = new ChooseTypeModel();
 
@@ -26,12 +28,6 @@ namespace MvcWEB.Controllers
 
             return View("ChooseType", model);
 
-
-            //var iplChoosen = new ChooseTypeModel();
-            ////return View(model);
-            //var tupleModel = new Tuple<List<DanhSachModel>,ChooseTypeModel>(null,iplChoosen);
-            //return View(tupleModel);
-
         }
 
 
@@ -39,9 +35,10 @@ namespace MvcWEB.Controllers
         [HttpPost]
         public ActionResult ChooseType(ChooseTypeModel model)
         {
+            var tp = model.ThanhPhan;
             //Get all type again
             var type = GetAllType();
-            var name = GetAllName();
+            var name = GetAllName(tp);
             ;
             // Set these type on the model. We need to do this because
             // only the selected value from the DropDownList is posted back, not the whole
@@ -49,7 +46,7 @@ namespace MvcWEB.Controllers
             model.Type = GetSelectListItems(type);
             model.Name = GetSelectListItems(name);
 
-            var id = GetID(model.HoTen);
+            var id = GetID(model.HoTen,tp);
             model.ID = id;
             var permission = new PermissionModel();
             var res = check(id);
@@ -76,7 +73,7 @@ namespace MvcWEB.Controllers
             }
             else if (model.ThanhPhan == "HSQ")
             {
-                return RedirectToAction("Index", "HSQ", model);
+                return RedirectToAction("Index", "HSQ", model); // focus on this
             }
             else
             {
@@ -119,10 +116,22 @@ namespace MvcWEB.Controllers
                 "HSQ"
             };
         }
-        private IEnumerable<string> GetAllName()
+        //private IEnumerable<string> GetAllName()
+        //{
+        //    var model = new DanhSachModel();
+        //    var modelList = model.ListAll();
+        //    var nameList = new List<string>();
+        //    foreach (var item in modelList)
+        //    {
+        //        nameList.Add(item.HoTen);
+        //    }
+
+        //    return nameList;
+        //}
+        private IEnumerable<string> GetAllName(string type)
         {
             var model = new DanhSachModel();
-            var modelList = model.ListAll();
+            var modelList = model.ListAll(type);
             var nameList = new List<string>();
             foreach (var item in modelList)
             {
@@ -131,11 +140,11 @@ namespace MvcWEB.Controllers
 
             return nameList;
         }
-        private int GetID(string HoTen)
+        private int GetID(string HoTen, string type)
         {
             int id = 0;
             var model = new DanhSachModel();
-            var modelList = model.ListAll();
+            var modelList = model.ListAll(type);
             foreach(var item in modelList)
             {
                 if (item.HoTen == HoTen)
@@ -169,6 +178,14 @@ namespace MvcWEB.Controllers
             }
 
             return selectList;
+        }
+
+        public JsonResult LoadName(string type)
+        {
+            var name = GetAllName(type);
+            
+            //var l = ob.Name.SingleOrDefault(s => s.Text == type);
+            return Json(name, JsonRequestBehavior.AllowGet);
         }
 
     }

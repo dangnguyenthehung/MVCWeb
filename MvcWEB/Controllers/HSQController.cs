@@ -228,24 +228,6 @@ namespace MvcWEB.Controllers
         [HttpPost]
         public ActionResult HSQ1(KetQuaModel model)
         {
-            // var insert = new KetQuaKiemTraModel();
-
-
-            // calculate
-            //MainAction(model);
-
-            //end calculate
-            // call insert method 
-            //insert.InsertResult(model.IDQN, model.KQ, model.XepLoai, model.DeSo);
-
-            //System.Diagnostics.Debug.WriteLine("------Begin------");
-            //System.Diagnostics.Debug.WriteLine(model.IDQN);
-            //System.Diagnostics.Debug.WriteLine(model.KQ);
-            //System.Diagnostics.Debug.WriteLine(model.DeSo);
-            //System.Diagnostics.Debug.WriteLine(model.TraLoi);
-            //System.Diagnostics.Debug.WriteLine("------End------");
-
-
             return RedirectToAction("MainAction", model);
         }
         [HttpPost]

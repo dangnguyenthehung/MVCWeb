@@ -1,6 +1,7 @@
 ﻿using Model.Framework;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,20 +15,15 @@ namespace Model
         {
             context = new d38dbContext();
         }
-        public List<DanhSach> ListAll()
+        public List<DanhSach> ListAll(string ThanhPhan)
         {
-            var list = context.Database.SqlQuery<DanhSach>("Sp_ChooseType").ToList();
+            object[] sqlParams =
+            {
+                new SqlParameter("@ThanhPhan", ThanhPhan)
+            };
+            var list = context.Database.SqlQuery<DanhSach>("Sp_ChooseType @ThanhPhan", sqlParams).ToList();
             return list;
         }
-        //public List<string> ListName()
-        //{
-        //    var list = context.Database.SqlQuery<DanhSach>("Sp_ChooseType").ToList();
-        //    var listName = new List<string>();
-        //    foreach(var item in list)
-        //    {
-        //        listName.Add(item.HoTen);
-        //    }
-        //    return listName;
-        //}
+       
     }
 }

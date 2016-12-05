@@ -189,6 +189,7 @@
     <Content Include="Assets\Client\font-awesome-4.6.3\css\font-awesome.min.css" />
     <Content Include="Assets\Client\font-awesome-4.6.3\fonts\fontawesome-webfont.svg" />
     <Content Include="Assets\Client\font-awesome-4.6.3\HELP-US-OUT.txt" />
+    <Content Include="Assets\Client\js\ChooseType.js" />
     <Content Include="Assets\Client\js\daBS.js" />
     <Content Include="Assets\Client\js\Explain.txt" />
     <Content Include="Assets\Client\js\test.js" />
