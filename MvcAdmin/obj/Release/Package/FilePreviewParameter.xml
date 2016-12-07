@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="Default Web Site/Kiemtra" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^D:\\Files\\Project\\MvcWEB\\MvcAdmin\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^D:\\Files\\Project\\MvcWEB\\MvcAdmin\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="d38dbContext-Web.config Connection String" description="" value="data source=.;initial catalog=d38db;persist security info=True;user id=dph38;password=thehung;MultipleActiveResultSets=True;App=EntityFramework" tags="">
+    <parameterEntry kind="XmlFile" scope="D:\\Files\\Project\\MvcWEB\\MvcAdmin\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='d38dbContext']/@connectionString" />
+  </parameter>
+</parameters>

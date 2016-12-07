@@ -1,0 +1,10 @@
+D:\Files\Project\MvcWEB\Model\bin\Release\Model.dll.config
+D:\Files\Project\MvcWEB\Model\bin\Release\Model.dll
+D:\Files\Project\MvcWEB\Model\bin\Release\Model.pdb
+D:\Files\Project\MvcWEB\Model\bin\Release\EntityFramework.dll
+D:\Files\Project\MvcWEB\Model\bin\Release\EntityFramework.SqlServer.dll
+D:\Files\Project\MvcWEB\Model\bin\Release\EntityFramework.xml
+D:\Files\Project\MvcWEB\Model\bin\Release\EntityFramework.SqlServer.xml
+D:\Files\Project\MvcWEB\Model\obj\Release\Model.csprojResolveAssemblyReference.cache
+D:\Files\Project\MvcWEB\Model\obj\Release\Model.dll
+D:\Files\Project\MvcWEB\Model\obj\Release\Model.pdb

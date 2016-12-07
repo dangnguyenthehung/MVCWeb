@@ -35,6 +35,17 @@ namespace MvcWEB.Code
                 {
                     File.Delete(SavePath);
                 }
+                // check result folder exist
+                if (Directory.Exists(ResultPath))
+                {
+                    //File.Delete(SavePath);
+                }
+                else
+                {
+                    Directory.CreateDirectory(ResultPath);
+                }
+                //end check
+
                 using (FileStream fs = File.Create(SavePath))
                 {
                 }

@@ -1,0 +1,2470 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutClient.cshtml";
+}
+
+<h2 class="title">Đối tượng HSQ-BS</h2>
+<div class="question">
+    <h3>
+        <b>
+            1. Bảo vệ Tổ quốc Việt Nam xã hội chủ nghĩa là một trong hai nhiệm vụ chiến lược của cách mạng nước ta hiện nay, vì xuất phát từ…
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q1" onclick="traloi[1]='A'">
+        a. Quy luật tồn tại và phát triển của dân tộc ta là “Dựng nước đi đôi với giữ nước”
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q1" onclick="traloi[1]='B'">
+        b.	Mục tiêu, yêu cầu nhiệm vụ cách mạng Việt Nam trong giai đoạn mới, đòi hỏi phải thực hiện thắng lợi hai nhiệm vụ chiến lược xây dựng chủ nghĩa xã hội và bảo vệ vững chắc Tổ quốc Việt Nam xã hội chủ nghĩa
+        <br />
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q1" onclick="traloi[1]='C'">
+        c.	Thực tiễn cách mạng nước ta từ khi có Đảng lãnh đạo, nhiệm vụ bảo vệ Tổ quốc đã trở thành nhiệm vụ chiến lược thường xuyên, lâu dài của cách mạng Việt Nam.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q1" onclick="traloi[1]='D'">
+        d.	Cả 3 câu a, b, c đều đúng
+    </p>
+
+    <div id="DapAn1"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            2. Quân đội nhân dân Việt Nam là công cụ….của Đảng, Nhà nước và là thành phần cơ bản, nòng cốt của lực lượng vũ trang nhân dân trong chiến tranh nhân dân bảo vệ Tổ Quốc.
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q2" onclick="traloi[2]='A'">
+        a. Sắc bén
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q2" onclick="traloi[2]='B'">
+        b. Bạo lực
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q2" onclick="traloi[2]='C'">
+        c. Lao động
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q2" onclick="traloi[2]='D'">
+        d. Chuyên môn
+    </p>
+    <div id="DapAn2"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            3. Chức năng của quân đội ta là đội quân chiến đấu, đội quân sản xuất và đội quân công tác. Trong đó chức năng nào là chức năng cơ bản nhất.
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q3" onclick="traloi[3]='A'">
+        a. Chiến đấu
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q3" onclick="traloi[3]='B'">
+        B. Đấu tranh
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q3" onclick="traloi[3]='C'">
+        C. Sản Xuất
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q3" onclick="traloi[3]='D'">
+        D. Công tác
+    </p>
+    <div id="DapAn3"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            4. Quân đội ta từ… mà ra, vì… mà chiến đấu, mang trong mình bản chất cách mạng, truyền thống yêu nước, ý chí kiên cường bất khuất, tự lực tự cường của dân tộc.
+            <br />
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q4" onclick="traloi[4]='A'">
+        A. Công nhân
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q4" onclick="traloi[4]='B'">
+        B. Nông dân
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q4" onclick="traloi[4]='C'">
+        C. Nhân dân
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q4" onclick="traloi[4]='D'">
+        D. Giai cấp
+    </p>
+    <div id="DapAn4"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            5. Chúng ta đang xây dựng đất nước theo định hướng nào?
+
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q5" onclick="traloi[5]='A'">
+        A. Chủ nghĩa xã hội
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q5" onclick="traloi[5]='B'">
+        B. Xã hội chủ nghĩa
+        <br />
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q5" onclick="traloi[5]='C'">
+        C. Chủ nghĩa cộng sản
+        <br />
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q5" onclick="traloi[5]='D'">
+        D. Cộng sản chủ nghĩa.
+        <br />
+    </p>
+    <div id="DapAn5"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            6. …. đã giúp Miền Nam hoàn toàn giải phóng, thống nhất đất nước, non sông quy về một mối.
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q6" onclick="traloi[6]='A'">
+        A. Chiến dịch Điện Biên Phủ.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q6" onclick="traloi[6]='B'">
+        B.  Chiến dịch Hồ Chí Minh, đại thắng mùa Xuân năm 1975.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q6" onclick="traloi[6]='C'">
+        C. Cuộc khởi nghĩa Nam kỳ.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q6" onclick="traloi[6]='D'">
+        D. Cuộc tổng tiến công và nổi dậy Tết Mậu Thân.
+    </p>
+    <div id="DapAn6"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            7. Một trong những nội dung xây dựng nền quốc phòng toàn dân vững mạnh là: Tăng cường sự lãnh đạo tuyệt đối, trực tiếp về mọi mặt của…, sự quản lý của… đối với quân đội nhân dân và sự nghiệp quốc phòng, an ninh.
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q7" onclick="traloi[7]='A'">
+        A. Nhà nước, Đảng
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q7" onclick="traloi[7]='B'">
+        B. Quốc hội, Nhà nước
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q7" onclick="traloi[7]='C'">
+        C. Đảng, Nhà nước
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q7" onclick="traloi[7]='D'">
+        D. Đảng, Quốc hội
+    </p>
+    <div id="DapAn7"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            8. Xây dựng nền quốc phòng toàn dân là nhiệm vụ …, thường xuyên của Đảng, Nhà nước và của toàn dân, trong đó quân đội nhân dân là lực lượng nòng cốt.
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q8" onclick="traloi[8]='A'">
+        A. Chủ yếu
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q8" onclick="traloi[8]='B'">
+        B. Thiết yếu
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q8" onclick="traloi[8]='C'">
+        C. Trọng điểm
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q8" onclick="traloi[8]='D'">
+        D. Trọng yếu
+    </p>
+    <div id="DapAn8"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            9. Đảng Cộng sản Việt Nam lấy….. làm kim chỉ nam cho hành động, làm đường lối, sách lược cho việc bảo vệ và phát triển đất nước ta trên con đường đi lên chủ nghĩa xã hội.
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q9" onclick="traloi[9]='A'">
+        A. Chủ nghĩa Mác – Lênin
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q9" onclick="traloi[9]='B'">
+        B. Tư tưởng Hồ Chí Minh
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q9" onclick="traloi[9]='C'">
+        C. Chủ nghĩa Mác – Lênin và Tư tưởng Hồ Chí Minh
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q9" onclick="traloi[9]='D'">
+        D. Chủ nghĩa Tư Bản
+    </p>
+    <div id="DapAn9"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            10. Vào… Bác Hồ đã ra đi tìm đường cứu nước, người đã tìm ra chân lý giúp nhân dân ta thoát khỏi chế độ phong kiến, áp bức bóc lột của các nước Tư bản, thống nhất đất nước, non sông quy về một mối.
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q10" onclick="traloi[10]='A'"> 	A. Ngày 01/6/1911
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q10" onclick="traloi[10]='B'">		B. Ngày 05/5/1911
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q10" onclick="traloi[10]='C'">		C. Ngày 05/6/1921
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q10" onclick="traloi[10]='D'">		D. Ngày 05/6/1911
+    </p>
+
+    <div id="DapAn10"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            11. Tăng cường quốc phòng, an ninh là nhiệm vụ quan trọng thường xuyên của Đảng, Nhà nước và của toàn dân, trong đó lực lượng nào giữ vai trò nòng cốt?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q11" onclick="traloi[11]='A'">
+        A. Quân đội nhân dân.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q11" onclick="traloi[11]='B'">
+        B. Công an nhân dân.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q11" onclick="traloi[11]='C'">
+        C. Bộ đội biên phòng.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q11" onclick="traloi[11]='D'">
+        D. Cả 2 câu a, b.
+    </p>
+    <div id="DapAn11"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            12. Đường cơ sở là gì?
+
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q12" onclick="traloi[12]='A'">
+        a. Đường cơ sở là đường cơ bản quốc gia ven biển có thể đơn phương xác định dùng làm căn cứ để tính chiều rộng lãnh hải và các vùng biển khác.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q12" onclick="traloi[12]='B'">
+        b. Đường cở sở là đường thông dụng của mọi quốc gia, các nước trên thế giới được phép sử dụng để làm căn cứ xác định biên giới nước mình.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q12" onclick="traloi[12]='C'">
+        c. Đường cơ sở là đường biên giới trên biển, được các quốc gia ven biển sử dụng để làm cơ sở phân định lãnh hải nước này với các nước khác
+    </p>
+
+    <div id="DapAn12"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            13. Có mấy loại đường cơ sở?
+
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q13" onclick="traloi[13]='A'">
+        a.	1 loại duy nhất đó là đường cơ sở thẳng
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q13" onclick="traloi[13]='B'">
+        b.	 2 loại: đường cơ sở thông thường và đường cơ sở thẳng.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q13" onclick="traloi[13]='C'">
+        c.	3 loại: đường cơ sở thông thường, đường cở sở chéo và đường cơ sở thẳng.
+    </p>
+
+    <div id="DapAn13"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            14. Vùng tiếp giáp lãnh hải là gì?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q14" onclick="traloi[14]='A'">
+        a. Vùng liếp giáp lãnh hải là vùng biển nằm phía trong lãnh hải và tiếp liền với lãnh hải, rộng 12 hải lý tính từ ranh giới ngoài của lãnh hải.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q14" onclick="traloi[14]='B'">
+        b. Vùng tiếp giáp lãnh hải là vùng biển nằm phía ngoài lãnh hải và tiếp liền với lãnh hải, rộng 12 hải lý tính từ ranh giới ngoài của lãnh hải.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q14" onclick="traloi[14]='C'">
+        c. Vùng liếp giáp lãnh hải là vùng biển nằm phía ngoài lãnh hải và tiếp liền với lãnh hải, rộng 24 hải lý tính từ ranh giới ngoài của lãnh hải.
+    </p>
+
+    <div id="DapAn14"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            15. Vùng đặc quyền kinh tế là gì?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q15" onclick="traloi[15]='A'">
+        a.	Là vùng nằm ở phía ngoài và tiếp liền với lãnh hải.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q15" onclick="traloi[15]='B'">
+        b.	Là vùng nằm ở phía trong và tiếp liền với lãnh hải.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q15" onclick="traloi[15]='C'">
+        c.	Là vùng nằm ở phía ngoài và không tiếp liền với lãnh hải.
+    </p>
+
+    <div id="DapAn15"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            16. Thềm lục địa là gì?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q16" onclick="traloi[16]='A'">
+        a. Thềm lục địa của một quốc gia ven biển bao gồm đáy biển và các đảo bên ngoài lãnh hải của quốc gia.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q16" onclick="traloi[16]='B'">
+        b. Thềm lục địa của một quốc gia ven biển bao gồm đáy biển và lòng đất dưới đáy biển bên trong lãnh hải của quốc gia.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q16" onclick="traloi[16]='C'">
+        c. Thềm lục địa của một quốc gia ven biển bao gồm đáy biển và lòng đất dưới đáy biển bên ngoài lãnh hải của quốc gia.
+    </p>
+
+    <div id="DapAn16"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            17. Nội dung, biện pháp kết hợp kinh tế với củng cố quốc phòng - an ninh là gì?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q17" onclick="traloi[17]='A'">
+        a. Kết hợp kinh tế củng cố quốc phòng - an ninh thể hiện trong đường lối, chủ trương, chính sách của Đảng và Nhà nước.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q17" onclick="traloi[17]='B'">
+        b. Kết hợp kinh tế với củng cố quốc phòng và an ninh trong chiến lược, quy hoạch, kế hoạch của Nhà nước và địa phương.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q17" onclick="traloi[17]='C'">
+        c. Kết hợp kinh tế với củng cố quốc phòng và an ninh trong các ngành kinh tế - xã hội.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q17" onclick="traloi[17]='D'">
+        d. Kết hợp kinh tế xã hội với củng cố quốc phòng - an ninh; quốc phòng - an ninh với kinh tế - xã hội theo vùng miền của đất nước.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v5" name="q17" onclick="traloi[17]='E'">
+        e. Tất cả các phương án trên.
+    </p>
+    <div id="DapAn17"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            18. Phương châm chỉ đạo của Đại hội XII của Đảng là gì?
+
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q18" onclick="traloi[18]='A'">
+        a. “Đoàn kết – Dân chủ - Kỷ cương – Đổi mới”
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q18" onclick="traloi[18]='B'">
+        b. “Đoàn kết – Dân chủ - Sáng tạo – Phát triển”
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q18" onclick="traloi[18]='C'">
+        c. “Bản lĩnh – Dân chủ - Kỷ cương – Đoàn kết”
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q18" onclick="traloi[18]='D'">
+        d. “Bản lĩnh – Dân chủ - Sáng tạo – Đoàn kết”
+    </p>
+    <div id="DapAn18"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            19. Nhiệm vụ của Đại hội XII của Đảng là gì?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q19" onclick="traloi[19]='A'">
+        a. Quyết định phương hướng, mục tiêu, nhiệm vụ 5 năm 2016 - 2020; kiểm điểm sự lãnh đạo của Ban Chấp hành Trung ương Đảng khóa XI; đánh giá việc thi hành Điều lệ Đảng khóa XI; bầu Ban Chấp hành Trung ương Đảng khóa XII
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q19" onclick="traloi[19]='B'">
+        b. Kiểm điểm việc thực hiện Nghị quyết Đại hội XI của Đảng (2011 - 2015); quyết định phương hướng, mục tiêu, nhiệm vụ 5 năm 2016 - 2020; kiểm điểm sự lãnh đạo của Ban Chấp hành Trung ương Đảng khóa XI; đánh giá việc thi hành Điều lệ Đảng khóa XI; bầu Ban Chấp hành Trung ương Đảng khóa XII
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q19" onclick="traloi[19]='C'">
+        c. Kiểm điểm việc thực hiện Nghị quyết Đại hội XI của Đảng (2011 - 2015); nhìn lại 30 năm đổi mới; quyết định phương hướng, mục tiêu, nhiệm vụ 5 năm 2016 - 2020; kiểm điểm sự lãnh đạo của Ban Chấp hành Trung ương Đảng khóa XI; đánh giá việc thi hành Điều lệ Đảng khóa XI; bầu Ban Chấp hành Trung ương Đảng khóa XII.
+    </p>
+
+    <div id="DapAn19"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            20. Chỉ tiêu phấn đấu đến năm 2020, bội chi ngân sách nhà nước còn khoảng bao nhiêu % GDP?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q20" onclick="traloi[20]='A'">
+        a.	6%
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q20" onclick="traloi[20]='B'">
+        b.	5%
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q20" onclick="traloi[20]='C'">
+        c.	4%
+    </p>
+
+    <div id="DapAn20"></div>
+</div>
+
+<div class="question">
+    <h3>
+        <b>
+            21. Một số trong những nhiệm vụ tổng quát phát triển đất nước trong 5 năm tới (nhiệm kỳ 2016-2020)?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q21" onclick="traloi[21]='A'">
+        a. Kiên quyết, kiên trì đấu tranh bảo vệ vững chắc độc lập, chủ quyền, thống nhất, toàn vẹn lãnh thổ của Tổ quốc, bảo vệ Đảng, Nhà nước, nhân dân và chế độ xã hội chủ nghĩa; giữ vững an ninh chính trị, trật tự, an toàn xã hội.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q21" onclick="traloi[21]='B'">
+        b. Củng cố, tăng cường quốc phòng, an ninh.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q21" onclick="traloi[21]='C'">
+        c. Xây dựng nền quốc phòng toàn dân, nền an ninh nhân dân vững chắc; xây dựng lực lượng vũ trang nhân dân cách mạng, chính quy, tinh nhuệ, từng bước hiện đại, ưu tiên hiện đại hóa một số quân chủng, binh chủng, lực lượng.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q21" onclick="traloi[21]='D'">
+        d. Câu a, b đúng
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v5" name="q21" onclick="traloi[21]='E'">
+        e. Câu a, b, c đúng
+    </p>
+    <div id="DapAn21"></div>
+</div>
+
+<div class="question">
+    <h3>
+        <b>
+            22. Các quan hệ lớn trong nhiệm vụ tổng quát phát triển đất nước trong 5 năm 2016-2020 là gì?
+
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q22" onclick="traloi[22]='A'">
+        a. Giữa đổi mới, ổn định và phát triển; giữa đổi mới kinh tế và đổi mới chính trị;
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q22" onclick="traloi[22]='B'">
+        b. Giữa tuân theo các quy luật thị trường và bảo đảm định hướng xã hội chủ nghĩa; giữa phát triển lực lượng sản xuất và xây dựng, hoàn thiện từng bước quan hệ sản xuất tư sản định hướng xã hội chủ nghĩa;
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q22" onclick="traloi[22]='C'">
+        c. Giữa Nhà nước và thị trường; giữa tăng trưởng kinh tế và phát triển văn hóa, thực hiện tiến bộ và công bằng xã hội;
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q22" onclick="traloi[22]='D'">
+        d. Giữa xây dựng chủ nghĩa xã hội và bảo vệ Tổ quốc xã hội chủ nghĩa; giữa độc lập, tự chủ và hội nhập quốc tế;
+    </p>
+
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q22" onclick="traloi[22]='E'">
+        e. Giữa Đảng lãnh đạo, Nhà nước quản lý, nhân dân làm chủ;
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q22" onclick="traloi[22]='F'">
+        f. Câu a, c, d, e đúng
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q22" onclick="traloi[22]='G'">
+        g. Tất cả đều đúng
+    </p>
+    <div id="DapAn22"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            23. Chọn câu phát biểu đúng nhất về nhiệm vụ tăng cường quốc phòng, an ninh, bảo vệ Tổ quốc Việt Nam xã hội chủ nghĩa trong tình hình mới:
+
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q23" onclick="traloi[23]='A'">
+        a. Kiên quyết đấu tranh bảo vệ độc lập, chủ quyền, thống nhất và toàn vẹn lãnh thổ, bảo vệ vững chắc biên giới và chủ quyền biển, đảo, vùng trời của Tổ quốc; đồng thời giữ vững môi trường hòa bình, ổn định để phát triển bền vững đất nước
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q23" onclick="traloi[23]='B'">
+        b. Kiên quyết, kiên trì đấu tranh bảo vệ độc lập, chủ quyền, thống nhất và toàn vẹn lãnh thổ, bảo vệ vững chắc chủ quyền biển, đảo, vùng trời của Tổ quốc; đồng thời giữ vững môi trường hòa bình, ổn định để phát triển bền vững đất nước.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q23" onclick="traloi[23]='C'">
+        c. Kiên quyết, kiên trì đấu tranh bảo vệ độc lập, chủ quyền, thống nhất và toàn vẹn lãnh thổ, bảo vệ vững chắc biên giới và chủ quyền biển, đảo, vùng trời của Tổ quốc; đồng thời giữ vững môi trường hòa bình, ổn định để phát triển bền vững đất nước.
+    </p>
+
+    <div id="DapAn23"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            24. Chỉ tiêu phấn đấu đến năm 2020, GDP bình quân đầu người đạt khoảng bao nhiêu?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q24" onclick="traloi[24]='A'">
+        a. 3000 - 3200 USD
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q24" onclick="traloi[24]='B'">
+        b. 3200 – 3500 USD
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q24" onclick="traloi[24]='C'">
+        c. 3500 – 4000 USD
+    </p>
+
+    <div id="DapAn24"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            25. Chỉ tiêu phấn đấu đến năm 2020, tỉ lệ thất nghiệp ở khu vực thành thị là bao nhiêu %?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q25" onclick="traloi[25]='A'">
+        a. Dưới 3%
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q25" onclick="traloi[25]='B'">
+        b. Dưới 4%
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q25" onclick="traloi[25]='C'">
+        c. Dưới 5%
+    </p>
+
+    <div id="DapAn25"></div>
+</div>
+
+<div class="question">
+    <h3>
+        <b>
+            26. Có mấy hình thái doanh nghiệp chính?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q26" onclick="traloi[26]='A'">
+        a. 2 (doanh nghiệp Nhà nước, doanh nghiệp tư nhân)
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q26" onclick="traloi[26]='B'">
+        b. 3 (doanh nghiệp Nhà nước, doanh nghiệp tư nhân, doanh nghiệp có vốn đầu tư nước ngoài)
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q26" onclick="traloi[26]='C'">
+        c. 4 (doanh nghiệp Nhà nước, doanh nghiệp tư nhân, doanh nghiệp có vốn đầu tư nước ngoài, kinh tế hợp tác)
+    </p>
+    <div id="DapAn26"></div>
+</div>
+
+<div class="question">
+    <h3>
+        <b>
+            27. Một số giải pháp chủ yếu để nâng cao hiệu quả hoạt động đối ngoại, chủ động hội nhập quốc tế, giữ vững môi trường hòa bình và tạo điệu kiện thuận lợi để phát triển đất nước?
+
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q27" onclick="traloi[27]='A'">
+        a. Thực hiện nhất quán đường lối đối ngoại độc lập, tự chủ, hòa bình, hữu nghị, hợp tác và phát triển;
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q27" onclick="traloi[27]='B'">
+        b. Đa phương hóa, đa dạng hóa quan hệ, chủ động và tích cực hội nhập, hợp tác quốc tế trên cơ sở tôn trọng độc lập, chủ quyền và toàn vẹn lãnh thổ, không can thiệp vào công việc nội bộ của nhau, bình đẳng, cùng có lợi.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q27" onclick="traloi[27]='C'">
+        c. Đưa quan hệ với các đối tác đi vào chiều sâu, thiết thực, hiệu quả. Nâng cao hiệu quả hoạt động đối ngoại đa phương, nhất là trong ASEAN, Liên hợp quốc.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q27" onclick="traloi[27]='D'">
+        d. Tăng cường hợp tác quốc tế và khu vực trong bảo đảm quốc phòng, an ninh, bảo vệ chủ quyền quốc gia. Kiên trì thúc đẩy giải quyết các tranh chấp trên biển bằng biện pháp quân sự trên cơ sở luật pháp quốc tế và nguyên tắc ứng xử của khu vực.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v5" name="q27" onclick="traloi[27]='E'">
+        e. Câu a, b, c đúng
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v6" name="q27" onclick="traloi[27]='F'">
+        f. Tất cả đều đúng
+    </p>
+
+    <div id="DapAn27"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            28. Cuộc bầu cử quốc hội khóa XIV và đại biểu hội đồng nhân dân các cấp nhiệm kỳ 2016 – 2021 có ý nghĩa chính trị như thế nào?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q28" onclick="traloi[28]='A'">
+        A. Là hình thức dân chủ trực tiếp, là phương thức thể hiện ý chí, nguyện vọng và quyền làm chủ của Nhân dân trong việc xây dựng Nhà nước nói chung và cơ quan đại diện - cơ quan quyền lực nhà nước từ trung ương đến địa phương ở nước ta nói riêng.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q28" onclick="traloi[28]='B'">
+        B. Là nơi để cử tri phát huy quyền và nghĩa vụ của công dân, lựa chọn bầu ra những người tiêu biểu, xứng đáng đại diện cho ý chí, nguyện vọng và quyền làm chủ của mình trong cơ quan quyền lực nhà nước ở trung ương và địa phương, đáp ứng yêu cầu xây dựng, hoàn thiện Nhà nước pháp quyền xã hội chủ nghĩa Việt Nam của Nhân dân, do Nhân dân, vì Nhân dân.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q28" onclick="traloi[28]='C'">
+        C. Cuộc bầu cử đại biểu Quốc hội khóa XIV và đại biểu Hội đồng nhân dân các cấp nhiệm kỳ 2016-2021 là sự kiện chính trị quan trọng của đất nước, diễn ra sau thành công của Đại hội đại biểu toàn quốc lần thứ XII của Đảng, gắn liền với công tác cán bộ, liên quan đến trách nhiệm của các cấp, các ngành.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q28" onclick="traloi[28]='D'">
+        D. Tất cả đều đúng.
+    </p>
+    <div id="DapAn28"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            29. Quốc hội Việt Nam có vị trí, vai trò như thế nào trong bộ máy nhà nước ta?
+
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q29" onclick="traloi[29]='A'">
+        A. Quốc hội là cơ quan đại biểu cao nhất của Nhân dân, cơ quan quyền lực nhà nước cao nhất của nước Cộng hòa xã hội chủ nghĩa Việt Nam.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q29" onclick="traloi[29]='B'">
+        B. Quốc hội là cơ quan đại biểu của Nhân dân, cơ quan quyền lực nhà nước cao nhất chỉ sau Chính phủ của nước Cộng hòa xã hội chủ nghĩa Việt Nam.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q29" onclick="traloi[29]='C'">
+        C. Quốc hội là cơ quan đại biểu của Nhân dân, cơ quan quyền lực nhà nước của nước Cộng hòa xã hội chủ nghĩa Việt Nam.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q29" onclick="traloi[29]='D'">
+        D. Quốc hội cùng với Chính phủ, và tổ chức Đảng là cơ quan đại biểu của Nhân dân, cơ quan quyền lực nhà nước của nước Cộng hòa xã hội chủ nghĩa Việt Nam.
+    </p>
+    <div id="DapAn29"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            30. Cơ quan quyền lực nhà nước cao nhất, cơ quan đại biểu cao nhất của Nhân dân là cơ quan nào?
+
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q30" onclick="traloi[30]='A'">
+        A. Ban Chấp hành Trung ương Đảng
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q30" onclick="traloi[30]='B'">
+        B. Hội đồng Nhân dân
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q30" onclick="traloi[30]='C'">
+        C. Chính phủ
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q30" onclick="traloi[30]='D'">
+        D. Quốc hội
+    </p>
+    <div id="DapAn30"></div>
+
+</div>
+<div class="question">
+    <h3>
+        <b>
+            31. Tại sao nói cơ quan quyền lực nhà nước cao nhất, cơ quan đại biểu cao nhất của Nhân dân là Quốc hội?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q31" onclick="traloi[31]='A'">
+        A. Tất cả quyền lực thuộc về nhân dân, Nhân dân là chủ thể của nhà nước
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q31" onclick="traloi[31]='B'">
+        B. Quốc hội do Dân bầu ra, là cơ quan nhà nước cao nhất thực hiện quyền lực của Nhân dân.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q31" onclick="traloi[31]='C'">
+        C. Quốc hội có quyền thể hiện ý chí, nguyện vọng của Nhân dân thành luật, thành các quy định chung mang tính bắt buộc phải tuân thủ đối với mọi tầng lớp dân cư xã hổi.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q31" onclick="traloi[31]='D'">
+        D. Tất cả đều đúng
+    </p>
+    <div id="DapAn31"></div>
+</div>
+
+<div class="question">
+    <h3>
+        <b>
+            32. Hiến pháp quy định Quốc hội những quyền gì?
+
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q32" onclick="traloi[32]='A'">
+        A. Lập hiến, lập pháp, quyết định những vấn đề quan trọng của đất nước và giám sát tối cao đối với hoạt động của Nhà nước.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q32" onclick="traloi[32]='B'">
+        B. Lập hiến, lập pháp, quyết định những vấn đề quan trọng của đất nước và giám sát tối cao đối với hoạt động của Đảng.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q32" onclick="traloi[32]='C'">
+        C. Lập hiến, lập pháp, quyết định những vấn đề quan trọng của Nhà nước và giám sát tối cao đối với hoạt động của Đảng.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q32" onclick="traloi[32]='D'">
+        D. Quyền lập hiến, lập pháp, quyết định những vấn đề quan trọng của đất nước và giám sát tối cao đối với hoạt động của Nhà nước, cũng như Đảng Cộng sản Việt Nam.
+    </p>
+    <div id="DapAn32"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            33. Quốc hội được cử tri cả nước bầu ra dựa trên bao nhiêu nguyên tắc?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q33" onclick="traloi[33]='A'">
+        a. 	3
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q33" onclick="traloi[33]='B'">
+        b. 	4
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q33" onclick="traloi[33]='C'">
+        c. 	5
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q33" onclick="traloi[33]='D'">
+        d. 	6
+    </p>
+    <div id="DapAn33"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            34. Quốc hội là sự thể hiện rõ nhất …………………, đại diện cho ………… của Nhân dân cả nước.
+
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q34" onclick="traloi[34]='A'">
+        A. Quyền làm chủ; tiếng nói
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q34" onclick="traloi[34]='B'">
+        B. Khối đại đoàn kết toàn dân tộc; quyền lợi
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q34" onclick="traloi[34]='C'">
+        C. Khối đại đoàn kết toàn dân tộc, trí tuệ
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q34" onclick="traloi[34]='D'">
+        D. Ý chí; nguyện vọng
+    </p>
+    <div id="DapAn34"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            35. Nguyên tắc hoạt động của Quốc hội nước ta như thế nào?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q35" onclick="traloi[35]='A'">
+        A. Quốc hội làm việc theo chế độ dân chủ, chủ tịch quốc hội quyết định những vấn đề quan trọng.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q35" onclick="traloi[35]='B'">
+        B. Quốc hội làm việc theo chế độ phân cấp, quyết định cuối cùng theo chủ tịch quốc hội.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q35" onclick="traloi[35]='C'">
+        C. Quốc hội làm việc theo chế độ hội nghị, và quyết định theo đa số.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q35" onclick="traloi[35]='D'">
+        D. Quốc hội làm việc theo chế độ dân chủ, và quyết định theo đa số.
+    </p>
+    <div id="DapAn35"></div>
+
+</div>
+<div class="question">
+    <h3>
+        <b>
+            36. Quyền và nghĩa vụ của công dân được quy định như thế nào trong Luật Quốc phòng 2005?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q36" onclick="traloi[36]='A'">
+        a.  Bảo vệ Tổ quốc là nghĩa vụ thiêng liêng và quyền cao quý của công dân.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q36" onclick="traloi[36]='B'">
+        b. Công dân phải trung thành với Tổ quốc, làm nghĩa vụ quân sự, được giáo dục về quốc phòng và huấn luyện quân sự; tham gia dân quân tự vệ, phòng thủ dân sự; chấp hành nghiêm chỉnh các biện pháp của Nhà nước và người có thẩm quyền khi đất nước có tình trạng chiến tranh hoặc tình trạng khẩn cấp về quốc phòng theo quy định của Luật này và các quy định khác của pháp luật có liên quan.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q36" onclick="traloi[36]='C'">
+        c. Công dân phục vụ trong lực lượng vũ trang nhân dân hoặc được huy động làm nhiệm vụ trong tình trạng chiến tranh, tình trạng khẩn cấp về quốc phòng nếu bị thương, tổn hại về sức khỏe, thiệt hại về tính mạng thì bản thân và gia đình được hưởng chế độ, chính sách theo quy định của pháp luật.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q36" onclick="traloi[36]='D'">
+        d. Tất cả các ý trên.
+    </p>
+    <div id="DapAn36"></div>
+</div>
+
+<div class="question">
+    <h3>
+        <b>
+            37. Đ/c cho biết Chỉ thị 333/CT-BTL chỉ đạo về vấn đề gì?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q37" onclick="traloi[37]='A'">
+        a.	Về những điều quân nhân không được làm trong lực lượng vũ trang quân khu.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q37" onclick="traloi[37]='B'">
+        b.	Về việc tăng cường công tác quản lý, duy trì kỷ luật, an toàn và hình thức xử lý vi phạm kỷ luật trong lực lượng vũ trang quân khu.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q37" onclick="traloi[37]='C'">
+        c.	Về việc tăng cường công tác quản lý, duy trì kỷ luật và an toàn trong lực lượng vũ trang quân khu.
+    </p>
+    <div id="DapAn37"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            38. Theo khoản 1, Điều 14, Quyết định 04/QĐHN-BQP, quân nhân nào vi phạm quy định bảo mật, phòng gian mà vô ý làm lộ bí mật công tác quân sự, làm mất tài liệu bí mật công tác quân sự thì bị xử phạt như thế nào?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q38" onclick="traloi[38]='A'">
+        a. Cảnh cáo đến phạt giam kỷ luật
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q38" onclick="traloi[38]='B'">
+        b. Cảnh cáo đến phạt giam kỷ luật, giáng chức, cách chức
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q38" onclick="traloi[38]='C'">
+        c. Cảnh cáo đến phạt giam kỷ luật, giáng chức, cách chức, giáng cấp bậc quân hàm.
+    </p>
+    <div id="DapAn38"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            39. Theo Điều 3, Nghị định số 46/2016/NĐ-CP, quy định về xử phạt các hành vi vi phạm quy định về điều kiện của người điều khiển xe cơ giới, giải thích từ ngữ “xe máy điện” là như thế nào?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q39" onclick="traloi[39]='A'">
+        a. Là xe gắn máy được dẫn động bằng động cơ điện có công suất lớn nhất không lớn hơn 4 kW, có vận tốc thiết kế lớn nhất không lớn hơn 50 km/h
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q39" onclick="traloi[39]='B'">
+        b. Là xe gắn máy được dẫn động bằng động cơ điện có công suất lớn nhất không lớn hơn 4 kW, có vận tốc thiết kế lớn nhất không nhỏ hơn 50 km/h
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q39" onclick="traloi[39]='C'">
+        c. Là xe gắn máy được dẫn động bằng động cơ điện có công suất lớn nhất lớn hơn 4 kW, có vận tốc thiết kế lớn nhất không nhỏ hơn 50 km/h.
+    </p>
+    <div id="DapAn39"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            40. Đ/c cho biết Luật BHXH năm 2014 được Quốc hội thông qua vào ngày 20/11/2014 có bao nhiêu chương, điều và có hiệu lực từ thời gian nào?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q40" onclick="traloi[40]='A'">
+        a.	X chương, 125 điều, có hiệu lực từ ngày 1/1/2015
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q40" onclick="traloi[40]='B'">
+        b.	IX chương, 125 điều, có hiệu lực từ ngày 1/1/2016
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q40" onclick="traloi[40]='C'">
+        c.	XI chương, 125 điều, có hiệu lực từ ngày 1/1/2016
+    </p>
+    <div id="DapAn40"></div>
+
+</div>
+<div class="question">
+    <h3>
+        <b>
+            41. Việt Nam là một quốc gia ven biển có bờ biển dài bao nhiêu?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q41" onclick="traloi[41]='A'">
+        a. 	Dưới 3.200 km
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q41" onclick="traloi[41]='B'">
+        b.	Trên 3.260 km
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q41" onclick="traloi[41]='C'">
+        c. 	Dưới 4.260 km
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q41" onclick="traloi[41]='D'">
+        d. 	Trên 4.500 km
+    </p>
+    <div id="DapAn41"></div>
+</div>
+
+<div class="question">
+    <h3>
+        <b>
+            42. Việt Nam có khoảng bao nhiêu đảo lớn nhỏ?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q42" onclick="traloi[42]='A'">
+        a.	Gần 2.000 đảo
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q42" onclick="traloi[42]='B'">
+        b.	Gần 3.000 đảo
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q42" onclick="traloi[42]='C'">
+        c.	Gần 4.000 đảo
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q42" onclick="traloi[42]='D'">
+        d.	Gần 5.000 đảo
+    </p>
+
+    <div id="DapAn42"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            43. Đ/c hãy cho biết nửa đầu thế kỷ XVII, chúa Nguyễn tổ chức 2 đội quân nào ra Hoàng Sa và Trường Sa?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q43" onclick="traloi[43]='A'">
+        a. 	“Hoàng Sa” – “Cát Vàng”
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q43" onclick="traloi[43]='B'">
+        b. 	“Cát Vàng” - “ Bắc Hải”
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q43" onclick="traloi[43]='C'">
+        c. 	“Cảnh Dương” – “Bình Sơn”
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q43" onclick="traloi[43]='D'">
+        d. 	“Hoàng Sa” – “Bắc Hải”
+    </p>
+    <div id="DapAn43"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            44. Đ/c hãy cho biết hiện nay những quốc gia và vùng lãnh thổ tuyên bố chủ quyền toàn bộ hoặc một phần đối với hai quần đảo Hoàng Sa và Trường Sa?
+
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q44" onclick="traloi[44]='A'">
+        a. 	Việt Nam, Trung Quốc, Philippin, Malaysia, Bruney, Lào, Đài Loan.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q44" onclick="traloi[44]='B'">
+        b. 	Việt Nam, Trung Quốc, Philippin, Malaysia, Bruney, Camphuchia, Đài Loan.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q44" onclick="traloi[44]='C'">
+        c. 	Việt Nam, Trung Quốc, Philippin, Malaysia, Bruney, Thái Lan, Đài Loan.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q44" onclick="traloi[44]='D'">
+        d. 	Việt Nam, Trung Quốc, Philippin, Malaysia, Bruney và Đài Loan.
+    </p>
+
+    <div id="DapAn44"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            45. Đ/c hãy cho biết Việt Nam hiện đã xác lập chủ quyền bao nhiêu đảo nổi và đảo chìm ở quần đảo Trường Sa?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q45" onclick="traloi[45]='A'">
+        a.	21 đảo
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q45" onclick="traloi[45]='B'">
+        b.	25 đảo
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q45" onclick="traloi[45]='C'">
+        c.	30 đảo
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q45" onclick="traloi[45]='D'">
+        d.	40 đảo
+    </p>
+
+    <div id="DapAn45"></div>
+
+</div>
+<div class="question">
+    <h3>
+        <b>
+            46. Việc giải quyết tranh chấp chủ quyền lãnh thổ dựa trên nguyên tắc nào?
+
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q46" onclick="traloi[46]='A'">
+        a. 	Nguyên tắc xác lập chủ quyền bằng chiếm hữu thật sự
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q46" onclick="traloi[46]='B'">
+        b. 	Nguyên tắc xác lập chủ quyền bằng chiếm hữu thật sự và thực hiện quyền lực nhà nước một cách thật sự, liên tục.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q46" onclick="traloi[46]='C'">
+        c. 	Nguyên tắc xác lập chủ quyền bằng chiếm hữu thật sự và thực hiện quyền lực nhà nước một cách thật sự, liên tục và hòa bình.
+    </p>
+    <div id="DapAn46"></div>
+</div>
+
+<div class="question">
+    <h3>
+        <b>
+            47. Cụm từ viết tắt DOC là gì?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q47" onclick="traloi[47]='A'">
+        a.	DOC là tên viết tắt tiếng Anh của Tuyên bố về cách ứng xử của các bên trên Biển Đông.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q47" onclick="traloi[47]='B'">
+        b.	DOC là tên viết tắt tiếng Anh của quyền tài phán trên Biển Đông
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q47" onclick="traloi[47]='C'">
+        c.	DOC là tên viết tắt của tiếng Anh của Bộ Quy tắc ứng xử ở Biển Đông.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q47" onclick="traloi[47]='D'">
+        d.	Tất cả đều sai.
+    </p>
+    <div id="DapAn47"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            48. Đ/c hãy cho biết Luật biển Việt Nam có bao nhiêu chương, điều luật?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q48" onclick="traloi[48]='A'">
+        a.	5 chương, 50 điều.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q48" onclick="traloi[48]='B'">
+        b.	7 chương, 55 điều
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q48" onclick="traloi[48]='C'">
+        c.	9 chương 58 điều
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q48" onclick="traloi[48]='D'">
+        d.	11 chương 60 điều
+    </p>
+
+    <div id="DapAn48"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            49. Đ/c hãy cho biết biển nước ta gồm mấy phần?
+
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q49" onclick="traloi[49]='A'">
+        a.	2 phần (Nội thủy; Lãnh hải )
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q49" onclick="traloi[49]='B'">
+        b.	3 phần (Nội thủy; Lãnh hải; Vùng tiếp giáp lãnh hải)
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q49" onclick="traloi[49]='C'">
+        c.	4 phần (Nội thủy; Lãnh hải; Vùng tiếp giáp lãnh hải; Vùng đặc quyền kinh tế)
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q49" onclick="traloi[49]='D'">
+        d.	5 phần (Nội thủy; Lãnh hải; Vùng tiếp giáp lãnh hải; Vùng đặc quyền kinh tế; Thềm lục địa)
+    </p>
+    <div id="DapAn49"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            50. Phương châm giải quyết tranh chấp trên biển Đông của nước ta là gì?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q50" onclick="traloi[50]='A'">
+        a. 	9 tránh, 3 không, 4k, 4 giữ vững
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q50" onclick="traloi[50]='B'">
+        b. 	9 tránh, 3 không, 8k, 4 giữ vững
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q50" onclick="traloi[50]='C'">
+        c. 	4 tránh, 3 không, 8k, 4 giữ vững
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q50" onclick="traloi[50]='D'">
+        d. 	4 tránh, 3 không, 9k, 4 giữ vững
+    </p>
+    <div id="DapAn50"></div>
+
+</div>
+<div class="question">
+    <h3>
+        <b>
+            51. Liên quan đến tranh chấp ở biển Đông, theo Trung Quốc tuyên bố đến nay đã có gần 60 nước ủng hộ lập trường của Trung Quốc ở biển Đông, trên thực tế thì:
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q51" onclick="traloi[51]='A'">
+        a.	Không có nước nào ủng hộ lập trường của Trung Quốc
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q51" onclick="traloi[51]='B'">
+        b.	Chỉ có 8 quốc gia ủng hộ lập trường của Trung Quốc
+        <br />
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q51" onclick="traloi[51]='C'">
+        c.	Chỉ có 18 quốc gia ủng hộ lập trường của Trung Quốc
+    </p>
+    <div id="DapAn51"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            52. Những động thái của Trung Quốc sau phán quyết của tòa PCA là như thế nào?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q52" onclick="traloi[52]='A'">
+        a.	Trung Quốc không ngừng phủ nhận thẩm quyền của Tòa, đẩy mạnh cuộc chiến ngoại giao, mềm mỏng với Philippines và kêu gọi nước này đàm phán song phương.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q52" onclick="traloi[52]='B'">
+        b.	Trung Quốc không ngừng phủ nhận thẩm quyền của Tòa, đẩy mạnh cuộc chiến ngoại giao, tiếp tục cứng rắn với Philippines và kêu gọi nước này đàm phán song phương.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q52" onclick="traloi[52]='C'">
+        c.	Trung Quốc không ngừng phủ nhận thẩm quyền của Tòa, đẩy mạnh cuộc chiến ngoại giao, mềm mỏng với Philippines và kêu gọi nước này đàm phán đa phương.
+    </p>
+    <div id="DapAn52"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            53. Nguyên tắc quản lý và bảo vệ biển được ghi trong Điều 4 Luật Biển Việt Nam như thế nào?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q53" onclick="traloi[53]='A'">
+        A. Quản lý và bảo vệ biển được thực hiện thống nhất theo quy định của pháp luật Việt Nam, phù hợp với Hiến chương Liên hợp quốc và các điều ước quốc tế khác mà nước Cộng hòa xã hội chủ nghĩa Việt Nam là thành viên.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q53" onclick="traloi[53]='B'">
+        B. Các cơ quan, tổ chức và mọi công dân Việt Nam có trách nhiệm bảo vệ chủ quyền, quyền chủ quyền, quyền tài phán quốc gia trên các vùng biển đảo và quần đảo, bảo vệ tài nguyên và môi trường biển.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q53" onclick="traloi[53]='C'">
+        C. Nhà nước giải quyết các tranh chấp liên quan đến biển đảo với các nước khác bằng các biện pháp hòa bình, phù hợp với Công ước của Liên hợp quốc về Luật biển năm 1982, pháp luật và thực tiễn quốc tế.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q53" onclick="traloi[53]='D'">
+        D. Cả 3 phương án trên.
+    </p>
+    <div id="DapAn53"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            54. Đâu là một trong các giải pháp cơ bản bảo vệ chủ quyền biển, đảo nước ta trong tình hình hiện nay?
+
+            <br />
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q54" onclick="traloi[54]='A'">
+        a.	Kiên trì giải quyết tranh chấp biển, đảo bằng biện pháp hòa bình, trên cơ sở luật pháp quốc tế.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q54" onclick="traloi[54]='B'">
+        b.	Kiên trì giải quyết tranh chấp biển, đảo bằng biện pháp hòa bình, trên cơ sở luật pháp quốc tế, đồng thời kết hợp chặt chẽ các hình thức, biện pháp chính trị, ngoại giao, pháp lý, kinh tế, quốc phòng trong bảo vệ chủ quyền biển, đảo.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q54" onclick="traloi[54]='C'">
+        c.	Kiên trì giải quyết tranh chấp biển, đảo bằng biện pháp quân sự, trên cơ sở luật pháp quốc tế, đồng thời kết hợp chặt chẽ các hình thức, biện pháp chính trị, ngoại giao, pháp lý, kinh tế, quốc phòng trong bảo vệ chủ quyền biển, đảo.
+    </p>
+    <div id="DapAn54"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            55. Đ/c hãy cho biết Việt Nam – Campuchia đã ký kết một hiệp định xác lập một vùng nước lịch sử chung vào ngày tháng năm nào?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q55" onclick="traloi[55]='A'">
+        a. Ngày 5/5/1982
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q55" onclick="traloi[55]='B'">
+        b. Ngày 6/6/1982
+        <br />
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q55" onclick="traloi[55]='C'">
+        c. Ngày 7/7/1982
+        <br />
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q55" onclick="traloi[55]='D'">
+        d. Ngày 8/8/1982
+        <br />
+    </p>
+    <div id="DapAn55"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            56. Vùng Đất Nam Bộ Việt Nam thuộc hạ lưu những con sông nào?
+
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q56" onclick="traloi[56]='A'">
+        A. Sông Cửu Long, sông Vàm Cỏ, sông Đồng Nai, tiếp giáp biển Đông
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q56" onclick="traloi[56]='B'">
+        B. Sông Hồng, sông Bé, sông Cửu Long, tiếp giáp biển Đông
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q56" onclick="traloi[56]='C'">
+        C. Sông Tiền, sông Hậu, Sông Cái
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q56" onclick="traloi[56]='D'">
+        D. Sông Lớn, Sông Cái, Sông Mê Kông
+    </p>
+
+    <div id="DapAn56"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            57. Trong những năm gần đây, các thế lực thù địch lợi dụng vấn đề gì để tuyên truyền, kích động ý thức dân tộc hẹp hòi, đòi “Độc lập, tự trị”, hòng tách “Vùng đất Nam bộ” ra khỏi nước ta?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q57" onclick="traloi[57]='A'">
+        A. Lịch sử vùng đất Nam Bộ chưa được làm rõ
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q57" onclick="traloi[57]='B'">
+        B. Vùng đất Nam Bộ trước 1975 là một quốc gia độc lập, có chủ quyền
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q57" onclick="traloi[57]='C'">
+        C. Vùng đất Nam Bộ là của người Chăm
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q57" onclick="traloi[57]='D'">
+        D. A và B đúng
+    </p>
+    <div id="DapAn57"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            58. KKK (viết tắt của Hiệp hội Khmer Kampuchia-Krom) sử dụng vũ khí lịch sử để chống phá Việt Nam dưới sự giật dây của quốc gia nào?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q58" onclick="traloi[58]='A'">
+        A. Trung Quốc
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q58" onclick="traloi[58]='B'">
+        B. Mỹ
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q58" onclick="traloi[58]='C'">
+        C. Cả A, B đúng
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q58" onclick="traloi[58]='D'">
+        D. Của liên minh các nước tư bản trên thế giới
+    </p>
+    <div id="DapAn58"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            59. Lịch sử cho thấy quốc gia đầu tiên trên vùng đất Nam Bộ là ai?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q59" onclick="traloi[59]='A'">
+        A. Phù Nam
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q59" onclick="traloi[59]='B'">
+        B. Chân Lạp
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q59" onclick="traloi[59]='C'">
+        C. Văn Lang
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q59" onclick="traloi[59]='D'">
+        D. Tất cả đều sai
+    </p>
+    <div id="DapAn59"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            60. Từ thế IX đến cuối thế kỷ XI, Chân Lạp trở thành một quốc gia cường thịnh, tạo nên nền văn minh (1)……. rực rỡ, đồng thời mở rộng lãnh thổ lên tận Nam Lào và trùm lên cả khu vực sông Chao Phaya. Trong khi đó qua các di tích khảo cổ học, dấu tích của văn hóa Khmer và văn minh (1)………. ở vùng Đồng Nai – Gia định (2)…………… ?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q60" onclick="traloi[60]='A'">
+        A. (1) Angkor; (2) Hết sức rực rỡ
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q60" onclick="traloi[60]='B'">
+        B. (1) Angkor; (2) Hết sức mờ nhạt
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q60" onclick="traloi[60]='C'">
+        C. (1) Chùa tháp; (2) Hết sức rực rỡ
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q60" onclick="traloi[60]='D'">
+        D. (1) Chùa tháp; (2) Hết sức mờ nhạt
+    </p>
+
+    <div id="DapAn60"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            61. Năm 1968, chúa Nguyễn Phúc Chu đã cử ai vào kinh lý vùng đất Nam Bộ và cho lập ra ở đây một đơn vị hành chính lớn là phủ Gia Định?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q61" onclick="traloi[61]='A'">
+        A. Nguyễn Hữu Cảnh
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q61" onclick="traloi[61]='B'">
+        B. Nguyễn Cư Trinh
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q61" onclick="traloi[61]='C'">
+        C. Mạc Thiên Tứ
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q61" onclick="traloi[61]='D'">
+        D. Nguyễn Hữu Kính
+    </p>
+
+    <div id="DapAn61"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            62. Nhà Nguyễn đã cho đào ở vùng đất Nam Bộ những con kênh nào?
+
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q62" onclick="traloi[62]='A'">
+        A. Kênh Thoại Hà
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q62" onclick="traloi[62]='B'">
+        B. Kênh Vĩnh Tế
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q62" onclick="traloi[62]='C'">
+        C. Kênh Vĩnh An
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q62" onclick="traloi[62]='D'">
+        D. Cả A, B và C
+    </p>
+
+    <div id="DapAn62"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            63. Cơ sở pháp lý quan trọng nào triều Nguyễn đã ký với thực dân Pháp, khẳng định chủ quyền Việt Nam đối với vùng đất Nam Bộ?
+
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q63" onclick="traloi[63]='A'">
+        A. Ký các hiệp định nhượng cho Pháp 3 tỉnh miền Đông năm 1862
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q63" onclick="traloi[63]='B'">
+        B. Ký các hiệp định nhượng cho Pháp 3 tỉnh miền Tây năm 1874
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q63" onclick="traloi[63]='C'">
+        C. A và B sai
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q63" onclick="traloi[63]='D'">
+        D. A và B đúng
+    </p>
+    <div id="DapAn63"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            64. Năm…………. Pháp và Campuchia đã ký một loạt các văn bản pháp lý về hoạch định, phân giới cắm mốc biên giới giữa Nam Kỳ và Campuchia. Tất cả các văn bản pháp lý này đều khẳng định vùng đất Nam Kỳ hoàn toàn thuộc về Việt Nam.
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q64" onclick="traloi[64]='A'">
+        A. 1874
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q64" onclick="traloi[64]='B'">
+        B. 1889
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q64" onclick="traloi[64]='C'">
+        C. 1949
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q64" onclick="traloi[64]='D'">
+        D. 1954
+    </p>
+
+    <div id="DapAn64"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            65. Trước những thắng lợi liên tiếp của nhân dân Việt Nam trong công cuộc kháng chiến chống Pháp, ngày 04/6/1949 Tổng thống Pháp Vincent Auriol ký kết …………….. trả lại Nam Kỳ cho chính quyền Bảo Đại.
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q65" onclick="traloi[65]='A'">
+        A. Bộ Luật số 49-733
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q65" onclick="traloi[65]='B'">
+        B. Geneve
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q65" onclick="traloi[65]='C'">
+        C. Hiệp định Paris
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q65" onclick="traloi[65]='D'">
+        D. Tất cả đều sai
+    </p>
+
+    <div id="DapAn65"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            66. Hiệp ước Chính phủ nước Cộng hòa xã hội chủ nghĩa Việt Nam và Chính phủ Vương quốc Campuhia đã ký từ sau ngày hòa bình thống nhất là?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q66" onclick="traloi[66]='A'">
+        A. Hiệp ước hòa bình, hữu nghị và hợp tác giữa hai nước, ký ngày 18/2/1979
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q66" onclick="traloi[66]='B'">
+        B. Hiệp ước về biên giới trên đất liền, ký ngày 20/7/1983
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q66" onclick="traloi[66]='C'">
+        C. Hiệp ước hoạch định biên giới quốc gia giữa hai nước, ký ngày 27/12/1985
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q66" onclick="traloi[66]='D'">
+        D.  Tất cả đều đúng.
+    </p>
+
+    <div id="DapAn66"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            67. Có mấy loại biên giới quốc gia?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q67" onclick="traloi[67]='A'">
+        a. 1
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q67" onclick="traloi[67]='B'">
+        b. 2
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q67" onclick="traloi[67]='C'">
+        c. 3
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q67" onclick="traloi[67]='D'">
+        d.	4
+    </p>
+
+    <div id="DapAn67"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            68. “Biên giới quốc gia nước Cộng hòa xã hội chủ nghĩa Việt Nam là đường và mặt thẳng đứng theo đường đó để xác định giới hạn lãnh thổ đất liền, các đảo, quần đảo trong đó có quần đảo Hoàng Sa và quần đảo Trường Sa, vùng biển, lòng đất, vùng trời của nước Cộng hòa xã hội chủ nghĩa Việt Nam”.  <br />
+            Đây là nội dung trong văn bản nào?
+
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q68" onclick="traloi[68]='A'">
+        A. Tuyên bố năm 1977 của Chính phủ về lãnh hải, vùng biển giáp lãnh hải, vùng đặc quyền kinh tế và thềm lục địa Việt Nam.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q68" onclick="traloi[68]='B'">
+        B. Luật Biên giới quốc gia năm 2003 (Điều 1).
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q68" onclick="traloi[68]='C'">
+        C. Tuyên bố năm 1982 về đường cơ sở để tính chiều rộng lãnh hải.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q68" onclick="traloi[68]='D'">
+        D. Công ước của Liên Hợp quốc về Luật Biển năm 1982 (UNCLOS).
+    </p>
+
+    <div id="DapAn68"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            69. Lãnh thổ biên giới quốc gia bao gồm?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q69" onclick="traloi[69]='A'">
+        A. Lãnh thổ đất liền, vùng biển, vùng trời
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q69" onclick="traloi[69]='B'">
+        B. Các đảo, quần đảo, trong đó có quần đảo Hoàng Sa, Trường Sa
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q69" onclick="traloi[69]='C'">
+        C. Lòng đất, đất liền, vùng biển
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q69" onclick="traloi[69]='D'">
+        D. Tất cả đều đúng
+    </p>
+
+    <div id="DapAn69"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            70. Nguyên tắc chung về hoạch định biên giới quốc gia trên đất liền được định theo?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q70" onclick="traloi[70]='A'">
+        A. Các điểm (điểm có tọa độ, điểm cao)
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q70" onclick="traloi[70]='B'">
+        B. Đường (đường thẳng, đường núi sông, đường cái, đường mòn
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q70" onclick="traloi[70]='C'">
+        C. Vật chuẩn (cù lao, bãi bồi)
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q70" onclick="traloi[70]='D'">
+        D. A, B, C đúng
+    </p>
+    <div id="DapAn70"></div>
+</div>
+
+<div class="question">
+    <h3>
+        <b>
+            71. Biên giới quốc gia trên biển được định theo?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q71" onclick="traloi[71]='A'">
+        A. Các tọa độ trên hải đồ do Việt Nam xác lập.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q71" onclick="traloi[71]='B'">
+        B. Công ước của Liên Hiệp quốc về Luật biển năm 1982.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q71" onclick="traloi[71]='C'">
+        C. Các điều ước quốc tế giữa Cộng hòa xã hội chủ nghĩa Việt Nam và các quốc gia hữu quan.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q71" onclick="traloi[71]='D'">
+        D. B và C đúng
+    </p>
+
+    <div id="DapAn71"></div>
+</div>
+
+<div class="question">
+    <h3>
+        <b>
+            72. Tình hình việc phân giới cắm mốc giữa Việt Nam – Trung Quốc hiện nay như thế nào?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q72" onclick="traloi[72]='A'">
+        A. Đã hoàn tất
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q72" onclick="traloi[72]='B'">
+        B. Còn nhiều đoạn biên giới chưa được xác định rõ và chưa cắm được mốc giới.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q72" onclick="traloi[72]='C'">
+        C. Đang trong lộ trình hoàn tất vào năm 2020
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q72" onclick="traloi[72]='D'">
+        D. Biên giới đất liền Việt Nam – Trung quốc đã hình thành, tồn tại từ lâu trong lịch sử. Vì vậy, việc phân giới cắm mốc giữa hai quốc gia là không cần thiết.
+    </p>
+
+    <div id="DapAn72"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            73. Sau khi Việt nam và Trung Quốc giành được độc lập, hai bên thỏa thuận tôn trọng đường biên giới do lịch sử để lại trên cơ sở nào?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q73" onclick="traloi[73]='A'">
+        A. Công ước về biên giới mà Pháp và nhà Thanh đã ký kết năm 1887
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q73" onclick="traloi[73]='B'">
+        B. Công ước về biên giới mà Pháp và nhà Thanh đã ký kết năm 1895
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q73" onclick="traloi[73]='C'">
+        C. Hiệp định tạm thời năm 1991
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q73" onclick="traloi[73]='D'">
+        D. A và B đúng
+    </p>
+    <div id="DapAn73"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            74. Biên giới Việt – Lào hình thành từ rất sớm, vào thế kỷ nào?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q74" onclick="traloi[74]='A'">
+        A. XI
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q74" onclick="traloi[74]='B'">
+        B. XII
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q74" onclick="traloi[74]='C'">
+        C. XIII
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q74" onclick="traloi[74]='D'">
+        D. XIV
+    </p>
+
+    <div id="DapAn74"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            75. Đường biên giới trên đất liền Việt Nam – Campuchia chỉ được thể hiện lên bản đồ vào thời gian nào?
+
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q75" onclick="traloi[75]='A'">
+        A. Sau khi thực dân Pháp chiếm xong các tỉnh Nam Bộ của Việt Nam và đặt xong chế độ bảo hộ ở Campuchia
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q75" onclick="traloi[75]='B'">
+        B. Vào cuối thế kỷ XVII, khi các chúa Nguyễn đã xác lập được quyền lực của mình tại vùng trung tâm Nam Bộ
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q75" onclick="traloi[75]='C'">
+        C. Sau khi Việt Nam giải phóng miền Nam, thống nhất đất nước 1975
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q75" onclick="traloi[75]='D'">
+        D. Chỉ sau khi Việt Nam và Campuchia ký Hiệp ước hoạch định biên giới năm 1985
+    </p>
+    <div id="DapAn75"></div>
+</div>
+
+<div class="question">
+    <h3>
+        <b>
+            76. Bản đồ làm căn cứ để tiến hành phân giới cắm mốc là bản đồ nào?
+
+
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q76" onclick="traloi[76]='A'">
+        A. Bản đồ Bonne tỷ lệ 1/100.000 do Sở Địa dư Đông Dương xuất bản từ năm 1929 – 1954
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q76" onclick="traloi[76]='B'">
+        B. Bản đồ UTM tỷ lệ 1/50.000
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q76" onclick="traloi[76]='C'">
+        C. 26 mảnh đồ dọc tuyến biên giới của Campuchia
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q76" onclick="traloi[76]='D'">
+        D. A và B đúng
+    </p>
+    <div id="DapAn76"></div>
+</div>
+
+<div class="question">
+    <h3>
+        <b>
+            77. Diễn tiến tình hình trên biên giới Việt Nam – Campuchia hiện nay ra sao?
+
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q77" onclick="traloi[77]='A'">
+        A. Tại khu vực mốc 202, 203 xảy ra tình trạng biểu tình, gây hấn do một số phần tử quá khích Campuchia gây nên; đã có xảy ra xô xát giữa hai bên.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q77" onclick="traloi[77]='B'">
+        B. Đảng CNRP kích động chống phá phân giới cắm mốc làm phức tạp tình hình.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q77" onclick="traloi[77]='C'">
+        C. Đảng đối lập CNRP do Chủ tihj Sam-Rên-Xy cầm đầu tổ chức chiến dịch nhằm nói xấu Việt Nam xâm lấn Campuchia; cáo buộc chính phủ cầm quyền CPP bán đất cho Việt Nam.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q77" onclick="traloi[77]='D'">
+        D. A, B và C đúng
+    </p>
+
+    <div id="DapAn77"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            78. Phản ứng của chính phủ Campuchia trước tình hình biên giới Việt Nam – Campuchia hiện nay như thế nào?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q78" onclick="traloi[78]='A'">
+        A. Không có phản ứng
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q78" onclick="traloi[78]='B'">
+        B. Ủng hộ đảng CNRP, làm căng thẳng thêm tình hình giữa hai quốc gia
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q78" onclick="traloi[78]='C'">
+        C. Phản đối hành động của CNRP; sử dụng các biện pháp hòa bình để phân giới cắm mốc biên giới Việt Nam – Campuchia
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q78" onclick="traloi[78]='D'">
+        D. Tất cả đều sai
+    </p>
+
+    <div id="DapAn78"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            79. Thái độ của Việt Nam về diễn biến phức tạp trên biên giới Việt Nam – Campuchia như thế nào?
+
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q79" onclick="traloi[79]='A'">
+        A. Mềm dẻo tuyên truyền, kết hợp chặt chẽ với lực lượng chức năng nước Bạn
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q79" onclick="traloi[79]='B'">
+        B. Kiên quyết bảo vệ biên giới quốc gia theo đúng luật Pháp Việt Nam và cam kết với Bạn cũng như luật pháp quốc tế
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q79" onclick="traloi[79]='C'">
+        C. Sử dụng lực lượng vũ trang trấn áp mạnh mẽ với bất kì động thái gây hấn nào từ phía Campuchia
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q79" onclick="traloi[79]='D'">
+        D. A và B đúng
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v5" name="q79" onclick="traloi[79]='E'">
+        E. Tất cả đều đúng
+    </p>
+
+    <div id="DapAn79"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            80. Từ năm 2014, Trung Quốc đã mở rộng diện tích các đảo họ đang chiếm đóng trái phép ở Trường Sa với quy mô rất lớn lên khoảng…..?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q80" onclick="traloi[80]='A'">
+        A. 600 lần
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q80" onclick="traloi[80]='B'">
+        B. 700 lần
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q80" onclick="traloi[80]='C'">
+        C. 800 lần
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q80" onclick="traloi[80]='D'">
+        D. 900 lần
+    </p>
+
+    <div id="DapAn80"></div>
+
+</div>
+<div class="question">
+    <h3>
+        <b>
+            81. Trung Quốc đã áp dụng biện pháp chiến lược, sách lược gì để Độc chiếm biển Đông?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q81" onclick="traloi[81]='A'">
+        A. Khẳng định chủ quyền khu vực Biển Đông trong “đường lưỡi bò”
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q81" onclick="traloi[81]='B'">
+        B. Tăng cường quân sự trên biển
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q81" onclick="traloi[81]='C'">
+        C. Tiến hành phân hóa giữa các nước ASEAN, trung lập các nước lớn có lợi ích liên quan đến biển Đông như Mỹ, Nga, Nhật, Ấn Độ,.., chống lại quốc tế hóa biển Đông.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q81" onclick="traloi[81]='D'">
+        D. Tất cả đều đúng
+    </p>
+
+    <div id="DapAn81"></div>
+</div>
+
+<div class="question">
+    <h3>
+        <b>
+            82. Chiến lược “Diễn biến hòa bình” là chiến lược tổng hợp của chủ nghĩa đế quốc và các thế lực thù địch; dùng biện pháp ………. là chủ yếu nhằm chống phá, tiến tới lật đổ chế độ chính trị ở các nước xã hội chủ nghĩa.
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q82" onclick="traloi[82]='A'">
+        A. Phi vũ trang
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q82" onclick="traloi[82]='B'">
+        B. Vũ trang
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q82" onclick="traloi[82]='C'">
+        C. Kinh tế
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q82" onclick="traloi[82]='D'">
+        D. Văn hóa
+    </p>
+    <div id="DapAn82"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            83. Chiến lược "diễn biến hòa bình" xuất hiện vào thời gian nào ?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q83" onclick="traloi[83]='A'">
+        A. Năm 40 thế kỷ XX
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q83" onclick="traloi[83]='B'">
+        B. Năm 45 thế kỷ XX
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q83" onclick="traloi[83]='C'">
+        C. Năm 75 thế kỷ XX
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q83" onclick="traloi[83]='D'">
+        D. Năm 86 thế kỷ XX
+    </p>
+
+    <div id="DapAn83"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            84. Mục đích của “Diễn biến hòa bình” là gì?
+
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q84" onclick="traloi[84]='A'">
+        A. Xóa bỏ chế độ xã hội chủ nghĩa trên phạm vi toàn cầu
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q84" onclick="traloi[84]='B'">
+        B. Chuyển hóa chủ nghĩa xã hội sang chủ nghĩa tư bản
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q84" onclick="traloi[84]='C'">
+        C. Xóa bỏ chủ nghĩa Mác – Lênin
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q84" onclick="traloi[84]='D'">
+        D. Tất cả đều đúng
+    </p>
+    <div id="DapAn84"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            85. Để đạt được mục đích của chiến lược “Diễn biến hòa bình” là xóa bỏ chủ nghĩa xã hội trên phạm vi toàn cầu, các thế lục thù địch đặt ra bao nhiêu mục tiêu cơ bản?
+
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q85" onclick="traloi[85]='A'">
+        A. 5
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q85" onclick="traloi[85]='B'">
+        B. 6
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q85" onclick="traloi[85]='C'">
+        C. 7
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q85" onclick="traloi[85]='D'">
+        D. 8
+    </p>
+
+    <div id="DapAn85"></div>
+
+</div>
+<div class="question">
+    <h3>
+        <b>
+            86. Đa nguyên chính trị, đa đảng đối lập là gì?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q86" onclick="traloi[86]='A'">
+        A. Nhiều lực lượng chính trị, đảng phái trong một quốc gia
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q86" onclick="traloi[86]='B'">
+        B. Một lực lượng chính trị, nhiều đảng phái trong một quốc gia
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q86" onclick="traloi[86]='C'">
+        C. Nhiều lực lượng chính trị, một đảng phái trong một quốc giá
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q86" onclick="traloi[86]='D'">
+        D. Tất cả đều sai.
+    </p>
+
+    <div id="DapAn86"></div>
+</div>
+
+<div class="question">
+    <h3>
+        <b>
+            87. Với quần chúng nhân dân, các thế lực thù địch kích động những vấn đề nào thực hiện chiến lược “diễn biến hòa bình” trên phạm vi toàn cầu?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q87" onclick="traloi[87]='A'">
+        A. Kinh tế, Văn hóa, Nhân quyền, Dân tộc
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q87" onclick="traloi[87]='B'">
+        B. Dân chủ, Dân tộc, Nhân quyền, Kinh tế
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q87" onclick="traloi[87]='C'">
+        C. Dân chủ, Nhân quyền, Dân Tộc, Tôn giáo
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q87" onclick="traloi[87]='D'">
+        D. Nhân quyền, Văn hóa, Dân Tộc, Kinh tế
+    </p>
+
+    <div id="DapAn87"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            88. Đối với công an và và quân đội ở nước xã hội chủ nghĩa, các thế lực thù địch sử dụng chiêu bài gì để “vô hiệu hóa” hai LLVT trên?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q88" onclick="traloi[88]='A'">
+        A. Phi chính trị hóa
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q88" onclick="traloi[88]='B'">
+        B. Tư bản hóa
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q88" onclick="traloi[88]='C'">
+        C. Tự diễn biến
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q88" onclick="traloi[88]='D'">
+        D. Tự chuyển hóa
+    </p>
+
+    <div id="DapAn88"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            89. Thông qua các hoạt động đầu tư, liên doanh, liên kết, hợp tác kinh tế để đẩy mạnh phát triển khu vực kinh tế tư nhân, làm biến đổi dần cơ sở kinh tế - xã hội của chủ nghĩa xã hội ở nước ta. Đây là một phần trong thủ đoạn chống phá trên lĩnh vực nào?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q89" onclick="traloi[89]='A'">
+        A. Kinh tế
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q89" onclick="traloi[89]='B'">
+        B. Xã hội
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q89" onclick="traloi[89]='C'">
+        C. Chính trị
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q89" onclick="traloi[89]='D'">
+        D. Tư tưởng – Văn hóa
+    </p>
+
+    <div id="DapAn89"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            90. Xóa bỏ vai trò lãnh đạo của Đảng Cộng sản Việt Nam. Thực hiện “đa nguyên chính trị”, “đa đảng đối lập”, tự do, dân chủ tư sản. Đây là một phần trong thủ đoạn chống phá trên lĩnh vực nào?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q90" onclick="traloi[90]='A'">
+        A. Kinh tế
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q90" onclick="traloi[90]='B'">
+        B. Xã hội
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q90" onclick="traloi[90]='C'">
+        C. Chính trị
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q90" onclick="traloi[90]='D'">
+        D. Tư tưởng – văn hóa
+    </p>
+    <div id="DapAn90"></div>
+
+</div>
+<div class="question">
+    <h3>
+        <b>
+            91. Các thế lực thù địch xác định tiến công trên lĩnh vực nào là “mũi đột phá”, là một nội dung trọng yếu, là vũ khí lợi hại nhất?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q91" onclick="traloi[91]='A'">
+        A. Kinh tế
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q91" onclick="traloi[91]='B'">
+        B. Xã hội
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q91" onclick="traloi[91]='C'">
+        C. Chính trị
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q91" onclick="traloi[91]='D'">
+        D. Tư tưởng – Văn hóa
+    </p>
+    <div id="DapAn91"></div>
+</div>
+
+<div class="question">
+    <h3>
+        <b>
+            92. Gây chia rẽ khối đại đoàn kết dân tộc, chia rẽ nhân dân với Đảng, nhân dân với quân đội, công an, chia rẽ các vùng miền; làm sâu sắc quá trình phân hóa giai cấp, phân hóa giàu nghèo, phân tầng xã hội. Là nội dung trong âm mưu, thủ đoạn chống phá trên lĩnh vực nào của thế lực thù địch?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q92" onclick="traloi[92]='A'">
+        A. Chính trị
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q92" onclick="traloi[92]='B'">
+        B. Xã hội
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q92" onclick="traloi[92]='C'">
+        C. Đối nội
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q92" onclick="traloi[92]='D'">
+        D. Đối ngoại
+    </p>
+
+    <div id="DapAn92"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            93. Chủ trương, biện pháp quan trọng mà Chủ tịch Hồ Chí Minh đã vận dụng để “thêm bạn, bớt thù” là gì?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q93" onclick="traloi[93]='A'">
+        A. Lợi dụng triệt để mâu thuẫn trong hàng ngũ kẻ địch
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q93" onclick="traloi[93]='B'">
+        B. Nhân nhượng có nguyên tắc để lôi kéo đồng minh
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q93" onclick="traloi[93]='C'">
+        C. Phân biệt chính phủ hiếu chiến với nhân dân yêu chuộng hòa bình của nước đối phương
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q93" onclick="traloi[93]='D'">
+        D. Độ lượng, khoan dung, lôi kéo những người đã lầm đường, lạc lối trở về với cách mạng.
+    </p>
+
+    <div id="DapAn93"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            94. Vấn đề đối tác, đối tượng là vấn đề:
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q94" onclick="traloi[94]='A'">
+        A. Cơ bản, quan trọng
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q94" onclick="traloi[94]='B'">
+        B. Phức tạp, nhạy cảm
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q94" onclick="traloi[94]='C'">
+        C. Cả A và B đúng
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q94" onclick="traloi[94]='D'">
+        D. Cả A và B sai
+    </p>
+
+    <div id="DapAn94"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            95. Việc xác định đối tác, đối tượng phụ thuộc vào yếu tố nào?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q95" onclick="traloi[95]='A'">
+        A. Lợi ích quốc gia, dân tộc
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q95" onclick="traloi[95]='B'">
+        B. Lợi ích giai cấp, lực lượng lãnh đạo
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q95" onclick="traloi[95]='C'">
+        C. Cả A và B đúng
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q95" onclick="traloi[95]='D'">
+        D. Cả A và B sai
+    </p>
+
+    <div id="DapAn95"></div>
+
+</div>
+<div class="question">
+    <h3>
+        <b>
+            96. Xu hướng chung trên thế giới đối với vấn đề đối tác, đối tượng là gì?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q96" onclick="traloi[96]='A'">
+        A. Công khai chỉ rõ ai là đối tác, đối tượng
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q96" onclick="traloi[96]='B'">
+        B. Không công khai chỉ rõ ai là đối tác, đối tượng
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q96" onclick="traloi[96]='C'">
+        C. Công khai đối tác, không công khai đối tượng
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q96" onclick="traloi[96]='D'">
+        D. Tùy trường hợp mà công khai hay không công khai ai là đối tác, đối tượng
+    </p>
+
+    <div id="DapAn96"></div>
+</div>
+
+<div class="question">
+    <h3>
+        <b>
+            97. Những khuynh hướng sai lệch chủ yếu của cán bộ, chiến sĩ thời gian gần đây về vấn đề đối tác, đối tượng là gì?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q97" onclick="traloi[97]='A'">
+        A. Tuyệt đối hóa xu thế toàn cầu hóa, và hội nhập quốc tế, đề cao hòa bình, hợp tác giữa các nước
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q97" onclick="traloi[97]='B'">
+        B. Một số ít cán bộ, chiến sĩ và cựu chiến binh cho rằng cần chỉ rõ kẻ thù cơ bản, lâu dài, kẻ thù trực tiếp, nguy hiểm mới hiện nay.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q97" onclick="traloi[97]='C'">
+        C. Những bất đồng, tranh chấp về chủ quyền khó có khả năng dung hòa, phải chỉ rõ đối tượng tác chiến, phải dùng vũ lực để giải quyết.
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q97" onclick="traloi[97]='D'">
+        D. Cả A, B và C đúng
+    </p>
+
+    <div id="DapAn97"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            98. Đối tác là gì?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q98" onclick="traloi[98]='A'">
+        A. Các nước có cùng hệ thống xã hội chủ nghĩa
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q98" onclick="traloi[98]='B'">
+        B. Là kẻ thù của đối tượng của ta
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q98" onclick="traloi[98]='C'">
+        C. Những ai tôn trọng độc lập, chủ quyền, thiết lập và mở rộng quan hệ hữu nghị, hợp tác bình đẳng, cùng có lợi với Việt Nam đều là đối tác
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q98" onclick="traloi[98]='D'">
+        D. Các nước đồng minh của Việt Nam
+    </p>
+
+    <div id="DapAn98"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            99. Về hình thức, đối tác chiến lược có tính chất như thế nào?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q99" onclick="traloi[99]='A'">
+        A. Mở
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q99" onclick="traloi[99]='B'">
+        B. Đóng
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v3" name="q99" onclick="traloi[99]='C'">
+        C. Tùy từng trường hợp cụ thể
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v4" name="q99" onclick="traloi[99]='D'">
+        D. Không rõ ràng
+    </p>
+
+    <div id="DapAn99"></div>
+</div>
+<div class="question">
+    <h3>
+        <b>
+            100. “Đối tác là để hợp tác và đối tượng là để cô lập, đấu tranh” là quan điểm đúng hay sai?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox" type="radio" value="v1" name="q100" onclick="traloi[100]='A'">
+        A. Đúng
+    </p>
+    <p>
+        <input class="checkBox" type="radio" value="v2" name="q100" onclick="traloi[100]='B'">
+        B. Sai
+    </p>
+
+    <div id="DapAn100"></div>
+
+</div>
+
+<div class="btndone" id="done">
+    <input type="button" value="Làm xong" onclick="LamXong()">
+</div>
+<div class="btndone" id="check">
+    <input type="button" value="Kiểm tra" onclick="Kiemtra()">
+</div>

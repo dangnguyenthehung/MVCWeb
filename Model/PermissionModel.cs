@@ -25,6 +25,16 @@ namespace Model
             var list = context.Database.SqlQuery<ViewPermission>("Sp_GetPermission @IDQN", sqlParams).ToList();
             return list;
         }
+        public ViewPermission GetOne(int id)
+        {
+            
+            object[] sqlParams =
+            {
+                new SqlParameter("@IDQN",id)
+            };
+            var obj = context.Database.SqlQuery<ViewPermission>("Sp_GetPermission @IDQN", sqlParams).SingleOrDefault();
+            return obj;
+        }
         public void Accept(int ID)
         {
             object[] sqlParams =

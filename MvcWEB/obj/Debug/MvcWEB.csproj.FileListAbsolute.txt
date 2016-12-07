@@ -15,6 +15,8 @@ D:\Files\Project\MvcWEB\MvcWEB\bin\MvcWEB.dll.config
 D:\Files\Project\MvcWEB\MvcWEB\bin\MvcWEB.dll
 D:\Files\Project\MvcWEB\MvcWEB\bin\MvcWEB.pdb
 D:\Files\Project\MvcWEB\MvcWEB\bin\Antlr3.Runtime.dll
+D:\Files\Project\MvcWEB\MvcWEB\bin\EntityFramework.dll
+D:\Files\Project\MvcWEB\MvcWEB\bin\EntityFramework.SqlServer.dll
 D:\Files\Project\MvcWEB\MvcWEB\bin\Microsoft.AI.Agent.Intercept.dll
 D:\Files\Project\MvcWEB\MvcWEB\bin\Microsoft.AI.DependencyCollector.dll
 D:\Files\Project\MvcWEB\MvcWEB\bin\Microsoft.AI.PerfCounterCollector.dll
@@ -34,8 +36,9 @@ D:\Files\Project\MvcWEB\MvcWEB\bin\System.Web.WebPages.Deployment.dll
 D:\Files\Project\MvcWEB\MvcWEB\bin\System.Web.WebPages.dll
 D:\Files\Project\MvcWEB\MvcWEB\bin\System.Web.WebPages.Razor.dll
 D:\Files\Project\MvcWEB\MvcWEB\bin\WebGrease.dll
-D:\Files\Project\MvcWEB\MvcWEB\bin\EntityFramework.dll
 D:\Files\Project\MvcWEB\MvcWEB\bin\Model.pdb
+D:\Files\Project\MvcWEB\MvcWEB\bin\EntityFramework.xml
+D:\Files\Project\MvcWEB\MvcWEB\bin\EntityFramework.SqlServer.xml
 D:\Files\Project\MvcWEB\MvcWEB\bin\Microsoft.AI.DependencyCollector.xml
 D:\Files\Project\MvcWEB\MvcWEB\bin\Microsoft.AI.ServerTelemetryChannel.xml
 D:\Files\Project\MvcWEB\MvcWEB\bin\Microsoft.AI.Web.xml
@@ -51,7 +54,6 @@ D:\Files\Project\MvcWEB\MvcWEB\bin\System.Web.WebPages.Deployment.xml
 D:\Files\Project\MvcWEB\MvcWEB\bin\System.Web.WebPages.Razor.xml
 D:\Files\Project\MvcWEB\MvcWEB\bin\Antlr3.Runtime.pdb
 D:\Files\Project\MvcWEB\MvcWEB\bin\Newtonsoft.Json.xml
-D:\Files\Project\MvcWEB\MvcWEB\bin\EntityFramework.xml
 D:\Files\Project\MvcWEB\MvcWEB\obj\Debug\MvcWEB.csprojResolveAssemblyReference.cache
 D:\Files\Project\MvcWEB\MvcWEB\obj\Debug\MvcWEB.dll
 D:\Files\Project\MvcWEB\MvcWEB\obj\Debug\MvcWEB.pdb

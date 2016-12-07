@@ -1,0 +1,72 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>KiemTraChinhTri-v2.0</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="~/Assets/Client/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- MetisMenu CSS -->
+    <link href="~/Assets/Client/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="~/Assets/Client/dist/css/sb-admin-2.css" rel="stylesheet">
+    <!-- Morris Charts CSS -->
+    <link href="~/Assets/Client/vendor/morrisjs/morris.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="~/Assets/Client/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    
+    <link rel="stylesheet" type="text/css" href="~/Assets/Client/css/style.css">
+    <link rel="stylesheet" type="text/css" href="~/Assets/Client/css/TypeChoosenStyle.css">
+
+    <script type="text/javascript" src="~/Assets/Client/js/test.js"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div id="wrapper">
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button class="navbar-toggle logout" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                    @Html.ActionLink("Đăng xuất", "Logout", "Login")
+                </button>
+                <a class="navbar-brand hidden-sm hidden-xs" href="#">KiemTraChinhTri v2.0</a>
+            </div>
+            <!-- /.navbar-header -->
+            <ul class="nav navbar-top-links navbar-right hidden-sm hidden-xs">
+                <li class="dropdown logout">
+                    @Html.ActionLink("Đăng xuất", "Logout", "Login")
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+            <!-- /.navbar-static-side -->
+        </nav>
+        
+     </div>
+    @RenderBody()
+    <!-- /#wrapper -->
+    <!-- jQuery -->
+    <script src="/Assets/Client/vendor/jquery/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/Assets/Client/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="/Assets/Client/vendor/metisMenu/metisMenu.min.js"></script>
+    <!-- Morris Charts JavaScript -->
+
+    <!-- Custom Theme JavaScript -->
+    <script src="/Assets/Client/dist/js/sb-admin-2.js"></script>
+</body>
+</html>

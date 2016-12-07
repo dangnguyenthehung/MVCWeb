@@ -55,89 +55,7 @@ namespace MvcWEB.Controllers
         //    return info;
         //}
         // GET: /HSQ/Details/5
-
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
-
-        //
-        // GET: /HSQ/Create
-
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        //
-        // POST: /HSQ/Create
-
-        [HttpPost]
-        public ActionResult Create(FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add insert logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        //
-        // GET: /HSQ/Edit/5
-
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        //
-        // POST: /HSQ/Edit/5
-
-        [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add update logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        //
-        // GET: /HSQ/Delete/5
-
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        //
-        // POST: /HSQ/Delete/5
-
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
+           
         //return Views
 
         public ActionResult MainAction(KetQuaModel model)
@@ -196,14 +114,13 @@ namespace MvcWEB.Controllers
             return RedirectToAction("Index","Result",show);
         }
 
+        // Routing with random Examination
         [HttpGet]
         public ActionResult HSQ1()
         {
-            //var model = new KetQuaModel();
             var session = SessionHelper.GetSession();
             //System.Diagnostics.Debug.WriteLine(session.ID);
             //System.Diagnostics.Debug.WriteLine(session.DeSo);
-
             return View();
         }
         [HttpGet]
@@ -220,6 +137,42 @@ namespace MvcWEB.Controllers
         }
         [HttpGet]
         public ActionResult HSQ4()
+        {
+            var session = SessionHelper.GetSession();
+            return View();
+        }
+        [HttpGet]
+        public ActionResult HSQ5()
+        {
+            var session = SessionHelper.GetSession();
+            return View();
+        }
+        [HttpGet]
+        public ActionResult HSQ6()
+        {
+            var session = SessionHelper.GetSession();
+            return View();
+        }
+        [HttpGet]
+        public ActionResult HSQ7()
+        {
+            var session = SessionHelper.GetSession();
+            return View();
+        }
+        [HttpGet]
+        public ActionResult HSQ8()
+        {
+            var session = SessionHelper.GetSession();
+            return View();
+        }
+        [HttpGet]
+        public ActionResult HSQ9()
+        {
+            var session = SessionHelper.GetSession();
+            return View();
+        }
+        [HttpGet]
+        public ActionResult HSQ10()
         {
             var session = SessionHelper.GetSession();
             return View();
@@ -242,6 +195,36 @@ namespace MvcWEB.Controllers
         }
         [HttpPost]
         public ActionResult HSQ4(KetQuaModel model)
+        {
+            return RedirectToAction("MainAction", model);
+        }
+        [HttpPost]
+        public ActionResult HSQ5(KetQuaModel model)
+        {
+            return RedirectToAction("MainAction", model);
+        }
+        [HttpPost]
+        public ActionResult HSQ6(KetQuaModel model)
+        {
+            return RedirectToAction("MainAction", model);
+        }
+        [HttpPost]
+        public ActionResult HSQ7(KetQuaModel model)
+        {
+            return RedirectToAction("MainAction", model);
+        }
+        [HttpPost]
+        public ActionResult HSQ8(KetQuaModel model)
+        {
+            return RedirectToAction("MainAction", model);
+        }
+        [HttpPost]
+        public ActionResult HSQ9(KetQuaModel model)
+        {
+            return RedirectToAction("MainAction", model);
+        }
+        [HttpPost]
+        public ActionResult HSQ10(KetQuaModel model)
         {
             return RedirectToAction("MainAction", model);
         }

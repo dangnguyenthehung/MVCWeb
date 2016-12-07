@@ -1,0 +1,65 @@
+﻿@model MvcWEB.Models.ChooseTypeModel
+
+@{
+    ViewBag.Title = "ChooseType";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+<script src="~/Assets/Client/vendor/jquery/jquery.js"></script>
+<script src="~/Assets/Client/js/ChooseType.js"></script>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <div class="login-panel panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Thông tin</h3>
+                </div>
+                <div class="panel-body">
+                    @using (Html.BeginForm())
+                    {
+                        @*@Html.AntiForgeryToken()
+                            @Html.ValidationSummary(true, null, new { @class = "alert alert-danger" })*@
+                        <fieldset>
+                            <div class="btn-group typeChoosen">
+                                <div class="form-group">
+                                    @Html.LabelFor(m => m.ThanhPhan)
+                                    @Html.DropDownListFor(m => m.ThanhPhan, // 1. Store selected value in Model.State
+                                                                        // when page is rendered after postback,
+                                                                        // take selected value from Model.State.
+
+                                              // 2. Take list of values from Model.States
+                                              Model.Type,
+
+                                              // 3. Text for the first 'default' option
+                                              
+
+                                              //4. A class name to assign to <select> tag
+                                              new { @class = "label form-control", @id = "typeDemo" })
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(m => m.HoTen)
+                                    @Html.DropDownListFor(m => m.HoTen, // 1. Store selected value in Model.State
+                                                                        // when page is rendered after postback,
+                                                                        // take selected value from Model.State.
+
+                                              // 2. Take list of values from Model.States
+                                              Model.Name,
+
+                                              // 3. Text for the first 'default' option
+                                              
+
+                                              //4. A class name to assign to <select> tag
+                                              new { @class = "label form-control", @id = "nameDemo" })
+                                </div>                             
+                            </div>
+
+                            <button type="submit" class="btn btn-lg btn-success btn-block">
+                                Làm bài
+                            </button>
+                        </fieldset>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

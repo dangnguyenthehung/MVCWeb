@@ -168,12 +168,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\css\style.css" />
     <Content Include="Assets\data\flot-data.js" />
     <Content Include="Assets\data\morris-data.js" />
     <Content Include="Assets\dist\css\sb-admin-2.css" />
     <Content Include="Assets\dist\css\sb-admin-2.min.css" />
     <Content Include="Assets\dist\js\sb-admin-2.js" />
     <Content Include="Assets\dist\js\sb-admin-2.min.js" />
+    <Content Include="Assets\js\Permission.js" />
     <Content Include="Assets\js\sb-admin-2.js" />
     <Content Include="Assets\vendor\bootstrap-social\bootstrap-social.css" />
     <Content Include="Assets\vendor\bootstrap\css\bootstrap.css" />
@@ -324,6 +326,8 @@
     <Content Include="Assets\less\mixins.less" />
     <Content Include="Assets\less\sb-admin-2.less" />
     <Content Include="Assets\less\variables.less" />
+    <None Include="Properties\PublishProfiles\demo.pubxml" />
+    <None Include="Properties\PublishProfiles\demo1.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

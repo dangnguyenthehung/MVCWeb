@@ -1,0 +1,96 @@
+﻿@model MvcAdmin.Models.PermissionMainModel
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>Cấp quyền truy cập</h2>
+
+<div>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <fieldset>
+            <div class="form-control hidden">
+                @Html.TextBoxFor(model => model.CaptID, new { @class = "form-control", Value = 0 })
+            </div>
+            <div class="form-control hidden">
+                @Html.TextBoxFor(model => model.Action, new { @class = "form-control", Value = "Refresh" })
+            </div>
+            <button type="submit" class="">
+                Refresh All
+            </button>
+        </fieldset>
+    }
+</div>
+<table class="table">
+    <tr>
+        <th>
+            IDQN
+        </th>
+        <th>
+            Họ tên
+        </th>
+        <th>
+            Quyền truy cập
+        </th>
+        <th>
+            Lượt truy cập
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model.PerList) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IDQN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Hoten)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Permission)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LogStatus)
+        </td>
+        <td>
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+                <fieldset>
+                    <div class="form-control hidden">
+                        @Html.TextBoxFor(model=>model.CaptID, new { @class = "form-control", Value = item.IDQN })
+                    </div>
+                    <div class="form-control hidden">
+                        @Html.TextBoxFor(model => model.Action, new { @class = "form-control", Value = "Accept" })
+                    </div>
+                    <button type="submit" class="">
+                        Accept
+                    </button>
+                </fieldset>
+            }
+        </td>
+        <td>
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+                <fieldset>
+                    <div class="form-control hidden">
+                        @Html.TextBoxFor(model => model.CaptID, new { @class = "form-control", Value = item.IDQN })
+                    </div>
+                    <div class="form-control hidden">
+                        @Html.TextBoxFor(model => model.Action, new { @class = "form-control", Value = "Refresh" })
+                    </div>
+                    <button type="submit" class="">
+                        Refresh
+                    </button>
+                </fieldset>
+            }
+        </td>
+        
+    </tr>
+}
+
+</table>

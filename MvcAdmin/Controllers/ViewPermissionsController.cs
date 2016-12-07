@@ -69,6 +69,26 @@ namespace MvcAdmin.Controllers
 
             return perList;
         }
+
+        
+        public JsonResult LoadList(int id, string act)
+        {
+            ViewPermission obj = new ViewPermission();
+                
+            //var id = obj.CaptID;
+            //var action = obj.Action;
+            if (act == "Accept")
+            {
+                context.Accept(id);
+            }
+            else
+            {
+                context.Refresh(id);
+            }
+            obj = context.GetOne(id);
+
+            return Json(obj, JsonRequestBehavior.AllowGet);
+        }
         // GET: ViewPermissions/Details/5
         //public ActionResult Details(int? id)
         //{
