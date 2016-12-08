@@ -1,4 +1,4 @@
-﻿namespace Model.Framework
+namespace Model.Framework
 {
     using System;
     using System.Collections.Generic;
@@ -17,13 +17,20 @@
         [Key]
         [Column(Order = 1)]
         [StringLength(200)]
-        [Display(Name = "Họ tên")]
         public string HoTen { get; set; }
 
-        [Display(Name = "Quyền truy cập")]
         public int? Permission { get; set; }
 
-        [Display(Name = "Lượt truy cập")]
         public int? LogStatus { get; set; }
+
+        [Key]
+        [Column(Order = 2)]
+        [StringLength(5)]
+        public string ThanhPhan { get; set; }
+
+        [Key]
+        [Column(Order = 3)]
+        [StringLength(20)]
+        public string DonVi { get; set; }
     }
 }

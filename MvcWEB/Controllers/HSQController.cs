@@ -33,29 +33,13 @@ namespace MvcWEB.Controllers
             string rdmAction = "HSQ" + rdmView;
 
             //return RedirectToAction(rdmAction);
-
-            // testing
-            //var KQ = new KetQuaModel();
-            //KQ.IDQN = model.ID;
-            //KQ.DeSo = rdmView;
-            //GetInfo(KQ);
             SessionHelper.SetSession(new UserSession() { UserName = model.HoTen, ID = model.ID, DeSo = rdmView });
             //Session.Add("ID", model.ID);
             //Session.Add("DeSo", rdmView);
 
             return RedirectToAction(rdmAction);
         }
-
-        //
-        //public KetQuaModel GetInfo(KetQuaModel KQ)
-        //{
-        //    var info = new KetQuaModel();
-        //    info.IDQN = KQ.IDQN;
-        //    info.DeSo = KQ.DeSo;
-        //    return info;
-        //}
-        // GET: /HSQ/Details/5
-           
+        
         //return Views
 
         public ActionResult MainAction(KetQuaModel model)
@@ -114,11 +98,36 @@ namespace MvcWEB.Controllers
             return RedirectToAction("Index","Result",show);
         }
 
+        // check log status
+        public int CheckStatus (int id)
+        {
+            var permission = new PermissionModel();
+            var check = new ChooseTypeController().check(id);
+            if (check == 1)
+            {
+                permission.SetLogStatus(id);
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
+        } // end check
+
         // Routing with random Examination
         [HttpGet]
         public ActionResult HSQ1()
         {
             var session = SessionHelper.GetSession();
+            var check = CheckStatus(session.ID);
+            if (check == 1)
+            {
+                // do nothing
+            }
+            else
+            {
+                return RedirectToAction("ChooseType", "ChooseType");
+            }
             //System.Diagnostics.Debug.WriteLine(session.ID);
             //System.Diagnostics.Debug.WriteLine(session.DeSo);
             return View();
@@ -127,54 +136,135 @@ namespace MvcWEB.Controllers
         public ActionResult HSQ2()
         {
             var session = SessionHelper.GetSession();
+            var check = CheckStatus(session.ID);
+            if (check == 1)
+            {
+                // do nothing
+            }
+            else
+            {
+                return RedirectToAction("ChooseType", "ChooseType");
+            }
             return View();
         }
         [HttpGet]
         public ActionResult HSQ3()
         {
             var session = SessionHelper.GetSession();
+            var check = CheckStatus(session.ID);
+            if (check == 1)
+            {
+                // do nothing
+            }
+            else
+            {
+                return RedirectToAction("ChooseType", "ChooseType");
+            }
             return View();
         }
         [HttpGet]
         public ActionResult HSQ4()
         {
             var session = SessionHelper.GetSession();
+            var check = CheckStatus(session.ID);
+            if (check == 1)
+            {
+                // do nothing
+            }
+            else
+            {
+                return RedirectToAction("ChooseType", "ChooseType");
+            }
             return View();
         }
         [HttpGet]
         public ActionResult HSQ5()
         {
             var session = SessionHelper.GetSession();
+            var check = CheckStatus(session.ID);
+            if (check == 1)
+            {
+                // do nothing
+            }
+            else
+            {
+                return RedirectToAction("ChooseType", "ChooseType");
+            }
             return View();
         }
         [HttpGet]
         public ActionResult HSQ6()
         {
             var session = SessionHelper.GetSession();
+            var check = CheckStatus(session.ID);
+            if (check == 1)
+            {
+                // do nothing
+            }
+            else
+            {
+                return RedirectToAction("ChooseType", "ChooseType");
+            }
             return View();
         }
         [HttpGet]
         public ActionResult HSQ7()
         {
             var session = SessionHelper.GetSession();
+            var check = CheckStatus(session.ID);
+            if (check == 1)
+            {
+                // do nothing
+            }
+            else
+            {
+                return RedirectToAction("ChooseType", "ChooseType");
+            }
             return View();
         }
         [HttpGet]
         public ActionResult HSQ8()
         {
             var session = SessionHelper.GetSession();
+            var check = CheckStatus(session.ID);
+            if (check == 1)
+            {
+                // do nothing
+            }
+            else
+            {
+                return RedirectToAction("ChooseType", "ChooseType");
+            }
             return View();
         }
         [HttpGet]
         public ActionResult HSQ9()
         {
             var session = SessionHelper.GetSession();
+            var check = CheckStatus(session.ID);
+            if (check == 1)
+            {
+                // do nothing
+            }
+            else
+            {
+                return RedirectToAction("ChooseType", "ChooseType");
+            }
             return View();
         }
         [HttpGet]
         public ActionResult HSQ10()
         {
             var session = SessionHelper.GetSession();
+            var check = CheckStatus(session.ID);
+            if (check == 1)
+            {
+                // do nothing
+            }
+            else
+            {
+                return RedirectToAction("ChooseType", "ChooseType");
+            }
             return View();
         }
 

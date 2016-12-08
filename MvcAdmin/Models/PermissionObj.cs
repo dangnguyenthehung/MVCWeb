@@ -18,5 +18,11 @@ namespace MvcAdmin.Models
 
         [Display(Name = "Lượt truy cập")]
         public int? LogStatus { get; set; }
+
+        //[Display(Name = "Thành phần")]
+        //public string ThanhPhan { get; set; }
+
+        //[Display(Name = "Đơn vị")]
+        //public string DonVi { get; set; }
     }
 }

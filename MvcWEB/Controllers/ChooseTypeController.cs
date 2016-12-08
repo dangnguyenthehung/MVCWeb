@@ -48,12 +48,12 @@ namespace MvcWEB.Controllers
 
             var id = GetID(model.HoTen,tp);
             model.ID = id;
-            var permission = new PermissionModel();
+            //var permission = new PermissionModel();
             var res = check(id);
             
             if (res == 1)
             {
-                permission.SetLogStatus(id);
+                //permission.SetLogStatus(id);
             }
             else
             {

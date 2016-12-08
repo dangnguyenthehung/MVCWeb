@@ -42,20 +42,20 @@
     </tr>
 
 @foreach (var item in Model.PerList) {
-    <tr>
+    <tr class="table-row" id="r">
         <td>
             @Html.DisplayFor(modelItem => item.IDQN)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Hoten)
         </td>
-        <td>
+        <td class="permissionDisplay">
             @Html.DisplayFor(modelItem => item.Permission)
         </td>
-        <td>
+        <td class="logDisplay">
             @Html.DisplayFor(modelItem => item.LogStatus)
         </td>
-        <td>
+        @*<td>
             @using (Html.BeginForm())
             {
                 @Html.AntiForgeryToken()
@@ -88,9 +88,31 @@
                     </button>
                 </fieldset>
             }
+        </td>*@
+        <td>
+            <div class="IDcontain">
+                <div class="form-control hidden">
+                    @Html.TextBoxFor(model => model.CaptID, new { @class = "form-control ID", @id = item.IDQN, Value = item.IDQN })
+                </div>
+                <button type="submit" class="Accept">
+                    TestPer
+                </button>
+            </div>
+        </td>
+        <td>
+            <div class="IDcontain">
+                <div class="form-control hidden">
+                    @Html.TextBoxFor(model => model.CaptID, new { @class = "form-control ID", @id = item.IDQN, Value = item.IDQN })
+                </div>
+                <button type="submit" class="Refresh">
+                    TestRef
+                </button>
+            </div>
+            
         </td>
         
     </tr>
 }
 
 </table>
+<script src="~/Assets/js/Permission.js" type="text/javascript"></script>
