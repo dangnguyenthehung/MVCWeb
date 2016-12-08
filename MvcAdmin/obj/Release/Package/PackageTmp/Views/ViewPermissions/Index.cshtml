@@ -24,95 +24,329 @@
         </fieldset>
     }
 </div>
-<table class="table">
-    <tr>
-        <th>
-            IDQN
-        </th>
-        <th>
-            Họ tên
-        </th>
-        <th>
-            Quyền truy cập
-        </th>
-        <th>
-            Lượt truy cập
-        </th>
-        <th></th>
-    </tr>
+<ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#SQ">SQ</a></li>
+    <li><a data-toggle="tab" href="#QNCN">QNCN</a></li>
+    <li><a data-toggle="tab" href="#HSQ_TS">HSQ-cTS</a></li>
+    <li><a data-toggle="tab" href="#HSQ_TT">HSQ-cTT</a></li>
+    <li><a data-toggle="tab" href="#HSQ_dB_bBD">HSQ-dB-BĐ</a></li>
+</ul>
+<div class="tab-content">
+    <div id="SQ" class="tab-pane fade in active">
+        <h3>Sỹ quan</h3>
+        <table class="table">
+            <tr>
+                <th>
+                    IDQN
+                </th>
+                <th>
+                    Họ tên
+                </th>
+                <th>
+                    Quyền truy cập
+                </th>
+                <th>
+                    Lượt truy cập
+                </th>
+                <th></th>
+            </tr>
 
-@foreach (var item in Model.PerList) {
-    <tr class="table-row" id="r">
-        <td>
-            @Html.DisplayFor(modelItem => item.IDQN)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Hoten)
-        </td>
-        <td class="permissionDisplay">
-            @Html.DisplayFor(modelItem => item.Permission)
-        </td>
-        <td class="logDisplay">
-            @Html.DisplayFor(modelItem => item.LogStatus)
-        </td>
-        @*<td>
-            @using (Html.BeginForm())
+            @foreach (var item in Model.PerList_SQ)
             {
-                @Html.AntiForgeryToken()
-                <fieldset>
-                    <div class="form-control hidden">
-                        @Html.TextBoxFor(model=>model.CaptID, new { @class = "form-control", Value = item.IDQN })
-                    </div>
-                    <div class="form-control hidden">
-                        @Html.TextBoxFor(model => model.Action, new { @class = "form-control", Value = "Accept" })
-                    </div>
-                    <button type="submit" class="">
-                        Accept
-                    </button>
-                </fieldset>
-            }
-        </td>
-        <td>
-            @using (Html.BeginForm())
-            {
-                @Html.AntiForgeryToken()
-                <fieldset>
-                    <div class="form-control hidden">
-                        @Html.TextBoxFor(model => model.CaptID, new { @class = "form-control", Value = item.IDQN })
-                    </div>
-                    <div class="form-control hidden">
-                        @Html.TextBoxFor(model => model.Action, new { @class = "form-control", Value = "Refresh" })
-                    </div>
-                    <button type="submit" class="">
-                        Refresh
-                    </button>
-                </fieldset>
-            }
-        </td>*@
-        <td>
-            <div class="IDcontain">
-                <div class="form-control hidden">
-                    @Html.TextBoxFor(model => model.CaptID, new { @class = "form-control ID", @id = item.IDQN, Value = item.IDQN })
-                </div>
-                <button type="submit" class="Accept">
-                    TestPer
-                </button>
-            </div>
-        </td>
-        <td>
-            <div class="IDcontain">
-                <div class="form-control hidden">
-                    @Html.TextBoxFor(model => model.CaptID, new { @class = "form-control ID", @id = item.IDQN, Value = item.IDQN })
-                </div>
-                <button type="submit" class="Refresh">
-                    TestRef
-                </button>
-            </div>
-            
-        </td>
-        
-    </tr>
-}
+                <tr class="table-row" id="r">
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IDQN)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Hoten)
+                    </td>
+                    <td class="permissionDisplay">
+                        @Html.DisplayFor(modelItem => item.Permission)
+                    </td>
+                    <td class="logDisplay">
+                        @Html.DisplayFor(modelItem => item.LogStatus)
+                    </td>
 
-</table>
+                    <td>
+                        <div class="IDcontain">
+                            <div class="form-control hidden">
+                                @Html.TextBoxFor(model => model.CaptID, new { @class = "form-control ID", @id = item.IDQN, Value = item.IDQN })
+                            </div>
+                            <button type="submit" class="Accept">
+                                TestPer
+                            </button>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="IDcontain">
+                            <div class="form-control hidden">
+                                @Html.TextBoxFor(model => model.CaptID, new { @class = "form-control ID", @id = item.IDQN, Value = item.IDQN })
+                            </div>
+                            <button type="submit" class="Refresh">
+                                TestRef
+                            </button>
+                        </div>
+
+                    </td>
+
+                </tr>
+            }
+
+        </table>
+    </div>
+    
+    <div id="QNCN" class="tab-pane fade">
+        <h3>Quân nhân chuyên nghiệp</h3>
+        <table class="table">
+            <tr>
+                <th>
+                    IDQN
+                </th>
+                <th>
+                    Họ tên
+                </th>
+                <th>
+                    Quyền truy cập
+                </th>
+                <th>
+                    Lượt truy cập
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model.PerList_QNCN)
+            {
+                <tr class="table-row" id="r">
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IDQN)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Hoten)
+                    </td>
+                    <td class="permissionDisplay">
+                        @Html.DisplayFor(modelItem => item.Permission)
+                    </td>
+                    <td class="logDisplay">
+                        @Html.DisplayFor(modelItem => item.LogStatus)
+                    </td>
+
+                    <td>
+                        <div class="IDcontain">
+                            <div class="form-control hidden">
+                                @Html.TextBoxFor(model => model.CaptID, new { @class = "form-control ID", @id = item.IDQN, Value = item.IDQN })
+                            </div>
+                            <button type="submit" class="Accept">
+                                TestPer
+                            </button>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="IDcontain">
+                            <div class="form-control hidden">
+                                @Html.TextBoxFor(model => model.CaptID, new { @class = "form-control ID", @id = item.IDQN, Value = item.IDQN })
+                            </div>
+                            <button type="submit" class="Refresh">
+                                TestRef
+                            </button>
+                        </div>
+
+                    </td>
+
+                </tr>
+            }
+
+        </table>
+    </div>
+    
+    <div id="HSQ_TS" class="tab-pane fade">
+        <h3>Hạ sỹ quan Đại đội Trinh Sát</h3>
+        <table class="table">
+            <tr>
+                <th>
+                    IDQN
+                </th>
+                <th>
+                    Họ tên
+                </th>
+                <th>
+                    Quyền truy cập
+                </th>
+                <th>
+                    Lượt truy cập
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model.PerList_HSQ_TS)
+            {
+                <tr class="table-row" id="r">
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IDQN)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Hoten)
+                    </td>
+                    <td class="permissionDisplay">
+                        @Html.DisplayFor(modelItem => item.Permission)
+                    </td>
+                    <td class="logDisplay">
+                        @Html.DisplayFor(modelItem => item.LogStatus)
+                    </td>
+
+                    <td>
+                        <div class="IDcontain">
+                            <div class="form-control hidden">
+                                @Html.TextBoxFor(model => model.CaptID, new { @class = "form-control ID", @id = item.IDQN, Value = item.IDQN })
+                            </div>
+                            <button type="submit" class="Accept">
+                                TestPer
+                            </button>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="IDcontain">
+                            <div class="form-control hidden">
+                                @Html.TextBoxFor(model => model.CaptID, new { @class = "form-control ID", @id = item.IDQN, Value = item.IDQN })
+                            </div>
+                            <button type="submit" class="Refresh">
+                                TestRef
+                            </button>
+                        </div>
+
+                    </td>
+
+                </tr>
+            }
+
+        </table>
+    </div>
+    
+    <div id="HSQ_TT" class="tab-pane fade">
+        <h3>Hạ sỹ quan Đại đội Tiêu Tẩy</h3>
+        <table class="table">
+            <tr>
+                <th>
+                    IDQN
+                </th>
+                <th>
+                    Họ tên
+                </th>
+                <th>
+                    Quyền truy cập
+                </th>
+                <th>
+                    Lượt truy cập
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model.PerList_HSQ_TT)
+            {
+                <tr class="table-row" id="r">
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IDQN)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Hoten)
+                    </td>
+                    <td class="permissionDisplay">
+                        @Html.DisplayFor(modelItem => item.Permission)
+                    </td>
+                    <td class="logDisplay">
+                        @Html.DisplayFor(modelItem => item.LogStatus)
+                    </td>
+
+                    <td>
+                        <div class="IDcontain">
+                            <div class="form-control hidden">
+                                @Html.TextBoxFor(model => model.CaptID, new { @class = "form-control ID", @id = item.IDQN, Value = item.IDQN })
+                            </div>
+                            <button type="submit" class="Accept">
+                                TestPer
+                            </button>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="IDcontain">
+                            <div class="form-control hidden">
+                                @Html.TextBoxFor(model => model.CaptID, new { @class = "form-control ID", @id = item.IDQN, Value = item.IDQN })
+                            </div>
+                            <button type="submit" class="Refresh">
+                                TestRef
+                            </button>
+                        </div>
+
+                    </td>
+
+                </tr>
+            }
+
+        </table>
+    </div>
+    
+    <div id="HSQ_dB_bBD" class="tab-pane fade">
+        <h3>Hạ sỹ quan Tiểu đoàn Bộ - Trung đội Bảo đảm</h3>
+        <table class="table">
+            <tr>
+                <th>
+                    IDQN
+                </th>
+                <th>
+                    Họ tên
+                </th>
+                <th>
+                    Quyền truy cập
+                </th>
+                <th>
+                    Lượt truy cập
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model.PerList_HSQ_dB_BD)
+            {
+                <tr class="table-row" id="r">
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IDQN)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Hoten)
+                    </td>
+                    <td class="permissionDisplay">
+                        @Html.DisplayFor(modelItem => item.Permission)
+                    </td>
+                    <td class="logDisplay">
+                        @Html.DisplayFor(modelItem => item.LogStatus)
+                    </td>
+
+                    <td>
+                        <div class="IDcontain">
+                            <div class="form-control hidden">
+                                @Html.TextBoxFor(model => model.CaptID, new { @class = "form-control ID", @id = item.IDQN, Value = item.IDQN })
+                            </div>
+                            <button type="submit" class="Accept">
+                                TestPer
+                            </button>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="IDcontain">
+                            <div class="form-control hidden">
+                                @Html.TextBoxFor(model => model.CaptID, new { @class = "form-control ID", @id = item.IDQN, Value = item.IDQN })
+                            </div>
+                            <button type="submit" class="Refresh">
+                                TestRef
+                            </button>
+                        </div>
+
+                    </td>
+
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>
+
+
 <script src="~/Assets/js/Permission.js" type="text/javascript"></script>

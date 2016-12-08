@@ -156,6 +156,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\DanhSachesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ViewKQsController.cs" />
     <Compile Include="Controllers\ViewPermissionsController.cs" />
@@ -361,6 +362,11 @@
     <Content Include="Views\ViewPermissions\Details.cshtml" />
     <Content Include="Views\ViewPermissions\Edit.cshtml" />
     <Content Include="Views\ViewPermissions\Index.cshtml" />
+    <Content Include="Views\DanhSaches\Create.cshtml" />
+    <Content Include="Views\DanhSaches\Delete.cshtml" />
+    <Content Include="Views\DanhSaches\Details.cshtml" />
+    <Content Include="Views\DanhSaches\Edit.cshtml" />
+    <Content Include="Views\DanhSaches\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
