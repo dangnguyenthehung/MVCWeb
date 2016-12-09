@@ -6,18 +6,21 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using Model;
 using Model.Framework;
 
 namespace MvcAdmin.Controllers
 {
     public class DanhSachesController : Controller
     {
-        private d38dbContext db = new d38dbContext();
-
+        //private d38dbContext db = new d38dbContext();
+        private DanhSachModel context = new DanhSachModel(); 
         // GET: DanhSaches
         public ActionResult Index()
         {
-            return View(db.DanhSaches.ToList());
+            var id = 0;
+            var list = context.List_ID(id);
+            return View(list);
         }
 
         // GET: DanhSaches/Details/5
@@ -27,12 +30,13 @@ namespace MvcAdmin.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            DanhSach danhSach = db.DanhSaches.Find(id);
-            if (danhSach == null)
+            List<DanhSach> List = context.List_ID(id);
+            DanhSach user = List[0];
+            if (user == null)
             {
                 return HttpNotFound();
             }
-            return View(danhSach);
+            return View(user);
         }
 
         // GET: DanhSaches/Create
@@ -46,16 +50,15 @@ namespace MvcAdmin.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "IDQN,HoTen,CB,CV,DonVi,ThanhPhan")] DanhSach danhSach)
+        public ActionResult Create([Bind(Include = "IDQN,HoTen,CB,CV,DonVi,ThanhPhan")] DanhSach user)
         {
             if (ModelState.IsValid)
             {
-                db.DanhSaches.Add(danhSach);
-                db.SaveChanges();
+                context.Insert(user);
                 return RedirectToAction("Index");
             }
 
-            return View(danhSach);
+            return View(user);
         }
 
         // GET: DanhSaches/Edit/5
@@ -65,12 +68,13 @@ namespace MvcAdmin.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            DanhSach danhSach = db.DanhSaches.Find(id);
-            if (danhSach == null)
+            List<DanhSach> List = context.List_ID(id);
+            DanhSach user = List[0];
+            if (user == null)
             {
                 return HttpNotFound();
             }
-            return View(danhSach);
+            return View(user);
         }
 
         // POST: DanhSaches/Edit/5
@@ -78,50 +82,49 @@ namespace MvcAdmin.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "IDQN,HoTen,CB,CV,DonVi,ThanhPhan")] DanhSach danhSach)
+        public ActionResult Edit([Bind(Include = "IDQN,HoTen,CB,CV,DonVi,ThanhPhan")] DanhSach user)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(danhSach).State = EntityState.Modified;
-                db.SaveChanges();
+                context.Edit(user);
                 return RedirectToAction("Index");
             }
-            return View(danhSach);
+            return View(user);
         }
 
         // GET: DanhSaches/Delete/5
-        public ActionResult Delete(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            DanhSach danhSach = db.DanhSaches.Find(id);
-            if (danhSach == null)
-            {
-                return HttpNotFound();
-            }
-            return View(danhSach);
-        }
+        //public ActionResult Delete(int? id)
+        //{
+        //    if (id == null)
+        //    {
+        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+        //    }
+        //    DanhSach danhSach = db.DanhSaches.Find(id);
+        //    if (danhSach == null)
+        //    {
+        //        return HttpNotFound();
+        //    }
+        //    return View(danhSach);
+        //}
 
         // POST: DanhSaches/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
-        {
-            DanhSach danhSach = db.DanhSaches.Find(id);
-            db.DanhSaches.Remove(danhSach);
-            db.SaveChanges();
-            return RedirectToAction("Index");
-        }
+        //[HttpPost, ActionName("Delete")]
+        //[ValidateAntiForgeryToken]
+        //public ActionResult DeleteConfirmed(int id)
+        //{
+        //    DanhSach danhSach = db.DanhSaches.Find(id);
+        //    db.DanhSaches.Remove(danhSach);
+        //    db.SaveChanges();
+        //    return RedirectToAction("Index");
+        //}
 
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+        //protected override void Dispose(bool disposing)
+        //{
+        //    if (disposing)
+        //    {
+        //        db.Dispose();
+        //    }
+        //    base.Dispose(disposing);
+        //}
     }
 }

@@ -1,46 +1,48 @@
-﻿@model IEnumerable<Model.Framework.ViewKQ>
+﻿@model IEnumerable<Model.Framework.DanhSach>
     @{ 
-        List<Model.Framework.ViewKQ> list_SQ = new List<Model.Framework.ViewKQ>();
-        List<Model.Framework.ViewKQ> list_QNCN = new List<Model.Framework.ViewKQ>();
-        List<Model.Framework.ViewKQ> list_HSQ_TS = new List<Model.Framework.ViewKQ>();
-        List<Model.Framework.ViewKQ> list_HSQ_TT = new List<Model.Framework.ViewKQ>();
-        List<Model.Framework.ViewKQ> list_HSQ_dB_BD = new List<Model.Framework.ViewKQ>();
-
+        List<Model.Framework.DanhSach> ListSQ = new List<Model.Framework.DanhSach>();
+        List<Model.Framework.DanhSach> ListQNCN = new List<Model.Framework.DanhSach>();
+        List<Model.Framework.DanhSach> ListHSQ_TS = new List<Model.Framework.DanhSach>();
+        List<Model.Framework.DanhSach> ListHSQ_TT = new List<Model.Framework.DanhSach>();
+        List<Model.Framework.DanhSach> ListHSQ_dB_BD = new List<Model.Framework.DanhSach>();
         foreach (var item in Model)
         {
             if (item.ThanhPhan == "SQ")
             {
-                list_SQ.Add(item);
+                ListSQ.Add(item);
             }
             else if (item.ThanhPhan == "QNCN")
             {
-                list_QNCN.Add(item);
+                ListQNCN.Add(item);
             }
             else
             {
                 if (item.DonVi == "cTS")
                 {
-                    list_HSQ_TS.Add(item);
+                    ListHSQ_TS.Add(item);
                 }
                 else if (item.DonVi == "cTT")
                 {
-                    list_HSQ_TT.Add(item);
+                    ListHSQ_TT.Add(item);
                 }
                 else
                 {
-                    list_HSQ_dB_BD.Add(item);
+                    ListHSQ_dB_BD.Add(item);
                 }
             }
         }
     }
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "DanhSach";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
 
-<h2>Tổng hợp</h2>
+<h2>Danh sách</h2>
 
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
 <ul class="nav nav-tabs">
     <li class="active"><a data-toggle="tab" href="#SQ">SQ</a></li>
     <li><a data-toggle="tab" href="#QNCN">QNCN</a></li>
@@ -54,52 +56,48 @@
         <table class="table">
             <tr>
                 <th>
-                    IDQN
-                </th>
-                <th>
                     Họ tên
                 </th>
                 <th>
-                    Ngày Kiểm tra
+                    Cấp bậc
                 </th>
                 <th>
-                    Đề Số
+                    Chức vụ
                 </th>
                 <th>
-                    Điểm
+                    Đơn vị
                 </th>
                 <th>
-                    Xếp loại
+                    Thành phần
                 </th>
                 <th></th>
             </tr>
 
-            @foreach (var item in list_SQ)
-        {
+            @foreach (var item in ListSQ)
+            {
                 <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.IDQN)
-                    </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.HoTen)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.NgayKT)
+                        @Html.DisplayFor(modelItem => item.CB)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.DeSo)
+                        @Html.DisplayFor(modelItem => item.CV)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.KQ)
+                        @Html.DisplayFor(modelItem => item.DonVi)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.XepLoai)
+                        @Html.DisplayFor(modelItem => item.ThanhPhan)
                     </td>
                     <td>
-                        @*@Html.ActionLink("Delete", "Delete", new {  id=item.IDQN })*@
+                        @Html.ActionLink("Edit", "Edit", new { id = item.IDQN }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.IDQN }) |
+                        @*@Html.ActionLink("Delete", "Delete", new { id = item.IDQN })*@
                     </td>
                 </tr>
-        }
+            }
 
         </table>
     </div>
@@ -109,49 +107,45 @@
         <table class="table">
             <tr>
                 <th>
-                    IDQN
-                </th>
-                <th>
                     Họ tên
                 </th>
                 <th>
-                    Ngày Kiểm tra
+                    Cấp bậc
                 </th>
                 <th>
-                    Đề Số
+                    Chức vụ
                 </th>
                 <th>
-                    Điểm
+                    Đơn vị
                 </th>
                 <th>
-                    Xếp loại
+                    Thành phần
                 </th>
                 <th></th>
             </tr>
 
-            @foreach (var item in list_QNCN)
+            @foreach (var item in ListQNCN)
             {
                 <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.IDQN)
-                    </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.HoTen)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.NgayKT)
+                        @Html.DisplayFor(modelItem => item.CB)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.DeSo)
+                        @Html.DisplayFor(modelItem => item.CV)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.KQ)
+                        @Html.DisplayFor(modelItem => item.DonVi)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.XepLoai)
+                        @Html.DisplayFor(modelItem => item.ThanhPhan)
                     </td>
                     <td>
-                        @*@Html.ActionLink("Delete", "Delete", new {  id=item.IDQN })*@
+                        @Html.ActionLink("Edit", "Edit", new { id = item.IDQN }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.IDQN })
+                        @*@Html.ActionLink("Delete", "Delete", new { id = item.IDQN })*@
                     </td>
                 </tr>
             }
@@ -164,49 +158,45 @@
         <table class="table">
             <tr>
                 <th>
-                    IDQN
-                </th>
-                <th>
                     Họ tên
                 </th>
                 <th>
-                    Ngày Kiểm tra
+                    Cấp bậc
                 </th>
                 <th>
-                    Đề Số
+                    Chức vụ
                 </th>
                 <th>
-                    Điểm
+                    Đơn vị
                 </th>
                 <th>
-                    Xếp loại
+                    Thành phần
                 </th>
                 <th></th>
             </tr>
 
-            @foreach (var item in list_HSQ_TS)
+            @foreach (var item in ListHSQ_TS)
             {
                 <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.IDQN)
-                    </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.HoTen)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.NgayKT)
+                        @Html.DisplayFor(modelItem => item.CB)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.DeSo)
+                        @Html.DisplayFor(modelItem => item.CV)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.KQ)
+                        @Html.DisplayFor(modelItem => item.DonVi)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.XepLoai)
+                        @Html.DisplayFor(modelItem => item.ThanhPhan)
                     </td>
                     <td>
-                        @*@Html.ActionLink("Delete", "Delete", new {  id=item.IDQN })*@
+                        @Html.ActionLink("Edit", "Edit", new { id = item.IDQN }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.IDQN }) |
+                        @*@Html.ActionLink("Delete", "Delete", new { id = item.IDQN })*@
                     </td>
                 </tr>
             }
@@ -219,49 +209,45 @@
         <table class="table">
             <tr>
                 <th>
-                    IDQN
-                </th>
-                <th>
                     Họ tên
                 </th>
                 <th>
-                    Ngày Kiểm tra
+                    Cấp bậc
                 </th>
                 <th>
-                    Đề Số
+                    Chức vụ
                 </th>
                 <th>
-                    Điểm
+                    Đơn vị
                 </th>
                 <th>
-                    Xếp loại
+                    Thành phần
                 </th>
                 <th></th>
             </tr>
 
-            @foreach (var item in list_HSQ_TT)
+            @foreach (var item in ListHSQ_TT)
             {
                 <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.IDQN)
-                    </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.HoTen)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.NgayKT)
+                        @Html.DisplayFor(modelItem => item.CB)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.DeSo)
+                        @Html.DisplayFor(modelItem => item.CV)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.KQ)
+                        @Html.DisplayFor(modelItem => item.DonVi)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.XepLoai)
+                        @Html.DisplayFor(modelItem => item.ThanhPhan)
                     </td>
                     <td>
-                        @*@Html.ActionLink("Delete", "Delete", new {  id=item.IDQN })*@
+                        @Html.ActionLink("Edit", "Edit", new { id = item.IDQN }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.IDQN }) |
+                        @*@Html.ActionLink("Delete", "Delete", new { id = item.IDQN })*@
                     </td>
                 </tr>
             }
@@ -274,56 +260,49 @@
         <table class="table">
             <tr>
                 <th>
-                    IDQN
-                </th>
-                <th>
                     Họ tên
                 </th>
                 <th>
-                    Ngày Kiểm tra
+                    Cấp bậc
                 </th>
                 <th>
-                    Đề Số
+                    Chức vụ
                 </th>
                 <th>
-                    Điểm
+                    Đơn vị
                 </th>
                 <th>
-                    Xếp loại
+                    Thành phần
                 </th>
                 <th></th>
             </tr>
 
-            @foreach (var item in list_HSQ_dB_BD)
+            @foreach (var item in ListHSQ_dB_BD)
             {
                 <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.IDQN)
-                    </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.HoTen)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.NgayKT)
+                        @Html.DisplayFor(modelItem => item.CB)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.DeSo)
+                        @Html.DisplayFor(modelItem => item.CV)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.KQ)
+                        @Html.DisplayFor(modelItem => item.DonVi)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.XepLoai)
+                        @Html.DisplayFor(modelItem => item.ThanhPhan)
                     </td>
                     <td>
-                        @*@Html.ActionLink("Delete", "Delete", new {  id=item.IDQN })*@
+                        @Html.ActionLink("Edit", "Edit", new { id = item.IDQN }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.IDQN }) |
+                        @*@Html.ActionLink("Delete", "Delete", new { id = item.IDQN })*@
                     </td>
                 </tr>
             }
 
         </table>
     </div>
-
 </div>
-
-   

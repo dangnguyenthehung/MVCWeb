@@ -131,7 +131,7 @@ namespace MvcWEB.Controllers
         private IEnumerable<string> GetAllName(string type)
         {
             var model = new DanhSachModel();
-            var modelList = model.ListAll(type);
+            var modelList = model.List_ThanhPhan(type);
             var nameList = new List<string>();
             foreach (var item in modelList)
             {
@@ -144,7 +144,7 @@ namespace MvcWEB.Controllers
         {
             int id = 0;
             var model = new DanhSachModel();
-            var modelList = model.ListAll(type);
+            var modelList = model.List_ThanhPhan(type);
             foreach(var item in modelList)
             {
                 if (item.HoTen == HoTen)

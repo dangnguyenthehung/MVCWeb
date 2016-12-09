@@ -34,11 +34,11 @@
     }
 
 @{
-    ViewBag.Title = "DanhSach";
+    ViewBag.Title = "Danh Sách";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
 
-<h2>Danh sách</h2>
+<h2>@ViewBag.Title</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -94,7 +94,7 @@
                     <td>
                         @Html.ActionLink("Edit", "Edit", new { id = item.IDQN }) |
                         @Html.ActionLink("Details", "Details", new { id = item.IDQN }) |
-                        @Html.ActionLink("Delete", "Delete", new { id = item.IDQN })
+                        @*@Html.ActionLink("Delete", "Delete", new { id = item.IDQN })*@
                     </td>
                 </tr>
             }
@@ -144,8 +144,8 @@
                     </td>
                     <td>
                         @Html.ActionLink("Edit", "Edit", new { id = item.IDQN }) |
-                        @Html.ActionLink("Details", "Details", new { id = item.IDQN }) |
-                        @Html.ActionLink("Delete", "Delete", new { id = item.IDQN })
+                        @Html.ActionLink("Details", "Details", new { id = item.IDQN })
+                        @*@Html.ActionLink("Delete", "Delete", new { id = item.IDQN })*@
                     </td>
                 </tr>
             }
@@ -196,7 +196,7 @@
                     <td>
                         @Html.ActionLink("Edit", "Edit", new { id = item.IDQN }) |
                         @Html.ActionLink("Details", "Details", new { id = item.IDQN }) |
-                        @Html.ActionLink("Delete", "Delete", new { id = item.IDQN })
+                        @*@Html.ActionLink("Delete", "Delete", new { id = item.IDQN })*@
                     </td>
                 </tr>
             }
@@ -247,7 +247,7 @@
                     <td>
                         @Html.ActionLink("Edit", "Edit", new { id = item.IDQN }) |
                         @Html.ActionLink("Details", "Details", new { id = item.IDQN }) |
-                        @Html.ActionLink("Delete", "Delete", new { id = item.IDQN })
+                        @*@Html.ActionLink("Delete", "Delete", new { id = item.IDQN })*@
                     </td>
                 </tr>
             }
@@ -298,7 +298,7 @@
                     <td>
                         @Html.ActionLink("Edit", "Edit", new { id = item.IDQN }) |
                         @Html.ActionLink("Details", "Details", new { id = item.IDQN }) |
-                        @Html.ActionLink("Delete", "Delete", new { id = item.IDQN })
+                        @*@Html.ActionLink("Delete", "Delete", new { id = item.IDQN })*@
                     </td>
                 </tr>
             }

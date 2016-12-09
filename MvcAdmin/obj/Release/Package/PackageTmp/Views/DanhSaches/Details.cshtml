@@ -1,0 +1,59 @@
+﻿@model Model.Framework.DanhSach
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DanhSach</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Họ tên
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HoTen)
+        </dd>
+
+        <dt>
+            Cấp bậc
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CB)
+        </dd>
+
+        <dt>
+            Chức vụ
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CV)
+        </dd>
+
+        <dt>
+            Đơn vị
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DonVi)
+        </dd>
+
+        <dt>
+            Thành phần
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThanhPhan)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Chỉnh sửa", "Edit", new { id = Model.IDQN }) |
+    @Html.ActionLink("Trở lại Danh sách", "Index")
+</p>

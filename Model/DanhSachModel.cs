@@ -15,7 +15,7 @@ namespace Model
         {
             context = new d38dbContext();
         }
-        public List<DanhSach> ListAll(string ThanhPhan)
+        public List<DanhSach> List_ThanhPhan(string ThanhPhan)
         {
             object[] sqlParams =
             {
@@ -24,6 +24,47 @@ namespace Model
             var list = context.Database.SqlQuery<DanhSach>("Sp_ChooseType @ThanhPhan", sqlParams).ToList();
             return list;
         }
-       
+        public List<DanhSach> List_ID(int? ID)
+        {
+            if (ID == null)
+            {
+                var l = new List<DanhSach>();
+                //
+                return l;
+            }
+            object[] sqlParams =
+            {
+                new SqlParameter("@IDQN", ID)
+            };
+            var list = context.Database.SqlQuery<DanhSach>("Sp_GetDanhSachTable @IDQN", sqlParams).ToList();
+            return list;
+        }
+        public void Insert (DanhSach user)
+        {
+            object[] sqlParams =
+            {
+                new SqlParameter("@HoTen", user.HoTen),
+                new SqlParameter("@CB", user.CB),
+                new SqlParameter("@CV", user.CV),
+                new SqlParameter("@DonVi", user.DonVi),
+                new SqlParameter("@ThanhPhan", user.ThanhPhan)
+            };
+            var list = context.Database.ExecuteSqlCommand("Sp_InsertDanhSach @HoTen,@CB,@CV,@DonVi,@ThanhPhan", sqlParams);  
+        }
+        public void Edit(DanhSach user)
+        {
+            object[] sqlParams =
+            {
+                new SqlParameter("@IDQN", user.IDQN),
+                new SqlParameter("@HoTen", user.HoTen),
+                new SqlParameter("@CB", user.CB),
+                new SqlParameter("@CV", user.CV),
+                new SqlParameter("@DonVi", user.DonVi),
+                new SqlParameter("@ThanhPhan", user.ThanhPhan)
+            };
+            var list = context.Database.ExecuteSqlCommand("Sp_EditDanhSach @IDQN,@HoTen,@CB,@CV,@DonVi,@ThanhPhan", sqlParams);
+
+        }
+
     }
 }

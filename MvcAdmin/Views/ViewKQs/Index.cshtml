@@ -1,60 +1,329 @@
 ﻿@model IEnumerable<Model.Framework.ViewKQ>
+    @{ 
+        List<Model.Framework.ViewKQ> list_SQ = new List<Model.Framework.ViewKQ>();
+        List<Model.Framework.ViewKQ> list_QNCN = new List<Model.Framework.ViewKQ>();
+        List<Model.Framework.ViewKQ> list_HSQ_TS = new List<Model.Framework.ViewKQ>();
+        List<Model.Framework.ViewKQ> list_HSQ_TT = new List<Model.Framework.ViewKQ>();
+        List<Model.Framework.ViewKQ> list_HSQ_dB_BD = new List<Model.Framework.ViewKQ>();
+
+        foreach (var item in Model)
+        {
+            if (item.ThanhPhan == "SQ")
+            {
+                list_SQ.Add(item);
+            }
+            else if (item.ThanhPhan == "QNCN")
+            {
+                list_QNCN.Add(item);
+            }
+            else
+            {
+                if (item.DonVi == "cTS")
+                {
+                    list_HSQ_TS.Add(item);
+                }
+                else if (item.DonVi == "cTT")
+                {
+                    list_HSQ_TT.Add(item);
+                }
+                else
+                {
+                    list_HSQ_dB_BD.Add(item);
+                }
+            }
+        }
+    }
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Tổng Hợp Kết Quả";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
 
-<h2>Tổng hợp</h2>
+<h2>@ViewBag.title</h2>
 
+<ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#SQ">SQ</a></li>
+    <li><a data-toggle="tab" href="#QNCN">QNCN</a></li>
+    <li><a data-toggle="tab" href="#HSQ_TS">HSQ-cTS</a></li>
+    <li><a data-toggle="tab" href="#HSQ_TT">HSQ-cTT</a></li>
+    <li><a data-toggle="tab" href="#HSQ_dB_bBD">HSQ-dB-BĐ</a></li>
+</ul>
+<div class="tab-content">
+    <div id="SQ" class="tab-pane fade in active">
+        <h3>Sỹ quan</h3>
+        <table class="table">
+            <tr>
+                <th>
+                    IDQN
+                </th>
+                <th>
+                    Họ tên
+                </th>
+                <th>
+                    Ngày Kiểm tra
+                </th>
+                <th>
+                    Đề Số
+                </th>
+                <th>
+                    Điểm
+                </th>
+                <th>
+                    Xếp loại
+                </th>
+                <th></th>
+            </tr>
 
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.IDQN)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.HoTen)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.NgayKT)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DeSo)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.KQ)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.XepLoai)
-        </th>
-        <th></th>
-    </tr>
+            @foreach (var item in list_SQ)
+        {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IDQN)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.HoTen)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NgayKT)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DeSo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.KQ)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.XepLoai)
+                    </td>
+                    <td>
+                        @*@Html.ActionLink("Delete", "Delete", new {  id=item.IDQN })*@
+                    </td>
+                </tr>
+        }
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.IDQN)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.HoTen)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.NgayKT)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DeSo)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.KQ)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.XepLoai)
-        </td>
-        <td>
-            @*@Html.ActionLink("Delete", "Delete", new {  id=item.IDQN })*@
-        </td>
-    </tr>
-}
+        </table>
+    </div>
 
-</table>
+    <div id="QNCN" class="tab-pane fade">
+        <h3>Quân nhân chuyên nghiệp</h3>
+        <table class="table">
+            <tr>
+                <th>
+                    IDQN
+                </th>
+                <th>
+                    Họ tên
+                </th>
+                <th>
+                    Ngày Kiểm tra
+                </th>
+                <th>
+                    Đề Số
+                </th>
+                <th>
+                    Điểm
+                </th>
+                <th>
+                    Xếp loại
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in list_QNCN)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IDQN)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.HoTen)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NgayKT)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DeSo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.KQ)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.XepLoai)
+                    </td>
+                    <td>
+                        @*@Html.ActionLink("Delete", "Delete", new {  id=item.IDQN })*@
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+
+    <div id="HSQ_TS" class="tab-pane fade">
+        <h3>Hạ sỹ quan Đại đội Trinh Sát</h3>
+        <table class="table">
+            <tr>
+                <th>
+                    IDQN
+                </th>
+                <th>
+                    Họ tên
+                </th>
+                <th>
+                    Ngày Kiểm tra
+                </th>
+                <th>
+                    Đề Số
+                </th>
+                <th>
+                    Điểm
+                </th>
+                <th>
+                    Xếp loại
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in list_HSQ_TS)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IDQN)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.HoTen)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NgayKT)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DeSo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.KQ)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.XepLoai)
+                    </td>
+                    <td>
+                        @*@Html.ActionLink("Delete", "Delete", new {  id=item.IDQN })*@
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+
+    <div id="HSQ_TT" class="tab-pane fade">
+        <h3>Hạ sỹ quan Đại đội Tiêu Tẩy</h3>
+        <table class="table">
+            <tr>
+                <th>
+                    IDQN
+                </th>
+                <th>
+                    Họ tên
+                </th>
+                <th>
+                    Ngày Kiểm tra
+                </th>
+                <th>
+                    Đề Số
+                </th>
+                <th>
+                    Điểm
+                </th>
+                <th>
+                    Xếp loại
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in list_HSQ_TT)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IDQN)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.HoTen)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NgayKT)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DeSo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.KQ)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.XepLoai)
+                    </td>
+                    <td>
+                        @*@Html.ActionLink("Delete", "Delete", new {  id=item.IDQN })*@
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+
+    <div id="HSQ_dB_bBD" class="tab-pane fade">
+        <h3>Hạ sỹ quan Tiểu đoàn Bộ - Trung đội Bảo đảm</h3>
+        <table class="table">
+            <tr>
+                <th>
+                    IDQN
+                </th>
+                <th>
+                    Họ tên
+                </th>
+                <th>
+                    Ngày Kiểm tra
+                </th>
+                <th>
+                    Đề Số
+                </th>
+                <th>
+                    Điểm
+                </th>
+                <th>
+                    Xếp loại
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in list_HSQ_dB_BD)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IDQN)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.HoTen)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NgayKT)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DeSo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.KQ)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.XepLoai)
+                    </td>
+                    <td>
+                        @*@Html.ActionLink("Delete", "Delete", new {  id=item.IDQN })*@
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+
+</div>
+
+   

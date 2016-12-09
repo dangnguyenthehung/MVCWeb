@@ -7,52 +7,55 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using Model.Framework;
+using Model;
 
 namespace MvcAdmin.Controllers
 {
     public class ViewKQsController : Controller
     {
-        private d38dbContext db = new d38dbContext();
+        //private d38dbContext db = new d38dbContext();
+        private StatisticModel context = new StatisticModel();
 
         // GET: ViewKQs
         public ActionResult Index()
         {
-            return View(db.ViewKQs.ToList());
+            var list = context.ListAll();
+            return View(list);
         }
 
         // GET: ViewKQs/Delete/5
-        public ActionResult Delete(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            ViewKQ viewKQ = db.ViewKQs.Find(id);
-            if (viewKQ == null)
-            {
-                return HttpNotFound();
-            }
-            return View(viewKQ);
-        }
+        //public ActionResult Delete(int? id)
+        //{
+        //    if (id == null)
+        //    {
+        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+        //    }
+        //    ViewKQ viewKQ = db.ViewKQs.Find(id);
+        //    if (viewKQ == null)
+        //    {
+        //        return HttpNotFound();
+        //    }
+        //    return View(viewKQ);
+        //}
 
         // POST: ViewKQs/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
-        {
-            ViewKQ viewKQ = db.ViewKQs.Find(id);
-            db.ViewKQs.Remove(viewKQ);
-            db.SaveChanges();
-            return RedirectToAction("Index");
-        }
+        //[HttpPost, ActionName("Delete")]
+        //[ValidateAntiForgeryToken]
+        //public ActionResult DeleteConfirmed(int id)
+        //{
+        //    ViewKQ viewKQ = db.ViewKQs.Find(id);
+        //    db.ViewKQs.Remove(viewKQ);
+        //    db.SaveChanges();
+        //    return RedirectToAction("Index");
+        //}
 
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+        //protected override void Dispose(bool disposing)
+        //{
+        //    if (disposing)
+        //    {
+        //        db.Dispose();
+        //    }
+        //    base.Dispose(disposing);
+        //}
     }
 }

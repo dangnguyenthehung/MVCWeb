@@ -29,5 +29,15 @@ namespace Model.Framework
         [Key]
         [Column(Order = 2)]
         public DateTime NgayKT { get; set; }
+
+        [Key]
+        [Column(Order = 3)]
+        [StringLength(20)]
+        public string DonVi { get; set; }
+
+        [Key]
+        [Column(Order = 4)]
+        [StringLength(5)]
+        public string ThanhPhan { get; set; }
     }
 }
