@@ -184,6 +184,7 @@
     <Content Include="App_Data\HSQ\HSQ2.txt" />
     <Content Include="App_Data\HSQ\HSQ3.txt" />
     <Content Include="App_Data\HSQ\HSQ4.txt" />
+    <Content Include="Assets\Client\css\MobileNav.css" />
     <Content Include="Assets\Client\css\Result.css" />
     <Content Include="Assets\Client\css\style.css" />
     <Content Include="Assets\Client\css\TypeChoosenStyle.css" />
@@ -200,6 +201,7 @@
     <Content Include="Assets\Client\js\ChooseType.js" />
     <Content Include="Assets\Client\js\daBS.js" />
     <Content Include="Assets\Client\js\Explain.txt" />
+    <Content Include="Assets\Client\js\MobileNav.js" />
     <Content Include="Assets\Client\js\test.js" />
     <Content Include="Assets\Client\vendor\bootstrap-social\bootstrap-social.css" />
     <Content Include="Assets\Client\vendor\bootstrap\css\bootstrap.css" />

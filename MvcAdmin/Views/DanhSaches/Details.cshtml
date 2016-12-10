@@ -1,14 +1,12 @@
-﻿@model Model.Framework.DanhSach
-
+﻿@model MvcAdmin.Models.DanhSachMainModel
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Chi tiết";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
 
-<h2>Details</h2>
+<h2>@ViewBag.Title</h2>
 
 <div>
-    <h4>DanhSach</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -16,7 +14,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.HoTen)
+            @Html.DisplayFor(model => model.user.HoTen)
         </dd>
 
         <dt>
@@ -24,7 +22,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.CB)
+            @Html.DisplayFor(model => model.user.CB)
         </dd>
 
         <dt>
@@ -32,7 +30,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.CV)
+            @Html.DisplayFor(model => model.user.CV)
         </dd>
 
         <dt>
@@ -40,7 +38,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.DonVi)
+            @Html.DisplayFor(model => model.user.DonVi)
         </dd>
 
         <dt>
@@ -48,12 +46,52 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.ThanhPhan)
+            @Html.DisplayFor(model => model.user.ThanhPhan)
         </dd>
 
-    </dl>
+    </dl> 
+    <h3>Lịch sử kiểm tra:</h3>
+    <table class="table">
+        <tr>
+            <th>
+                Ngày Kiểm tra
+            </th>
+            <th>
+                Đề Số
+            </th>
+            <th>
+                Điểm
+            </th>
+            <th>
+                Xếp loại
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model.listKQ)
+        {
+            <tr>                
+                <td>
+                    @Html.DisplayFor(modelItem => item.NgayKT)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DeSo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.KQ)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.XepLoai)
+                </td>
+                <td>
+                    @*@Html.ActionLink("Delete", "Delete", new {  id=item.IDQN })*@
+                </td>
+            </tr>
+        }
+
+    </table>
 </div>
 <p>
-    @Html.ActionLink("Chỉnh sửa", "Edit", new { id = Model.IDQN }) |
+    @Html.ActionLink("Chỉnh sửa", "Edit", new { id = Model.user.IDQN }) |
     @Html.ActionLink("Trở lại Danh sách", "Index")
 </p>

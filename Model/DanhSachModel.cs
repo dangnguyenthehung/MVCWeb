@@ -63,7 +63,21 @@ namespace Model
                 new SqlParameter("@ThanhPhan", user.ThanhPhan)
             };
             var list = context.Database.ExecuteSqlCommand("Sp_EditDanhSach @IDQN,@HoTen,@CB,@CV,@DonVi,@ThanhPhan", sqlParams);
-
+        }
+        public List<ViewKQ> List_Statistic_ID(int? id)
+        {
+            if (id == null)
+            {
+                var l = new List<ViewKQ>();
+                //
+                return l;
+            }
+            object[] sqlParams =
+            {
+                new SqlParameter("@IDQN",id)
+            };
+            var list = context.Database.SqlQuery<ViewKQ>("Sp_Statistic @IDQN", sqlParams).ToList();
+            return list;
         }
 
     }

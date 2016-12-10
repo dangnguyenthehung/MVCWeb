@@ -72,8 +72,8 @@ function countdown(){ // dong ho dem nguoc
     };
 function begin (){
     document.getElementById("begin").style.display = "none";
-   // document.getElementById("container").removeAttribute("class");
-   // document.getElementById("mobile-nav").setAttribute("class", "nav");
+    //document.getElementById("toggleButton").removeAttribute("class");
+    //document.getElementById("toggleButton").setAttribute("class", "hamburger is-closed hidden-lg hidden-md");
     document.getElementById("countdown").setAttribute("class", "countdownClock");
 	countdown();
 };
@@ -117,7 +117,9 @@ function hideLeftPanel_Mobile() {
 function countArray() {
 	var countUnchecked = 0;
 	var uncheckList = document.getElementById("uncheckList");
+	var uncheckList_mobile = document.getElementById("uncheckList_mobile");
 	uncheckList.innerHTML = "";
+	uncheckList_mobile.innerHTML = "";
 	for (i=1;i<=numberOfQuestion;i++) {
 	    var node = document.createElement("li");
 	    var textNode;
@@ -132,12 +134,14 @@ function countArray() {
 		    nodeLink.appendChild(textNode);
 			node.appendChild(nodeLink);
 			uncheckList.appendChild(node);
+			uncheckList_mobile.appendChild(node);
 			console.log(i);
 		}
 	}
 	if (countUnchecked == 0) {
 		textNode = document.createTextNode("Đã trả lời đầy đủ!");
 		node.appendChild(textNode);
-		uncheckList.appendChild(node);	
+		uncheckList.appendChild(node);
+		uncheckList_mobile.appendChild(node);
 	}
 }

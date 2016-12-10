@@ -1,6 +1,7 @@
 ﻿using Model.Framework;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,8 +17,14 @@ namespace Model
         }
         public List<ViewKQ> ListAll()
         {
-            var list = context.Database.SqlQuery<ViewKQ>("Sp_Statistic").ToList();
+            var id = 0;
+            object[] sqlParams =
+            {
+                new SqlParameter("@IDQN",id)
+            };
+            var list = context.Database.SqlQuery<ViewKQ>("Sp_Statistic @IDQN",sqlParams).ToList();
             return list;
         }
+        
     }
 }

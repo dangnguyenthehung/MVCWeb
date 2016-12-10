@@ -1,11 +1,11 @@
 ﻿@model MvcAdmin.Models.PermissionMainModel
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Cấp quyền truy cập";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
 
-<h2>Cấp quyền truy cập</h2>
+<h2>@ViewBag.title</h2>
 
 <div>
     @using (Html.BeginForm())
@@ -73,7 +73,7 @@
                                 @Html.TextBoxFor(model => model.CaptID, new { @class = "form-control ID", @id = item.IDQN, Value = item.IDQN })
                             </div>
                             <button type="submit" class="Accept">
-                                TestPer
+                                Accept
                             </button>
                         </div>
                     </td>
@@ -83,7 +83,7 @@
                                 @Html.TextBoxFor(model => model.CaptID, new { @class = "form-control ID", @id = item.IDQN, Value = item.IDQN })
                             </div>
                             <button type="submit" class="Refresh">
-                                TestRef
+                                Refresh
                             </button>
                         </div>
 
@@ -136,7 +136,7 @@
                                 @Html.TextBoxFor(model => model.CaptID, new { @class = "form-control ID", @id = item.IDQN, Value = item.IDQN })
                             </div>
                             <button type="submit" class="Accept">
-                                TestPer
+                                Accept
                             </button>
                         </div>
                     </td>
@@ -146,7 +146,7 @@
                                 @Html.TextBoxFor(model => model.CaptID, new { @class = "form-control ID", @id = item.IDQN, Value = item.IDQN })
                             </div>
                             <button type="submit" class="Refresh">
-                                TestRef
+                                Refresh
                             </button>
                         </div>
 
@@ -199,7 +199,7 @@
                                 @Html.TextBoxFor(model => model.CaptID, new { @class = "form-control ID", @id = item.IDQN, Value = item.IDQN })
                             </div>
                             <button type="submit" class="Accept">
-                                TestPer
+                                Accept
                             </button>
                         </div>
                     </td>
@@ -209,7 +209,7 @@
                                 @Html.TextBoxFor(model => model.CaptID, new { @class = "form-control ID", @id = item.IDQN, Value = item.IDQN })
                             </div>
                             <button type="submit" class="Refresh">
-                                TestRef
+                                Refresh
                             </button>
                         </div>
 
@@ -262,7 +262,7 @@
                                 @Html.TextBoxFor(model => model.CaptID, new { @class = "form-control ID", @id = item.IDQN, Value = item.IDQN })
                             </div>
                             <button type="submit" class="Accept">
-                                TestPer
+                                Accept
                             </button>
                         </div>
                     </td>
@@ -272,7 +272,7 @@
                                 @Html.TextBoxFor(model => model.CaptID, new { @class = "form-control ID", @id = item.IDQN, Value = item.IDQN })
                             </div>
                             <button type="submit" class="Refresh">
-                                TestRef
+                                Refresh
                             </button>
                         </div>
 
@@ -325,7 +325,7 @@
                                 @Html.TextBoxFor(model => model.CaptID, new { @class = "form-control ID", @id = item.IDQN, Value = item.IDQN })
                             </div>
                             <button type="submit" class="Accept">
-                                TestPer
+                                Accept
                             </button>
                         </div>
                     </td>
@@ -335,7 +335,7 @@
                                 @Html.TextBoxFor(model => model.CaptID, new { @class = "form-control ID", @id = item.IDQN, Value = item.IDQN })
                             </div>
                             <button type="submit" class="Refresh">
-                                TestRef
+                                Refresh
                             </button>
                         </div>
 

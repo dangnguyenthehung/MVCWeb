@@ -6,6 +6,12 @@
 }
 <script src="~/Assets/Client/vendor/jquery/jquery.js"></script>
 <script src="~/Assets/Client/js/ChooseType.js"></script>
+<script>
+    if (@ViewData["check"] != 1)
+    {
+        alert("Bạn chưa được cấp quyền truy cập.\nLiên hệ với quản trị viên để được cấp quyền!\nXin cám ơn!")
+    }
+</script>
 <div class="container">
     <div class="row">
         <div class="col-md-4 col-md-offset-4">

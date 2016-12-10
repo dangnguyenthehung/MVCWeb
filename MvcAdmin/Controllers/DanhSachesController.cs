@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using Model;
 using Model.Framework;
+using MvcAdmin.Models;
 
 namespace MvcAdmin.Controllers
 {
@@ -30,13 +31,20 @@ namespace MvcAdmin.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+            // declare model
+            DanhSachMainModel model = new DanhSachMainModel();
+            //
             List<DanhSach> List = context.List_ID(id);
             DanhSach user = List[0];
+            List<ViewKQ> listKQ = context.List_Statistic_ID(id);
+            //
+            model.user = user;
+            model.listKQ = listKQ;
             if (user == null)
             {
                 return HttpNotFound();
             }
-            return View(user);
+            return View(model);
         }
 
         // GET: DanhSaches/Create

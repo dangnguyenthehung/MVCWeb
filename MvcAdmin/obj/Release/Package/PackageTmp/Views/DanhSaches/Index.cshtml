@@ -34,11 +34,11 @@
     }
 
 @{
-    ViewBag.Title = "DanhSach";
+    ViewBag.Title = "Danh Sách";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
 
-<h2>Danh sách</h2>
+<h2>@ViewBag.Title</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")

@@ -35,11 +35,11 @@
     }
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Tổng Hợp Kết Quả";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
 
-<h2>Tổng hợp</h2>
+<h2>@ViewBag.title</h2>
 
 <ul class="nav nav-tabs">
     <li class="active"><a data-toggle="tab" href="#SQ">SQ</a></li>
@@ -48,6 +48,7 @@
     <li><a data-toggle="tab" href="#HSQ_TT">HSQ-cTT</a></li>
     <li><a data-toggle="tab" href="#HSQ_dB_bBD">HSQ-dB-BĐ</a></li>
 </ul>
+
 <div class="tab-content">
     <div id="SQ" class="tab-pane fade in active">
         <h3>Sỹ quan</h3>

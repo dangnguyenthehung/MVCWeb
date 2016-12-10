@@ -50,13 +50,15 @@ namespace MvcWEB.Controllers
             model.ID = id;
             //var permission = new PermissionModel();
             var res = check(id);
-            
+
             if (res == 1)
             {
+                ViewData["check"] = 1;
                 //permission.SetLogStatus(id);
             }
             else
-            {
+            {   
+                ViewData["check"] = 0;
                 return View("ChooseType", model);
             }
             
@@ -79,9 +81,9 @@ namespace MvcWEB.Controllers
             {
                 return RedirectToAction("Index", "SQ");
             }
-           
-
+          
         }
+       
         public int check (int id)
         {
             var permission = new PermissionModel();

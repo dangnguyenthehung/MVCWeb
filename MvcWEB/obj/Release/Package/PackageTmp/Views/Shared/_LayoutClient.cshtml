@@ -9,46 +9,52 @@
     <div id="begin" class="fullScr">
         <input type="button" value="Bắt đầu" onclick="begin()">
     </div>
+<!-- Mobile Nav-->
+    <nav class="navbar navbar-inverse navbar-fixed-top hidden-lg hidden-md" id="sidebar-wrapper" role="navigation">
+        <p class="PanelHeader">Các câu chưa chọn:</p>
+        <ul class="nav sidebar-nav" id="uncheckList_mobile">
+            <!-- list here-->           
+        </ul>
+    </nav>
+    <!-- /#sidebar-wrapper -->
+    <div id="page-content-wrapper">
+        <button type="button" class="hamburger is-closed hidden-lg hidden-md" data-toggle="offcanvas" id="toggleButton">
+            <span class="hamb-top"></span>
+            <span class="hamb-middle"></span>
+            <span class="hamb-bottom"></span>
+        </button>
+        <div id="container">
 
-    <div id="container">
-        @RenderBody()
-        <div class="btndone" id="check">
-            <input type="button" value="Kiểm tra" onclick="Kiemtra()">
+            @RenderBody()
+            <div class="btndone" id="check">
+                <input type="button" value="Kiểm tra" onclick="Kiemtra()">
+            </div>
+
+            @using (Html.BeginForm())
+            {
+                <fieldset>
+                    <div class="form-group hidden">
+                        @Html.TextBoxFor(model => model.IDQN, new { @class = "form-control", Value = currentSession.ID })
+                    </div>
+                    <div class="form-group hidden">
+                        @Html.TextBoxFor(model => model.DeSo, new { @class = "form-control", Value = currentSession.DeSo })
+                    </div>
+                    <div class="form-group hidden">
+                        @Html.TextBoxFor(model => model.TraLoi, new { @class = "form-control" })
+                    </div>
+                    <!-- Change this to a button or input when using this as a form -->
+                    <div class="btndone" id="done">
+                        <button type="submit" class="btn btn-lg btn-success btn-block" id="done" onclick="LamXong()">
+                            Làm xong
+                        </button>
+                    </div>
+
+                </fieldset>
+            }
         </div>
-
-        @using (Html.BeginForm())
-        {
-            <fieldset>
-                <div class="form-group hidden">
-                    @Html.TextBoxFor(model => model.IDQN, new { @class = "form-control", Value = currentSession.ID })
-                </div>
-                <div class="form-group hidden">
-                    @Html.TextBoxFor(model => model.DeSo, new { @class = "form-control", Value = currentSession.DeSo })
-                </div>
-                <div class="form-group hidden">
-                    @Html.TextBoxFor(model => model.TraLoi, new { @class = "form-control" })
-                </div>
-                <!-- Change this to a button or input when using this as a form -->
-                <div class="btndone" id="done">
-                    <button type="submit" class="btn btn-lg btn-success btn-block" id="done" onclick="LamXong()">
-                        Làm xong
-                    </button>
-                </div>
-                
-            </fieldset>
-        }
     </div>
-    @*<div class="ketqua" id="ketqua">
-        <div class="resultButton" id="resultButton" onclick="hideRightPanel();">
-            <i id="resultButtonLabel" class="fa fa-arrow-right" aria-hidden="true"></i>
-        </div>*
-        <p class="PanelHeader">Kết quả</p>
-        <p>Tổng số câu: 100 </p>
-        <p>Số câu đúng: <span id="trueNumber"></span></p>
-        <p>Điểm: <span id="mark"></span></p>
-        <p>Xếp loại: <span id="qualtity"></span></p>
-    </div>*@
-    <div class="checkedTracking" id="checkedTracking">
+   
+    <div class="checkedTracking hidden-sm hidden-xs" id="checkedTracking">
         @*<div class="trackingButton" id="trackingButton" onclick="hideLeftPanel();">
             <i id="trackingButtonLabel" class="fa fa-arrow-left" aria-hidden="true"></i>
         </div>*@
