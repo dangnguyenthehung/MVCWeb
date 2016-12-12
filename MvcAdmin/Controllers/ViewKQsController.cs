@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using Model.Framework;
 using Model;
+using MvcAdmin.Models;
 
 namespace MvcAdmin.Controllers
 {
@@ -15,13 +16,32 @@ namespace MvcAdmin.Controllers
     {
         //private d38dbContext db = new d38dbContext();
         private StatisticModel context = new StatisticModel();
-
+        [HttpGet]
         // GET: ViewKQs
         public ActionResult Index()
         {
+            StatisticMainModel model = new StatisticMainModel();
             var list = context.ListAll();
-            return View(list);
+            model.listKQ = list;
+            return View(model);
         }
+        [HttpPost]
+        public ActionResult Index (StatisticMainModel model)
+        {
+            int month = model.month;
+            var list = new List<ViewKQ>();
+            if (month==0)
+            {
+                list = context.ListAll();
+            }
+            else
+            {
+                list = context.List_Month(month);
+            }
+            model.listKQ = list;
+            return View(model);
+        }
+
 
         // GET: ViewKQs/Delete/5
         //public ActionResult Delete(int? id)

@@ -1,3 +1,13 @@
 ﻿.IDcontain {
     width: 65px;
 }
+.selection {
+    height: 35px;
+    font-size: 16px;
+}
+.selection option {
+    font-size: 16px;
+}
+.selectContain {
+    margin-top: 20px;
+}

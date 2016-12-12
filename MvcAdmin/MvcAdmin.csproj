@@ -166,7 +166,7 @@
     <Compile Include="Models\DanhSachMainModel.cs" />
     <Compile Include="Models\PermissionMainModel.cs" />
     <Compile Include="Models\PermissionObj.cs" />
-    <Compile Include="Models\StatisticModel.cs" />
+    <Compile Include="Models\StatisticMainModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

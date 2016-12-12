@@ -25,6 +25,16 @@ namespace Model
             var list = context.Database.SqlQuery<ViewKQ>("Sp_Statistic @IDQN",sqlParams).ToList();
             return list;
         }
-        
+        public List<ViewKQ> List_Month(int month)
+        {           
+            object[] sqlParams =
+            {
+                new SqlParameter("@Month",month)
+            };
+            var list = context.Database.SqlQuery<ViewKQ>("Sp_GetStatistic_Month @Month", sqlParams).ToList();
+
+            return list;
+        }
+
     }
 }

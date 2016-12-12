@@ -54,6 +54,6 @@ D:\Files\Project\MvcWEB\MvcAdmin\bin\System.Web.WebPages.Deployment.xml
 D:\Files\Project\MvcWEB\MvcAdmin\bin\System.Web.WebPages.Razor.xml
 D:\Files\Project\MvcWEB\MvcAdmin\bin\Antlr3.Runtime.pdb
 D:\Files\Project\MvcWEB\MvcAdmin\bin\Newtonsoft.Json.xml
+D:\Files\Project\MvcWEB\MvcAdmin\obj\Debug\MvcAdmin.csprojResolveAssemblyReference.cache
 D:\Files\Project\MvcWEB\MvcAdmin\obj\Debug\MvcAdmin.dll
 D:\Files\Project\MvcWEB\MvcAdmin\obj\Debug\MvcAdmin.pdb
-D:\Files\Project\MvcWEB\MvcAdmin\obj\Debug\MvcAdmin.csprojResolveAssemblyReference.cache
