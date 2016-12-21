@@ -67,11 +67,11 @@ namespace MvcWEB.Controllers
 
             if (model.ThanhPhan == "SQ")
             {
-                return RedirectToAction("Index", "SQ");
+                return RedirectToAction("Index", "SQ", model);
             }
             else if (model.ThanhPhan == "QNCN")
             {
-                return RedirectToAction("Index", "QNCN");
+                return RedirectToAction("Index", "QNCN", model);
             }
             else if (model.ThanhPhan == "HSQ")
             {
@@ -79,7 +79,7 @@ namespace MvcWEB.Controllers
             }
             else
             {
-                return RedirectToAction("Index", "SQ");
+                return View();
             }
           
         }

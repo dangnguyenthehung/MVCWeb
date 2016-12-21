@@ -20,12 +20,11 @@ function LamXong(){
     isDone = true;
 };
 function Kiemtra() {
-	countArray();
 	document.getElementById("checkedTracking").style.display = "inline";
 	isHide = false;
+	countArray();
 }
 function Kiemtra_Mobile() {
-	countArray();
 	var navButtonLabel = document.getElementById("navButtonLabel");
 	if (isHide == true && numClick == 0) {
 		document.getElementById("checkedTracking").style.display = "inline";	
@@ -37,7 +36,7 @@ function Kiemtra_Mobile() {
 	} else {
 		hideLeftPanel_Mobile();
 	}
-	
+	countArray_mobile();
 }
 function countdown(){ // dong ho dem nguoc
      var min = time;
@@ -117,9 +116,7 @@ function hideLeftPanel_Mobile() {
 function countArray() {
 	var countUnchecked = 0;
 	var uncheckList = document.getElementById("uncheckList");
-	var uncheckList_mobile = document.getElementById("uncheckList_mobile");
 	uncheckList.innerHTML = "";
-	uncheckList_mobile.innerHTML = "";
 	for (i=1;i<=numberOfQuestion;i++) {
 	    var node = document.createElement("li");
 	    var textNode;
@@ -134,14 +131,44 @@ function countArray() {
 		    nodeLink.appendChild(textNode);
 			node.appendChild(nodeLink);
 			uncheckList.appendChild(node);
-			uncheckList_mobile.appendChild(node);
 			console.log(i);
 		}
 	}
+
+
 	if (countUnchecked == 0) {
 		textNode = document.createTextNode("Đã trả lời đầy đủ!");
 		node.appendChild(textNode);
 		uncheckList.appendChild(node);
-		uncheckList_mobile.appendChild(node);
 	}
+}
+
+function countArray_mobile() {
+    var countUnchecked = 0;
+    var uncheckList_mobile = document.getElementById("uncheckList_mobile");
+    uncheckList_mobile.innerHTML = "";
+    for (i = 1; i <= numberOfQuestion; i++) {
+        var node = document.createElement("li");
+        var textNode;
+        var nodeLink = document.createElement("a");
+        var nodeAttr = document.createAttribute("href");
+
+        if (traloi[i] === undefined || traloi[i] === null) {
+            countUnchecked++;
+            nodeAttr.value = "#" + i;
+            nodeLink.setAttributeNode(nodeAttr);
+            textNode = document.createTextNode(i);
+            nodeLink.appendChild(textNode);
+            node.appendChild(nodeLink);
+            uncheckList_mobile.appendChild(node);
+            console.log(i);
+        }
+    }
+
+
+    if (countUnchecked == 0) {
+        textNode = document.createTextNode("Đã trả lời đầy đủ!");
+        node.appendChild(textNode);
+        uncheckList_mobile.appendChild(node);
+    }
 }

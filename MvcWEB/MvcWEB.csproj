@@ -165,6 +165,7 @@
     <Compile Include="Controllers\ChooseTypeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HSQController.cs" />
+    <Compile Include="Controllers\QNCNController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\ResultController.cs" />
     <Compile Include="Controllers\SQController.cs" />
@@ -434,6 +435,10 @@
     <Content Include="Views\Result\QNCN\index.cshtml" />
     <Content Include="Views\Result\SQ\index.cshtml" />
     <Content Include="Views\Result\HSQ\index.cshtml" />
+    <Content Include="Views\QNCN\QNCN1.cshtml" />
+    <Content Include="Views\QNCN\QNCN2.cshtml" />
+    <Content Include="Views\QNCN\QNCN3.cshtml" />
+    <Content Include="Views\QNCN\QNCN4.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

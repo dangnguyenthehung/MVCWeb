@@ -23,7 +23,7 @@
             var row = $(this).parents(".table-row");
             row.attr("id", rID); // 
 
-            var act = $(this).find("button").attr("class");
+            var act = $(this).find("button").val();
             var obj = $(function () {
                 loadAJAX(url, ID, act);
             });

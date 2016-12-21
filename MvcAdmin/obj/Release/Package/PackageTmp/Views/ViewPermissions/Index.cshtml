@@ -7,7 +7,7 @@
 
 <h2>@ViewBag.title</h2>
 
-<div>
+<div class="refreshAll">
     @using (Html.BeginForm())
     {
         @Html.AntiForgeryToken()
@@ -18,20 +18,20 @@
             <div class="form-control hidden">
                 @Html.TextBoxFor(model => model.Action, new { @class = "form-control", Value = "Refresh" })
             </div>
-            <button type="submit" class="">
+            <button type="submit" class="btn btn-default">
                 Refresh All
             </button>
         </fieldset>
     }
 </div>
-<ul class="nav nav-tabs">
+<ul class="nav nav-tabs permission">
     <li class="active"><a data-toggle="tab" href="#SQ">SQ</a></li>
     <li><a data-toggle="tab" href="#QNCN">QNCN</a></li>
     <li><a data-toggle="tab" href="#HSQ_TS">HSQ-cTS</a></li>
     <li><a data-toggle="tab" href="#HSQ_TT">HSQ-cTT</a></li>
     <li><a data-toggle="tab" href="#HSQ_dB_bBD">HSQ-dB-BĐ</a></li>
 </ul>
-<div class="tab-content">
+<div class="tab-content permission">
     <div id="SQ" class="tab-pane fade in active">
         <h3>Sỹ quan</h3>
         <table class="table">
@@ -48,7 +48,12 @@
                 <th>
                     Lượt truy cập
                 </th>
-                <th></th>
+                <th>
+                    Cấp quyền
+                </th>
+                <th>
+                    Làm mới
+                </th>
             </tr>
 
             @foreach (var item in Model.PerList_SQ)
@@ -72,7 +77,7 @@
                             <div class="form-control hidden">
                                 @Html.TextBoxFor(model => model.CaptID, new { @class = "form-control ID", @id = item.IDQN, Value = item.IDQN })
                             </div>
-                            <button type="submit" class="Accept">
+                            <button type="submit" class="btn btn-accept" value="Accept">
                                 Accept
                             </button>
                         </div>
@@ -82,7 +87,7 @@
                             <div class="form-control hidden">
                                 @Html.TextBoxFor(model => model.CaptID, new { @class = "form-control ID", @id = item.IDQN, Value = item.IDQN })
                             </div>
-                            <button type="submit" class="Refresh">
+                            <button type="submit" class="btn btn-refresh" value="Refresh">
                                 Refresh
                             </button>
                         </div>
@@ -111,7 +116,12 @@
                 <th>
                     Lượt truy cập
                 </th>
-                <th></th>
+                <th>
+                    Cấp quyền
+                </th>
+                <th>
+                    Làm mới
+                </th>
             </tr>
 
             @foreach (var item in Model.PerList_QNCN)
@@ -135,7 +145,7 @@
                             <div class="form-control hidden">
                                 @Html.TextBoxFor(model => model.CaptID, new { @class = "form-control ID", @id = item.IDQN, Value = item.IDQN })
                             </div>
-                            <button type="submit" class="Accept">
+                            <button type="submit" class="btn btn-accept" value="Accept">
                                 Accept
                             </button>
                         </div>
@@ -145,7 +155,7 @@
                             <div class="form-control hidden">
                                 @Html.TextBoxFor(model => model.CaptID, new { @class = "form-control ID", @id = item.IDQN, Value = item.IDQN })
                             </div>
-                            <button type="submit" class="Refresh">
+                            <button type="submit" class="btn btn-refresh" value="Refresh">
                                 Refresh
                             </button>
                         </div>
@@ -174,7 +184,12 @@
                 <th>
                     Lượt truy cập
                 </th>
-                <th></th>
+                <th>
+                    Cấp quyền
+                </th>
+                <th>
+                    Làm mới
+                </th>
             </tr>
 
             @foreach (var item in Model.PerList_HSQ_TS)
@@ -198,7 +213,7 @@
                             <div class="form-control hidden">
                                 @Html.TextBoxFor(model => model.CaptID, new { @class = "form-control ID", @id = item.IDQN, Value = item.IDQN })
                             </div>
-                            <button type="submit" class="Accept">
+                            <button type="submit" class="btn btn-accept" value="Accept">
                                 Accept
                             </button>
                         </div>
@@ -208,7 +223,7 @@
                             <div class="form-control hidden">
                                 @Html.TextBoxFor(model => model.CaptID, new { @class = "form-control ID", @id = item.IDQN, Value = item.IDQN })
                             </div>
-                            <button type="submit" class="Refresh">
+                            <button type="submit" class="btn btn-refresh" value="Refresh">
                                 Refresh
                             </button>
                         </div>
@@ -237,7 +252,12 @@
                 <th>
                     Lượt truy cập
                 </th>
-                <th></th>
+                <th>
+                    Cấp quyền
+                </th>
+                <th>
+                    Làm mới
+                </th>
             </tr>
 
             @foreach (var item in Model.PerList_HSQ_TT)
@@ -261,7 +281,7 @@
                             <div class="form-control hidden">
                                 @Html.TextBoxFor(model => model.CaptID, new { @class = "form-control ID", @id = item.IDQN, Value = item.IDQN })
                             </div>
-                            <button type="submit" class="Accept">
+                            <button type="submit" class="btn btn-accept" value="Accept">
                                 Accept
                             </button>
                         </div>
@@ -271,7 +291,7 @@
                             <div class="form-control hidden">
                                 @Html.TextBoxFor(model => model.CaptID, new { @class = "form-control ID", @id = item.IDQN, Value = item.IDQN })
                             </div>
-                            <button type="submit" class="Refresh">
+                            <button type="submit" class="btn btn-refresh" value="Refresh">
                                 Refresh
                             </button>
                         </div>
@@ -300,7 +320,12 @@
                 <th>
                     Lượt truy cập
                 </th>
-                <th></th>
+                <th>
+                    Cấp quyền
+                </th>
+                <th>
+                    Làm mới
+                </th>
             </tr>
 
             @foreach (var item in Model.PerList_HSQ_dB_BD)
@@ -324,7 +349,7 @@
                             <div class="form-control hidden">
                                 @Html.TextBoxFor(model => model.CaptID, new { @class = "form-control ID", @id = item.IDQN, Value = item.IDQN })
                             </div>
-                            <button type="submit" class="Accept">
+                            <button type="submit" class="btn btn-accept" value="Accept">
                                 Accept
                             </button>
                         </div>
@@ -334,7 +359,7 @@
                             <div class="form-control hidden">
                                 @Html.TextBoxFor(model => model.CaptID, new { @class = "form-control ID", @id = item.IDQN, Value = item.IDQN })
                             </div>
-                            <button type="submit" class="Refresh">
+                            <button type="submit" class="btn btn-refresh" value="Refresh">
                                 Refresh
                             </button>
                         </div>

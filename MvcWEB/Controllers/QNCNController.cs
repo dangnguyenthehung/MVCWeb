@@ -11,27 +11,27 @@ using System.Web.Mvc;
 
 namespace MvcWEB.Controllers
 {
-    public class SQController : Controller
+    public class QNCNController : Controller
     {
         //
 
-        // GET: /SQ/
+        // GET: /QNCN/
 
         public ActionResult Index(ChooseTypeModel model)
         {
             //Return path of Views part to count files
             string path = HttpContext.Server.MapPath("");
-            string RePath = path.Replace("SQ\\Index", "Views\\SQ");
+            string RePath = path.Replace("QNCN\\Index", "Views\\QNCN");
             int fCount = Directory.GetFiles(RePath, "*", SearchOption.TopDirectoryOnly).Length;
             System.Diagnostics.Debug.WriteLine(fCount);
             Random rdm = new Random();
-            int rdmView = rdm.Next(fCount) + 1;
+            int rdmView = rdm.Next(fCount)+1;
             //print to output for test
             System.Diagnostics.Debug.WriteLine(rdmView);
             System.Diagnostics.Debug.WriteLine(model.HoTen);
             System.Diagnostics.Debug.WriteLine(model.ID);
             //choose random action
-            string rdmAction = "SQ" + rdmView;
+            string rdmAction = "QNCN" + rdmView;
 
             //return RedirectToAction(rdmAction);
             SessionHelper.SetSession(new UserSession() { UserName = model.HoTen, ID = model.ID, DeSo = rdmView });
@@ -40,16 +40,16 @@ namespace MvcWEB.Controllers
 
             return RedirectToAction(rdmAction);
         }
-
+        
         //return Views
 
         public ActionResult MainAction(KetQuaModel model)
         {
             string path = HttpContext.Server.MapPath("");
-            string RePath = path.Replace("SQ", "Views\\SQ");
+            string RePath = path.Replace("QNCN", "Views\\QNCN");
             var answer = new UserAnswer();
             string correctAns = CorrectAnswerHelper.GetCorrectAnswer(answer.Object);
-            answer.Object = "SQ" + model.DeSo;
+            answer.Object = "QNCN" + model.DeSo;
             answer.UAnswer = model.TraLoi;
             answer.CorrectAnswer = correctAns;
 
@@ -93,14 +93,14 @@ namespace MvcWEB.Controllers
                     show.quality = "Không đạt yêu cầu";
                     break;
             }
-            string desAction = model.IDQN + "_SQ" + model.DeSo;
+            string desAction = model.IDQN + "_QNCN" + model.DeSo;
             show.fileName = desAction;
-            show.type = "SQ";
-            return RedirectToAction("Index", "Result", show);
+            show.type = "QNCN";
+            return RedirectToAction("Index","Result",show);
         }
 
         // check log status
-        public int CheckStatus(int id)
+        public int CheckStatus (int id)
         {
             var permission = new PermissionModel();
             var check = new ChooseTypeController().check(id);
@@ -117,7 +117,7 @@ namespace MvcWEB.Controllers
 
         // Routing with random Examination
         [HttpGet]
-        public ActionResult SQ1()
+        public ActionResult QNCN1()
         {
             var session = SessionHelper.GetSession();
             var check = CheckStatus(session.ID);
@@ -134,7 +134,7 @@ namespace MvcWEB.Controllers
             return View();
         }
         [HttpGet]
-        public ActionResult SQ2()
+        public ActionResult QNCN2()
         {
             var session = SessionHelper.GetSession();
             if (session == null)
@@ -153,7 +153,7 @@ namespace MvcWEB.Controllers
             return View();
         }
         [HttpGet]
-        public ActionResult SQ3()
+        public ActionResult QNCN3()
         {
             var session = SessionHelper.GetSession();
             var check = CheckStatus(session.ID);
@@ -168,7 +168,7 @@ namespace MvcWEB.Controllers
             return View();
         }
         [HttpGet]
-        public ActionResult SQ4()
+        public ActionResult QNCN4()
         {
             var session = SessionHelper.GetSession();
             var check = CheckStatus(session.ID);
@@ -183,7 +183,7 @@ namespace MvcWEB.Controllers
             return View();
         }
         [HttpGet]
-        public ActionResult SQ5()
+        public ActionResult QNCN5()
         {
             var session = SessionHelper.GetSession();
             var check = CheckStatus(session.ID);
@@ -198,7 +198,7 @@ namespace MvcWEB.Controllers
             return View();
         }
         [HttpGet]
-        public ActionResult SQ6()
+        public ActionResult QNCN6()
         {
             var session = SessionHelper.GetSession();
             var check = CheckStatus(session.ID);
@@ -213,7 +213,7 @@ namespace MvcWEB.Controllers
             return View();
         }
         [HttpGet]
-        public ActionResult SQ7()
+        public ActionResult QNCN7()
         {
             var session = SessionHelper.GetSession();
             var check = CheckStatus(session.ID);
@@ -228,7 +228,7 @@ namespace MvcWEB.Controllers
             return View();
         }
         [HttpGet]
-        public ActionResult SQ8()
+        public ActionResult QNCN8()
         {
             var session = SessionHelper.GetSession();
             var check = CheckStatus(session.ID);
@@ -243,7 +243,7 @@ namespace MvcWEB.Controllers
             return View();
         }
         [HttpGet]
-        public ActionResult SQ9()
+        public ActionResult QNCN9()
         {
             var session = SessionHelper.GetSession();
             var check = CheckStatus(session.ID);
@@ -258,7 +258,7 @@ namespace MvcWEB.Controllers
             return View();
         }
         [HttpGet]
-        public ActionResult SQ10()
+        public ActionResult QNCN10()
         {
             var session = SessionHelper.GetSession();
             var check = CheckStatus(session.ID);
@@ -274,52 +274,52 @@ namespace MvcWEB.Controllers
         }
 
         [HttpPost]
-        public ActionResult SQ1(KetQuaModel model)
+        public ActionResult QNCN1(KetQuaModel model)
         {
             return RedirectToAction("MainAction", model);
         }
         [HttpPost]
-        public ActionResult SQ2(KetQuaModel model)
+        public ActionResult QNCN2(KetQuaModel model)
         {
             return RedirectToAction("MainAction", model);
         }
         [HttpPost]
-        public ActionResult SQ3(KetQuaModel model)
+        public ActionResult QNCN3(KetQuaModel model)
         {
             return RedirectToAction("MainAction", model);
         }
         [HttpPost]
-        public ActionResult SQ4(KetQuaModel model)
+        public ActionResult QNCN4(KetQuaModel model)
         {
             return RedirectToAction("MainAction", model);
         }
         [HttpPost]
-        public ActionResult SQ5(KetQuaModel model)
+        public ActionResult QNCN5(KetQuaModel model)
         {
             return RedirectToAction("MainAction", model);
         }
         [HttpPost]
-        public ActionResult SQ6(KetQuaModel model)
+        public ActionResult QNCN6(KetQuaModel model)
         {
             return RedirectToAction("MainAction", model);
         }
         [HttpPost]
-        public ActionResult SQ7(KetQuaModel model)
+        public ActionResult QNCN7(KetQuaModel model)
         {
             return RedirectToAction("MainAction", model);
         }
         [HttpPost]
-        public ActionResult SQ8(KetQuaModel model)
+        public ActionResult QNCN8(KetQuaModel model)
         {
             return RedirectToAction("MainAction", model);
         }
         [HttpPost]
-        public ActionResult SQ9(KetQuaModel model)
+        public ActionResult QNCN9(KetQuaModel model)
         {
             return RedirectToAction("MainAction", model);
         }
         [HttpPost]
-        public ActionResult SQ10(KetQuaModel model)
+        public ActionResult QNCN10(KetQuaModel model)
         {
             return RedirectToAction("MainAction", model);
         }
