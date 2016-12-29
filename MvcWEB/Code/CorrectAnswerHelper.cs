@@ -59,7 +59,7 @@ namespace MvcWEB.Code
         }
         public static string GetCorrectAnswer(string DoiTuong)
         {
-            var CorrectString = System.IO.File.ReadAllText(HostingEnvironment.MapPath(@"~/App_Data/HSQ/HSQ1.txt"));
+            var CorrectString = System.IO.File.ReadAllText(HostingEnvironment.MapPath(@"~/App_Data/CorrectAnswer/" + DoiTuong + ".txt"));
             return CorrectString;
         }
         public static void Insert(KetQuaModel model)

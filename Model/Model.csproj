@@ -59,10 +59,12 @@
     <Compile Include="Framework\KetQuaKiemTra.cs" />
     <Compile Include="Framework\Permission.cs" />
     <Compile Include="Framework\sysdiagram.cs" />
+    <Compile Include="Framework\ViewIndividualExam.cs" />
     <Compile Include="Framework\ViewKQ.cs" />
     <Compile Include="Framework\ViewPermission.cs" />
     <Compile Include="KetQuaKiemTraModel.cs" />
     <Compile Include="PermissionModel.cs" />
+    <Compile Include="IndividualExamModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StatisticModel.cs" />
   </ItemGroup>

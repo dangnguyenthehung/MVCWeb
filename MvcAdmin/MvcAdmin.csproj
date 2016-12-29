@@ -158,18 +158,22 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\DanhSachesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IndividualExamsController.cs" />
     <Compile Include="Controllers\ViewKQsController.cs" />
     <Compile Include="Controllers\ViewPermissionsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\DanhSachMainModel.cs" />
+    <Compile Include="Models\IndividualExamMainModel.cs" />
+    <Compile Include="Models\IndividualExamObj.cs" />
     <Compile Include="Models\PermissionMainModel.cs" />
     <Compile Include="Models\PermissionObj.cs" />
     <Compile Include="Models\StatisticMainModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\css\individual_page_style.css" />
     <Content Include="Assets\css\style.css" />
     <Content Include="Assets\data\flot-data.js" />
     <Content Include="Assets\data\morris-data.js" />
@@ -177,6 +181,7 @@
     <Content Include="Assets\dist\css\sb-admin-2.min.css" />
     <Content Include="Assets\dist\js\sb-admin-2.js" />
     <Content Include="Assets\dist\js\sb-admin-2.min.js" />
+    <Content Include="Assets\js\IndividualExam.js" />
     <Content Include="Assets\js\Permission.js" />
     <Content Include="Assets\js\sb-admin-2.js" />
     <Content Include="Assets\vendor\bootstrap-social\bootstrap-social.css" />
@@ -364,6 +369,7 @@
     <Content Include="Views\DanhSaches\Details.cshtml" />
     <Content Include="Views\DanhSaches\Edit.cshtml" />
     <Content Include="Views\DanhSaches\Index.cshtml" />
+    <Content Include="Views\IndividualExams\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

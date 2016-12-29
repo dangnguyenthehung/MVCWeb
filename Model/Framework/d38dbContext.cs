@@ -17,6 +17,7 @@ namespace Model.Framework
         public virtual DbSet<KetQuaKiemTra> KetQuaKiemTras { get; set; }
         public virtual DbSet<Permission> Permissions { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+        public virtual DbSet<ViewIndividualExam> ViewIndividualExams { get; set; }
         public virtual DbSet<ViewKQ> ViewKQs { get; set; }
         public virtual DbSet<ViewPermission> ViewPermissions { get; set; }
 

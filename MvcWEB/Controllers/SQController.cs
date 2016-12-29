@@ -48,8 +48,10 @@ namespace MvcWEB.Controllers
             string path = HttpContext.Server.MapPath("");
             string RePath = path.Replace("SQ", "Views\\SQ");
             var answer = new UserAnswer();
-            string correctAns = CorrectAnswerHelper.GetCorrectAnswer(answer.Object);
+
             answer.Object = "SQ" + model.DeSo;
+            string correctAns = CorrectAnswerHelper.GetCorrectAnswer(answer.Object);
+            
             answer.UAnswer = model.TraLoi;
             answer.CorrectAnswer = correctAns;
 
@@ -103,7 +105,7 @@ namespace MvcWEB.Controllers
         public int CheckStatus(int id)
         {
             var permission = new PermissionModel();
-            var check = new ChooseTypeController().check(id);
+            var check = new ChooseTypeController().checkPermission(id);
             if (check == 1)
             {
                 permission.SetLogStatus(id);
@@ -114,6 +116,13 @@ namespace MvcWEB.Controllers
                 return 0;
             }
         } // end check
+
+        // keep client alive - contact with server during exam time
+        [HttpGet]
+        public ActionResult KeepAlive()
+        {
+            return Content("Still alive!");
+        }
 
         // Routing with random Examination
         [HttpGet]

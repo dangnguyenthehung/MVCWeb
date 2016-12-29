@@ -164,6 +164,7 @@
     <Compile Include="Code\UserSession.cs" />
     <Compile Include="Controllers\ChooseTypeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IndividualController.cs" />
     <Compile Include="Controllers\HSQController.cs" />
     <Compile Include="Controllers\QNCNController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
@@ -181,10 +182,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\HSQ\HSQ1.txt" />
-    <Content Include="App_Data\HSQ\HSQ2.txt" />
-    <Content Include="App_Data\HSQ\HSQ3.txt" />
-    <Content Include="App_Data\HSQ\HSQ4.txt" />
+    <Content Include="App_Data\CorrectAnswer\HSQ1.txt" />
+    <Content Include="App_Data\CorrectAnswer\HSQ2.txt" />
+    <Content Include="App_Data\CorrectAnswer\HSQ3.txt" />
+    <Content Include="App_Data\CorrectAnswer\HSQ4.txt" />
+    <Content Include="App_Data\CorrectAnswer\Individual1.txt" />
+    <Content Include="App_Data\CorrectAnswer\Individual2.txt" />
     <Content Include="Assets\Client\css\MobileNav.css" />
     <Content Include="Assets\Client\css\Result.css" />
     <Content Include="Assets\Client\css\style.css" />
@@ -439,6 +442,8 @@
     <Content Include="Views\QNCN\QNCN2.cshtml" />
     <Content Include="Views\QNCN\QNCN3.cshtml" />
     <Content Include="Views\QNCN\QNCN4.cshtml" />
+    <Content Include="Views\Individual\Individual1.cshtml" />
+    <Content Include="Views\Individual\Individual2.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

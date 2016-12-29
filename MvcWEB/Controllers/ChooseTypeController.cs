@@ -49,9 +49,9 @@ namespace MvcWEB.Controllers
             var id = GetID(model.HoTen,tp);
             model.ID = id;
             //var permission = new PermissionModel();
-            var res = check(id);
+            var check_1 = checkPermission(id);
 
-            if (res == 1)
+            if (check_1 == 1)
             {
                 ViewData["check"] = 1;
                 //permission.SetLogStatus(id);
@@ -61,11 +61,26 @@ namespace MvcWEB.Controllers
                 ViewData["check"] = 0;
                 return View("ChooseType", model);
             }
+
+            var check_2 = checkIndividualExam(id);
+            if (check_2 == 1)
+            {
+                // do nothing
+                System.Diagnostics.Debug.WriteLine("normal");
+            }
+            else
+            {
+                model.ThanhPhan = "DeRieng";
+                System.Diagnostics.Debug.WriteLine(model.ThanhPhan);
+            }
             
             // In case everything is fine - i.e. both "Name" and "Type" are entered/selected,
             // redirect user to the "Target" page, and pass the user object along via Session
-
-            if (model.ThanhPhan == "SQ")
+            if (model.ThanhPhan == "DeRieng")
+            {
+                return RedirectToAction("Index", "Individual", model);
+            }
+            else if (model.ThanhPhan == "SQ")
             {
                 return RedirectToAction("Index", "SQ", model);
             }
@@ -84,12 +99,26 @@ namespace MvcWEB.Controllers
           
         }
        
-        public int check (int id)
+        public int checkPermission (int id)
         {
             var permission = new PermissionModel();
             ViewPermission res = new ViewPermission();
             res = permission.CheckPermission(id);
             if (res.Permission == 1 && res.LogStatus == 0)
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+        public int checkIndividualExam(int id)
+        {
+            var context = new PermissionModel();
+            ViewIndividualExam res = new ViewIndividualExam();
+            res = context.CheckIndividualExam(id);
+            if (res.IndividualExam == 0)
             {
                 return 1;
             }

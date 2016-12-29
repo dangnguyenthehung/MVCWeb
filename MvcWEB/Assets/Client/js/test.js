@@ -172,3 +172,16 @@ function countArray_mobile() {
         uncheckList_mobile.appendChild(node);
     }
 }
+function heartBeat() {
+    
+    $.get("KeepAlive", function (data) {
+        console.log(data);
+    });
+    
+}
+$(function () {
+    
+    setInterval("heartBeat()", 1000 * 60 * 2); // 2p gửi request một lần
+    
+});
+

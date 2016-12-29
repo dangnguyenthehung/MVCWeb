@@ -26,6 +26,10 @@
     <!-- Custom CSS -->
     <link href="~/Assets/css/style.css" rel="stylesheet" type="text/css">
 
+    @if (IsSectionDefined("Styles"))
+    {
+        @RenderSection("Styles", required: false)
+    }
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -73,7 +77,6 @@
                             @Html.ActionLink("Thống kê", "Index", "ViewKQs")
                             
                         </li>
-                        
                         <li>
                             <i class="fa fa-table fa-fw"></i>
                             @Html.ActionLink("Cấp quyền", "Index", "ViewPermissions")
@@ -81,6 +84,10 @@
                         <li>
                             <i class="fa fa-list fa-fw"></i>
                             @Html.ActionLink("Xem danh sách", "Index", "DanhSaches")
+                        </li>
+                        <li>
+                            <i class="fa fa-user-secret fa-fw"></i>
+                            @Html.ActionLink("Quy định đề riêng", "Index", "IndividualExams")
                         </li>
                     </ul>
                 </div>

@@ -80,5 +80,19 @@ namespace Model
         {
             var res = context.Database.ExecuteSqlCommand("Sp_InitPermission");
         }
+
+        public ViewIndividualExam CheckIndividualExam(int ID)
+        {
+            object[] sqlParams =
+            {
+                new SqlParameter("@IDQN",ID)
+            };
+
+            var list = context.Database.SqlQuery<ViewIndividualExam>("Sp_GetIndividualExam @IDQN", sqlParams).ToList();
+
+            ViewIndividualExam res = new ViewIndividualExam();
+            res.IndividualExam = list[0].IndividualExam;
+            return res;
+        }
     }
 }

@@ -18,6 +18,8 @@ namespace Model.Framework
 
         public int? LogStatus { get; set; }
 
+        public int? IndividualExam { get; set; }
+
         public virtual DanhSach DanhSach { get; set; }
     }
 }

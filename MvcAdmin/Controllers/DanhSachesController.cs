@@ -14,8 +14,9 @@ namespace MvcAdmin.Controllers
 {
     public class DanhSachesController : Controller
     {
-        //private d38dbContext db = new d38dbContext();
+        
         private DanhSachModel context = new DanhSachModel(); 
+
         // GET: DanhSaches
         public ActionResult Index()
         {

@@ -1,0 +1,403 @@
+﻿@model MvcAdmin.Models.IndividualExamMainModel
+@section Styles {
+    <link href="@Url.Content("~/Assets/css/individual_page_style.css")" rel="stylesheet" type="text/css" />
+}
+@{
+    List<Model.Framework.ViewIndividualExam> ListSQ = new List<Model.Framework.ViewIndividualExam>();
+    List<Model.Framework.ViewIndividualExam> ListQNCN = new List<Model.Framework.ViewIndividualExam>();
+    List<Model.Framework.ViewIndividualExam> ListHSQ_TS = new List<Model.Framework.ViewIndividualExam>();
+    List<Model.Framework.ViewIndividualExam> ListHSQ_TT = new List<Model.Framework.ViewIndividualExam>();
+    List<Model.Framework.ViewIndividualExam> ListHSQ_dB_BD = new List<Model.Framework.ViewIndividualExam>();
+    foreach (var item in Model.ListView)
+    {
+        if (item.ThanhPhan == "SQ")
+        {
+            ListSQ.Add(item);
+        }
+        else if (item.ThanhPhan == "QNCN")
+        {
+            ListQNCN.Add(item);
+        }
+        else
+        {
+            if (item.DonVi == "cTS")
+            {
+                ListHSQ_TS.Add(item);
+            }
+            else if (item.DonVi == "cTT")
+            {
+                ListHSQ_TT.Add(item);
+            }
+            else
+            {
+                ListHSQ_dB_BD.Add(item);
+            }
+        }
+    }
+}
+
+@{
+    ViewBag.Title = "Cấp đề riêng";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>@ViewBag.title</h2>
+
+<div class="refreshAll">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <fieldset>
+            <div class="form-control hidden">
+                @Html.TextBoxFor(model => model.ListObj, new { @class = "form-control", Value = 0 })
+            </div>
+            <div class="form-control hidden">
+                @Html.TextBoxFor(model => model.Action, new { @class = "form-control", Value = "Refresh" })
+            </div>
+            <button type="submit" class="btn btn-default">
+                Refresh All
+            </button>
+        </fieldset>
+    }
+</div>
+<ul class="nav nav-tabs permission">
+    <li class="active"><a data-toggle="tab" href="#SQ">SQ</a></li>
+    <li><a data-toggle="tab" href="#QNCN">QNCN</a></li>
+    <li><a data-toggle="tab" href="#HSQ_TS">HSQ-cTS</a></li>
+    <li><a data-toggle="tab" href="#HSQ_TT">HSQ-cTT</a></li>
+    <li><a data-toggle="tab" href="#HSQ_dB_bBD">HSQ-dB-BĐ</a></li>
+</ul>
+<div class="tab-content permission">
+    <div id="SQ" class="tab-pane fade in active">
+        <h3>Sỹ quan</h3>
+        <table class="table">
+            <tr>
+                <th>
+                    IDQN
+                </th>
+                <th>
+                    Họ tên
+                </th>
+                
+                <th>
+                    Đề hiện tại
+                </th>
+                <th>
+                    Quy định đề
+                </th>
+                <th>
+                    Cập nhật
+                </th>
+            </tr>
+
+            @foreach (var item in ListSQ)
+            {
+                <tr class="table-row" id="r">
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IDQN)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.HoTen)
+                    </td>
+                    
+                    <td class="currentNumberDisplay">
+                        @Html.DisplayFor(modelItem => item.IndividualExam)
+                    </td>
+
+                    <td class="numberSelect">
+                        @Html.DropDownListFor(m => m.ListObj.ExamNumber,
+
+                                              // 2. Take list of values from Model.States
+                                              Model.TotalExam,
+
+                                              // 3. Text for the first 'default' option
+
+
+                                              //4. A class name to assign to <select> tag
+                                              new { @class = "form-control examSelectList", @id = "examSelectList" })
+                    </td>
+
+                    <td>
+                        <div class="IDcontain">
+                            <div class="form-control hidden">
+                                @Html.TextBoxFor(model => model.CaptID, new { @class = "form-control ID", @id = item.IDQN, Value = item.IDQN })
+                            </div>
+                            <button type="submit" class="btn btn-accept" value="Accept">
+                                Set
+                            </button>
+                        </div>
+                    </td>
+                    @*<td>
+                        <div class="IDcontain">
+                            <div class="form-control hidden">
+                                @Html.TextBoxFor(model => model.CaptID, new { @class = "form-control ID", @id = item.IDQN, Value = item.IDQN })
+                            </div>
+                            <button type="submit" class="btn btn-refresh" value="Refresh">
+                                Refresh
+                            </button>
+                        </div>
+
+                    </td>*@
+
+                </tr>
+            }
+
+        </table>
+    </div>
+    
+    <div id="QNCN" class="tab-pane fade">
+        <h3>Quân nhân chuyên nghiệp</h3>
+        <table class="table">
+            <tr>
+                <th>
+                    IDQN
+                </th>
+                <th>
+                    Họ tên
+                </th>
+                <th>
+                    Đề hiện tại
+                </th>
+                <th>
+                    Quy định đề
+                </th>
+                <th>
+                    Cập nhật
+                </th>
+            </tr>
+
+            @foreach (var item in ListQNCN)
+            {
+                <tr class="table-row" id="r">
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IDQN)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.HoTen)
+                    </td>
+                    <td class="currentNumberDisplay">
+                        @Html.DisplayFor(modelItem => item.IndividualExam)
+                    </td>
+                    <td class="numberSelect">
+                        @Html.DropDownListFor(m => m.ListObj.ExamNumber,
+
+                                              // 2. Take list of values from Model.States
+                                              Model.TotalExam,
+
+                                              // 3. Text for the first 'default' option
+
+
+                                              //4. A class name to assign to <select> tag
+                                              new { @class = "form-control examSelectList", @id = "examSelectList" })
+                    </td>
+
+                    <td>
+                        <div class="IDcontain">
+                            <div class="form-control hidden">
+                                @Html.TextBoxFor(model => model.CaptID, new { @class = "form-control ID", @id = item.IDQN, Value = item.IDQN })
+                            </div>
+                            <button type="submit" class="btn btn-accept" value="Accept">
+                                Set
+                            </button>
+                        </div>
+                    </td>
+
+                </tr>
+            }
+
+        </table>
+    </div>
+    
+    <div id="HSQ_TS" class="tab-pane fade">
+        <h3>Hạ sỹ quan Đại đội Trinh Sát</h3>
+        <table class="table">
+            <tr>
+                <th>
+                    IDQN
+                </th>
+                <th>
+                    Họ tên
+                </th>
+                <th>
+                    Đề hiện tại
+                </th>
+                <th>
+                    Quy định đề
+                </th>
+                <th>
+                    Cập nhật
+                </th>
+            </tr>
+
+            @foreach (var item in ListHSQ_TS)
+            {
+                <tr class="table-row" id="r">
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IDQN)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.HoTen)
+                    </td>
+                    <td class="currentNumberDisplay">
+                        @Html.DisplayFor(modelItem => item.IndividualExam)
+                    </td>
+                    <td class="numberSelect">
+                        @Html.DropDownListFor(m => m.ListObj.ExamNumber,
+
+                                              // 2. Take list of values from Model.States
+                                              Model.TotalExam,
+
+                                              // 3. Text for the first 'default' option
+
+
+                                              //4. A class name to assign to <select> tag
+                                              new { @class = "form-control examSelectList", @id = "examSelectList" })
+                    </td>
+
+                    <td>
+                        <div class="IDcontain">
+                            <div class="form-control hidden">
+                                @Html.TextBoxFor(model => model.CaptID, new { @class = "form-control ID", @id = item.IDQN, Value = item.IDQN })
+                            </div>
+                            <button type="submit" class="btn btn-accept" value="Accept">
+                                Set
+                            </button>
+                        </div>
+                    </td>
+
+                </tr>
+            }
+
+        </table>
+    </div>
+    
+    <div id="HSQ_TT" class="tab-pane fade">
+        <h3>Hạ sỹ quan Đại đội Tiêu Tẩy</h3>
+        <table class="table">
+            <tr>
+                <th>
+                    IDQN
+                </th>
+                <th>
+                    Họ tên
+                </th>
+                <th>
+                    Đề hiện tại
+                </th>
+                <th>
+                    Quy định đề
+                </th>
+                <th>
+                    Cập nhật
+                </th>
+            </tr>
+
+            @foreach (var item in ListHSQ_TT)
+            {
+                <tr class="table-row" id="r">
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IDQN)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.HoTen)
+                    </td>
+                    <td class="currentNumberDisplay">
+                        @Html.DisplayFor(modelItem => item.IndividualExam)
+                    </td>
+                    <td class="numberSelect">
+                        @Html.DropDownListFor(m => m.ListObj.ExamNumber,
+
+                                              // 2. Take list of values from Model.States
+                                              Model.TotalExam,
+
+                                              // 3. Text for the first 'default' option
+
+
+                                              //4. A class name to assign to <select> tag
+                                              new { @class = "form-control examSelectList", @id = "examSelectList" })
+                    </td>
+
+                    <td>
+                        <div class="IDcontain">
+                            <div class="form-control hidden">
+                                @Html.TextBoxFor(model => model.CaptID, new { @class = "form-control ID", @id = item.IDQN, Value = item.IDQN })
+                            </div>
+                            <button type="submit" class="btn btn-accept" value="Accept">
+                                Set
+                            </button>
+                        </div>
+                    </td>
+                    
+
+                </tr>
+            }
+
+        </table>
+    </div>
+    
+    <div id="HSQ_dB_bBD" class="tab-pane fade">
+        <h3>Hạ sỹ quan Tiểu đoàn Bộ - Trung đội Bảo đảm</h3>
+        <table class="table">
+            <tr>
+                <th>
+                    IDQN
+                </th>
+                <th>
+                    Họ tên
+                </th>
+                <th>
+                    Đề hiện tại
+                </th>
+                <th>
+                    Quy định đề
+                </th>
+                <th>
+                    Cập nhật
+                </th>
+            </tr>
+
+            @foreach (var item in ListHSQ_dB_BD)
+            {
+                <tr class="table-row" id="r">
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IDQN)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.HoTen)
+                    </td>
+                    <td class="currentNumberDisplay">
+                        @Html.DisplayFor(modelItem => item.IndividualExam)
+                    </td>
+                    <td class="numberSelect">
+                        @Html.DropDownListFor(m => m.ListObj.ExamNumber,
+
+                                              // 2. Take list of values from Model.States
+                                              Model.TotalExam,
+
+                                              // 3. Text for the first 'default' option
+
+
+                                              //4. A class name to assign to <select> tag
+                                              new { @class = "form-control examSelectList", @id = "examSelectList" })
+                    </td>
+
+                    <td>
+                        <div class="IDcontain">
+                            <div class="form-control hidden">
+                                @Html.TextBoxFor(model => model.CaptID, new { @class = "form-control ID", @id = item.IDQN, Value = item.IDQN })
+                            </div>
+                            <button type="submit" class="btn btn-accept" value="Accept">
+                                Set
+                            </button>
+                        </div>
+                    </td>
+
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>
+
+
+<script src="~/Assets/js/IndividualExam.js" type="text/javascript"></script>

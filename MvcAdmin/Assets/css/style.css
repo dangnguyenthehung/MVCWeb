@@ -44,8 +44,11 @@
 #side-menu li:nth-child(2) {
     background-color: #8e44ad;
 }
-#side-menu li:last-child {
+#side-menu li:nth-child(3) {
     background-color: #2980b9;
+}
+#side-menu li:last-child {
+    background-color: #c0392b;
 }
 #side-menu li:first-child a {
     background-color: #16a085;
@@ -55,8 +58,12 @@
     background-color: #8e44ad;
     display: inline;
 }
-#side-menu li:last-child a {
+#side-menu li:nth-child(3) a {
     background-color: #2980b9;
+    display: inline;
+}
+#side-menu li:last-child a {
+    background-color: #c0392b;
     display: inline;
 }
 .nav-tabs {
