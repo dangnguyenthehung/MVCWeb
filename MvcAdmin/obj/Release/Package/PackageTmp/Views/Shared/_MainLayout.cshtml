@@ -47,6 +47,8 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="~/Assets/dist/js/sb-admin-2.js"></script>
+    <script src="~/Assets/vendor/bootstrap-growl-master/jquery.bootstrap-growl.js"></script>
+    <script src="~/Assets/js/SyncResult.js"></script>
 </head>
 
 <body>
@@ -93,6 +95,12 @@
                 </div>
                 <!-- /.sidebar-collapse -->
             </div>
+                        <!-- test notification -->
+                        @*<button class="success btn btn-success">Success</button>
+                        <button class="error btn btn-danger">Error</button>
+                        <button class="info btn btn-info">Info</button>
+                        <button class="warning btn btn-warning">Warning</button>*@
+                        
             <!-- /.navbar-static-side -->
         </nav>
 
@@ -106,7 +114,12 @@
         </div>
     <!-- /#wrapper -->
 
-
+    <script type="text/javascript">
+        function currentController() {
+            var controller = '@HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString()';
+            return controller;
+        }
+    </script>
     
 
 </body>

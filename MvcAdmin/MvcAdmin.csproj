@@ -156,6 +156,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Code\SyncResult.cs" />
     <Compile Include="Controllers\DanhSachesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IndividualExamsController.cs" />
@@ -173,6 +174,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Audio\demonstrative.mp3" />
+    <Content Include="Assets\Audio\filling-your-inbox.mp3" />
+    <Content Include="Assets\Audio\soft-bells.mp3" />
+    <Content Include="Assets\Audio\trembling.mp3" />
+    <Content Include="Assets\Audio\new-message.mp3" />
     <Content Include="Assets\css\individual_page_style.css" />
     <Content Include="Assets\css\style.css" />
     <Content Include="Assets\data\flot-data.js" />
@@ -184,6 +190,10 @@
     <Content Include="Assets\js\IndividualExam.js" />
     <Content Include="Assets\js\Permission.js" />
     <Content Include="Assets\js\sb-admin-2.js" />
+    <Content Include="Assets\js\SyncResult.js" />
+    <Content Include="Assets\vendor\bootstrap-growl-master\demo.html" />
+    <Content Include="Assets\vendor\bootstrap-growl-master\jquery.bootstrap-growl.js" />
+    <Content Include="Assets\vendor\bootstrap-growl-master\jquery.bootstrap-growl.min.js" />
     <Content Include="Assets\vendor\bootstrap-social\bootstrap-social.css" />
     <Content Include="Assets\vendor\bootstrap\css\bootstrap.css" />
     <Content Include="Assets\vendor\bootstrap\css\bootstrap.min.css" />
@@ -333,6 +343,12 @@
     <Content Include="Assets\less\mixins.less" />
     <Content Include="Assets\less\sb-admin-2.less" />
     <Content Include="Assets\less\variables.less" />
+    <Content Include="Assets\vendor\bootstrap-growl-master\composer.json" />
+    <Content Include="Assets\vendor\bootstrap-growl-master\jquery.bootstrap-growl.coffee" />
+    <Content Include="Assets\vendor\bootstrap-growl-master\LICENSE.md" />
+    <Content Include="Assets\vendor\bootstrap-growl-master\package.json" />
+    <Content Include="Assets\vendor\bootstrap-growl-master\Rakefile" />
+    <Content Include="Assets\vendor\bootstrap-growl-master\README.md" />
     <None Include="Properties\PublishProfiles\demo.pubxml" />
     <None Include="Properties\PublishProfiles\demo1.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -373,6 +389,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\ResultSyncing\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

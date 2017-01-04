@@ -2,8 +2,6 @@
 
     var loadAJAX = function (url, ID, examNum) {
         $.getJSON(url, { id: ID, examNumber: examNum }, function (response) {
-            //$("#nameDemo").empty();
-
             // get response object
             var obj = response;
             var rID = "r" + ID;

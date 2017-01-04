@@ -100,7 +100,12 @@ namespace MvcAdmin.Controllers
             }
             return View(user);
         }
-
+        // syncing result - realtime syncing
+        [HttpGet]
+        public ActionResult SyncResult()
+        {
+            return Content("Syncing...");
+        }
         // GET: DanhSaches/Delete/5
         //public ActionResult Delete(int? id)
         //{

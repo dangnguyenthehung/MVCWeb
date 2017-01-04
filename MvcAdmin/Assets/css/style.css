@@ -177,8 +177,64 @@
     border-top: 1px solid #2980b9;
     padding-left: 20px;
 }
+/* Individual Exam page */
+.nav-tabs.individual>li:not(.active) > a {
+    background-color: #c0392b;
+    color: white;
+}
+.nav-tabs.individual>li:not(.active) > a:hover {
+    background-color: #c0392b;
+    color: white;
+}
+.nav-tabs.individual>li.active>a, 
+.nav-tabs.individual>li.active>a:focus, 
+.nav-tabs.individual>li.active>a:hover {
+    border: solid 1px #c0392b;
+    border-bottom: solid 1px transparent;
+}
+.tab-content.individual {
+    border: solid 1px #c0392b;
+}
+.individual .table>tbody>tr>td, 
+.individual .table>tbody>tr>th, 
+.individual .table>tfoot>tr>td, 
+.individual .table>tfoot>tr>th, 
+.individual .table>thead>tr>td, 
+.individual .table>thead>tr>th {
+    border-top: 1px solid #c0392b;
+    padding-left: 20px;
+}
+.refreshAll {
+    height: 50px;
+}
+.btn-accept {
+    background-color: #61bdfb;
+    width: 70px;
+    height: 30px;
+    padding: 3px 8px;
+}
+.btn-refresh {
+    background-color: #3accaf;
+    width: 70px;
+    height: 30px;
+    padding: 3px 8px;
+}
+.btn-accept:hover {
+    background-color: #47a1de;
+}
+.btn-refresh:hover {
+    background-color: #22b194;
+}
 /*end*/
 .tab-content > .tab-pane > h3 {
     text-align: center;
     padding: 10px;
+}
+.bootstrap-growl.alert-success {
+    color: #0F438A;
+    background-color: #95E0CF;
+    border-color: #03886A;
+    font-size: 16px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }

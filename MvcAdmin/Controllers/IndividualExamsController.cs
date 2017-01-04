@@ -31,8 +31,18 @@ namespace MvcAdmin.Controllers
         [HttpPost]
         public ActionResult Index(IndividualExamMainModel model)
         {
-            var list = context.ListAll();
-            return View(list);
+            var ID = model.CaptID;
+            var Act = model.Action;
+            if (Act == "RefreshAll" && ID == 0)
+            {
+                context.Refresh(ID);
+            }
+            else
+            {
+                //
+            }
+
+            return RedirectToAction("Index");
         }
 
         public int GetTotalExam()
