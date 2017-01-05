@@ -39,5 +39,10 @@ namespace Model.Framework
         [Column(Order = 4)]
         [StringLength(5)]
         public string ThanhPhan { get; set; }
+
+        [Key]
+        [Column(Order = 5)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int IDKQ { get; set; }
     }
 }

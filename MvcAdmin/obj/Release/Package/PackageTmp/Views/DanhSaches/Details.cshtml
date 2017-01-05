@@ -3,7 +3,6 @@
     ViewBag.Title = "Chi tiết";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
-
 <h2>@ViewBag.Title</h2>
 
 <div>
@@ -65,12 +64,14 @@
             <th>
                 Xếp loại
             </th>
-            <th></th>
+            <th>
+                
+            </th>
         </tr>
 
         @foreach (var item in Model.listKQ)
         {
-            <tr>                
+            <tr class="table-row" id="r">                
                 <td>
                     @Html.DisplayFor(modelItem => item.NgayKT)
                 </td>
@@ -84,8 +85,13 @@
                     @Html.DisplayFor(modelItem => item.XepLoai)
                 </td>
                 <td>
-                    @*@Html.ActionLink("Delete", "Delete", new {  id=item.IDQN })*@
+                    <div class="IDcontain">
+                        <button type="submit" class="btn btn-delete" value="Delete">
+                            @Html.ActionLink( "Xóa", "Delete", new { IDKQ = item.IDKQ , IDQN = item.IDQN})
+                        </button>
+                    </div>
                 </td>
+                
             </tr>
         }
 

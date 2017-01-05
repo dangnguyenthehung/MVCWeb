@@ -29,5 +29,39 @@ namespace Model
             var res = context.Database.ExecuteSqlCommand("Sp_InsertKQKT @IDQN,@KQ,@XepLoai,@DeSo,@TraLoi,@DapAn",sqlParams);
             return res;
         }
+        public void DeleteResult(int? IDKQ)
+        {
+            if (IDKQ != null)
+            {
+                object[] sqlParams =
+                {
+                    new SqlParameter("@IDKQ", IDKQ)
+                };
+                var res = context.Database.ExecuteSqlCommand("Sp_DeleteKQKT @IDKQ", sqlParams);
+            }
+            else
+            {
+                //
+            }
+           
+        }
+        public ViewKQ GetResult(int? IDKQ, int? IDQN)
+        {
+            if (IDKQ != null && IDQN != null)
+            {
+                object[] sqlParams =
+                {
+                    new SqlParameter("@IDKQ", IDKQ),
+                    new SqlParameter("@IDQN", IDQN)
+                };
+                var res = context.Database.SqlQuery<ViewKQ>("Sp_GetKQKT @IDKQ, @IDQN", sqlParams).SingleOrDefault();
+                return res;
+            }
+            else
+            {
+                //
+                return null;
+            }
+        }
     }
 }

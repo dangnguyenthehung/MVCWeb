@@ -386,9 +386,11 @@
     <Content Include="Views\DanhSaches\Edit.cshtml" />
     <Content Include="Views\DanhSaches\Index.cshtml" />
     <Content Include="Views\IndividualExams\Index.cshtml" />
+    <Content Include="Views\DanhSaches\NoResult.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Details\" />
     <Folder Include="Views\ResultSyncing\" />
   </ItemGroup>
   <ItemGroup>

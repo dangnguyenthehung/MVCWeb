@@ -1,5 +1,6 @@
 ﻿using Model;
 using Model.Framework;
+using MvcAdmin.Code;
 using MvcAdmin.Models;
 using System;
 using System.Collections.Generic;
@@ -105,6 +106,28 @@ namespace MvcAdmin.Controllers
             obj = context.GetOne(id);
 
             return Json(obj, JsonRequestBehavior.AllowGet);
+        }
+        // syncing result - realtime syncing
+        [HttpGet]
+        public ActionResult SyncResult()
+        {
+            List<ViewKQ> data = func_SyncResult.show_New_Result();
+            string[] text = { " " };
+            var i = 0;
+            if (data == null)
+            {
+                text[0] = "normal";
+            }
+            else
+            {
+                for (i = 0; i < text.Length; i++)
+                {
+                    string str = "Nộp bài: " + data[i].HoTen + " - " + data[i].KQ + " điểm";
+                    text[i] = str;
+                }
+            }
+
+            return Json(text, JsonRequestBehavior.AllowGet);
         }
     }
 }

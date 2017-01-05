@@ -9,6 +9,7 @@ using System.Web.Mvc;
 using Model;
 using Model.Framework;
 using MvcAdmin.Models;
+using MvcAdmin.Code;
 
 namespace MvcAdmin.Controllers
 {
@@ -26,6 +27,7 @@ namespace MvcAdmin.Controllers
         }
 
         // GET: DanhSaches/Details/5
+        [HttpGet]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -47,7 +49,8 @@ namespace MvcAdmin.Controllers
             }
             return View(model);
         }
-
+        
+        
         // GET: DanhSaches/Create
         public ActionResult Create()
         {
@@ -104,33 +107,66 @@ namespace MvcAdmin.Controllers
         [HttpGet]
         public ActionResult SyncResult()
         {
-            return Content("Syncing...");
+            List<ViewKQ> data = func_SyncResult.show_New_Result();
+            string[] text = { " " };
+            var i = 0;
+            if (data == null)
+            {
+                text[0] = "normal";
+            }
+            else
+            {
+                for (i = 0; i < text.Length; i++)
+                {
+                    string str = "Nộp bài: " + data[i].HoTen + " - " + data[i].KQ + " điểm";
+                    text[i] = str;
+                }
+            }
+
+            return Json(text, JsonRequestBehavior.AllowGet);
         }
         // GET: DanhSaches/Delete/5
-        //public ActionResult Delete(int? id)
-        //{
-        //    if (id == null)
-        //    {
-        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-        //    }
-        //    DanhSach danhSach = db.DanhSaches.Find(id);
-        //    if (danhSach == null)
-        //    {
-        //        return HttpNotFound();
-        //    }
-        //    return View(danhSach);
-        //}
 
-        // POST: DanhSaches/Delete/5
-        //[HttpPost, ActionName("Delete")]
-        //[ValidateAntiForgeryToken]
-        //public ActionResult DeleteConfirmed(int id)
-        //{
-        //    DanhSach danhSach = db.DanhSaches.Find(id);
-        //    db.DanhSaches.Remove(danhSach);
-        //    db.SaveChanges();
-        //    return RedirectToAction("Index");
-        //}
+        public ActionResult Delete(int? IDKQ, int? IDQN)
+        {
+            if (IDKQ == null || IDQN == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            KetQuaKiemTraModel model = new KetQuaKiemTraModel();
+
+            ViewKQ obj = new ViewKQ();
+            obj = model.GetResult(IDKQ, IDQN);
+            if (obj == null)
+            {
+                return View("NoResult");
+            }
+
+            return View(obj);
+        }
+        
+        //POST: DanhSaches/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed(int? IDKQ, int? IDQN)
+        {
+            if (IDKQ == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            KetQuaKiemTraModel model = new KetQuaKiemTraModel();
+            model.DeleteResult(IDKQ);
+            if (IDQN != null)
+            {
+                return RedirectToAction("Details", new { id = IDQN});
+
+            }
+            else
+            {
+                return RedirectToAction("Index");
+            }
+        }
 
         //protected override void Dispose(bool disposing)
         //{

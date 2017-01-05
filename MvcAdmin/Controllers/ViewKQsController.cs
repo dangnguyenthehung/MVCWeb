@@ -64,7 +64,6 @@ namespace MvcAdmin.Controllers
             }
 
             return Json(text, JsonRequestBehavior.AllowGet);
-
         }
         // GET: ViewKQs/Delete/5
         //public ActionResult Delete(int? id)

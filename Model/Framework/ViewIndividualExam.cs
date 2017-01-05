@@ -23,12 +23,12 @@ namespace Model.Framework
 
         [Key]
         [Column(Order = 2)]
-        [StringLength(5)]
-        public string ThanhPhan { get; set; }
+        [StringLength(20)]
+        public string DonVi { get; set; }
 
         [Key]
         [Column(Order = 3)]
-        [StringLength(20)]
-        public string DonVi { get; set; }
+        [StringLength(5)]
+        public string ThanhPhan { get; set; }
     }
 }
