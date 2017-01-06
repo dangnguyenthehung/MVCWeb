@@ -444,6 +444,7 @@
     <Content Include="Views\QNCN\QNCN4.cshtml" />
     <Content Include="Views\Individual\Individual1.cshtml" />
     <Content Include="Views\Individual\Individual2.cshtml" />
+    <Content Include="Views\Shared\Render.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

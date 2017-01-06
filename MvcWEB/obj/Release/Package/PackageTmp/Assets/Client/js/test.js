@@ -180,8 +180,25 @@ function heartBeat() {
     
 }
 $(function () {
-    
+    checkLog();
     setInterval("heartBeat()", 1000 * 60 * 2); // 2p gửi request một lần
     
 });
+function checkLog() {
+    //var url = window.location.href;
+    $.get("PreventBack", function (data) {
+        
+        if (data  == 2 )
+        {
+            window.location.reload();
+        }
+        else
+        {
+            console.log("enter");
+        }
+    });
+
+};
+
+    
 

@@ -98,6 +98,10 @@ namespace MvcWEB.Controllers
             string desAction = model.IDQN + "_HSQ" + model.DeSo;
             show.fileName = desAction;
             show.type = "HSQ";
+
+            var permission = new PermissionModel();
+            permission.SetLogStatus(model.IDQN, 2);
+
             return RedirectToAction("Index","Result",show);
         }
 
@@ -108,7 +112,7 @@ namespace MvcWEB.Controllers
             var check = new ChooseTypeController().checkPermission(id);
             if (check == 1)
             {
-                permission.SetLogStatus(id);
+                permission.SetLogStatus(id,1);
                 return 1;
             }
             else
@@ -116,6 +120,24 @@ namespace MvcWEB.Controllers
                 return 0;
             }
         } // end check
+
+        // prevent user to click back to exam after submit
+        public int PreventBack()
+        {
+            var session = SessionHelper.GetSession();
+            var permission = new PermissionModel();
+            var check = new ChooseTypeController().checkPermission(session.ID);
+            if (check == 2)
+            {
+                
+                return 2;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+        // end check
 
         // keep client alive - contact with server during exam time
         [HttpGet]

@@ -108,6 +108,10 @@ namespace MvcWEB.Controllers
             {
                 return 1;
             }
+            else if (res.Permission == 1 && res.LogStatus == 2)
+            {
+                return 2;
+            }
             else
             {
                 return 0;

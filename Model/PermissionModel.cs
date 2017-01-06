@@ -53,13 +53,14 @@ namespace Model
             var res = context.Database.ExecuteSqlCommand("Sp_RenewAllPermission @IDQN", sqlParams);
 
         }
-        public void SetLogStatus(int ID)
+        public void SetLogStatus(int ID, int log)
         {
             object[] sqlParams =
             {
-                new SqlParameter("@IDQN",ID)
+                new SqlParameter("@IDQN",ID),
+                new SqlParameter("@Log",log)
             };
-            var res = context.Database.ExecuteSqlCommand("Sp_SetLogStatus @IDQN", sqlParams);
+            var res = context.Database.ExecuteSqlCommand("Sp_SetLogStatus @IDQN, @Log", sqlParams);
 
         }
         public ViewPermission CheckPermission(int ID)
