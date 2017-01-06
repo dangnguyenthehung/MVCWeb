@@ -22,6 +22,7 @@ namespace MvcWEB.Code
             //
             var ResultPageInfo = new ResultPageModel();
             List<int> wrongStr = new List<int>();
+            List<string> wrongAns = new List<string>();
             List<string> trueAns = new List<string>();
             // calculate mark
             var i = 0;
@@ -34,15 +35,18 @@ namespace MvcWEB.Code
                 else // save user wrong choices for display in result page
                 {
                     wrongStr.Add(i+1);
-                    var s = correctString[i].Remove(0,correctString[i].Length-1);
-                    trueAns.Add(s);
+                    string t = correctString[i].Remove(0,correctString[i].Length-1); // remove first char (1A -> A)
+                    string w = userString[i].Remove(0, correctString[i].Length - 1); ;
+                    wrongAns.Add(w);
+                    trueAns.Add(t);
                 }
-                System.Diagnostics.Debug.WriteLine(userString[i] + "------->" + correctString[i]);
+                System.Diagnostics.Debug.WriteLine(userString[i] + "--->" + correctString[i]);
             }
 
             ResultPageInfo.ExamObj = answer.Object;
             ResultPageInfo.WrongNumber = wrongStr.ToArray();
             ResultPageInfo.TrueAns = trueAns.ToArray();
+            ResultPageInfo.WrongAns = wrongAns.ToArray();
             // call create result page action
             CreateResultFile.Action(ResultPageInfo, path);
 

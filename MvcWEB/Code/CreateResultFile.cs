@@ -58,6 +58,7 @@ namespace MvcWEB.Code
 
                     int[] wrong = model.WrongNumber;
                     string[] dapan = model.TrueAns;
+                    string[] user_choose = model.WrongAns;
                     int falseNumber = wrong.Length;
                     for (i = 0; i < falseNumber; i++)
                     {
@@ -65,7 +66,8 @@ namespace MvcWEB.Code
                         var j = wrong[i];
 
                         string oldStr = "<div id=\"DapAn" + j + "\">";
-                        string trueAns = oldStr + "<h2 class='false'><b>Đáp án : " + dapan[i] + "</b></h2>";
+                        string trueAns = oldStr + "<h2 class='false'><span>Chọn: " + user_choose[i] + ", </span>" +
+                                        "<b> Đáp án : " + dapan[i] + "</b></h2>";
                         string oldClass = "checkBox";
                         string newClass = "checkBox invisible";
 

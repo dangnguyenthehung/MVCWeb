@@ -9,6 +9,7 @@ namespace MvcWEB.Models
     {
         public string ExamObj { get; set; }
         public int[] WrongNumber { get; set; }
+        public string[] WrongAns { get; set; }
         public string[] TrueAns { get; set; }
     }
 }
