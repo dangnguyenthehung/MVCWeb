@@ -22,8 +22,10 @@ namespace MvcWEB.Code
                 "@model MvcWEB.Models.ShowResultModel \n" +
                 "<div class=\"info\">" +
                 "<h1>" + userInfo.UserName + "</h1>\n" +
-                "<h3>Điểm: <h2>@Model.mark</h2></h3> \n" +
-                "<h3>Xếp loại: <h2>@Model.quality</h2></h3> \n" +
+                "<h3>Điểm: </h3> \n" +
+                "<h2>@Model.mark</h2>" +
+                "<h3>Xếp loại: </h3> \n" +
+                "<h2>@Model.quality</h2>" +
                 "</div>\n" +
                 "<div class=\"wrongAns\">\n" +
                 "<h1>Các câu trả lời sai:</h1>\n";

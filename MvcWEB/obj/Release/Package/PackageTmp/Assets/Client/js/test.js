@@ -71,6 +71,7 @@ function countdown(){ // dong ho dem nguoc
     };
 function begin (){
     document.getElementById("begin").style.display = "none";
+    document.getElementById("timer").innerHTML = time + " :00";
     //document.getElementById("toggleButton").removeAttribute("class");
     //document.getElementById("toggleButton").setAttribute("class", "hamburger is-closed hidden-lg hidden-md");
     document.getElementById("countdown").setAttribute("class", "countdownClock");

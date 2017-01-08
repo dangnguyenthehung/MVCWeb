@@ -56,6 +56,10 @@ body {
 	color: #C00; 
 	font-size:18pt; 
 }
+.false > span { 
+	color: #2980b9;
+    font-weight: bold;
+}
 h3 {
 	text-align: justify;
 }

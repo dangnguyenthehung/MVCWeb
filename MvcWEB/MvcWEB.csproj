@@ -182,12 +182,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\CorrectAnswer\HSQ1.txt" />
-    <Content Include="App_Data\CorrectAnswer\HSQ2.txt" />
-    <Content Include="App_Data\CorrectAnswer\HSQ3.txt" />
-    <Content Include="App_Data\CorrectAnswer\HSQ4.txt" />
-    <Content Include="App_Data\CorrectAnswer\Individual1.txt" />
-    <Content Include="App_Data\CorrectAnswer\Individual2.txt" />
+    <Content Include="App_Data\CorrectAnswer\HSQ_1.txt" />
+    <Content Include="App_Data\CorrectAnswer\HSQ_2.txt" />
+    <Content Include="App_Data\CorrectAnswer\HSQ_3.txt" />
+    <Content Include="App_Data\CorrectAnswer\HSQ_4.txt" />
+    <Content Include="App_Data\CorrectAnswer\Individual_1.txt" />
+    <Content Include="App_Data\CorrectAnswer\Individual_2.txt" />
     <Content Include="Assets\Client\css\MobileNav.css" />
     <Content Include="Assets\Client\css\Result.css" />
     <Content Include="Assets\Client\css\style.css" />
@@ -421,30 +421,33 @@
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutClient.cshtml" />
     <Content Include="Views\Shared\_MainLayout.cshtml" />
-    <Content Include="Views\SQ\SQ1.cshtml" />
-    <Content Include="Views\SQ\SQ2.cshtml" />
-    <Content Include="Views\SQ\SQ3.cshtml" />
-    <Content Include="Views\SQ\SQ4.cshtml" />
+    <Content Include="Views\SQ\SQ_1.cshtml" />
+    <Content Include="Views\SQ\SQ_2.cshtml" />
+    <Content Include="Views\SQ\SQ_3.cshtml" />
+    <Content Include="Views\SQ\SQ_4.cshtml" />
     <Content Include="Views\Test\HSQ.cshtml" />
     <Content Include="Views\Test\Index.cshtml" />
     <Content Include="Views\Test\QNCN.cshtml" />
     <Content Include="Views\Test\SQ.cshtml" />
-    <Content Include="Views\HSQ\HSQ1.cshtml" />
-    <Content Include="Views\HSQ\HSQ2.cshtml" />
-    <Content Include="Views\HSQ\HSQ3.cshtml" />
-    <Content Include="Views\HSQ\HSQ4.cshtml" />
+    <Content Include="Views\HSQ\HSQ_1.cshtml" />
+    <Content Include="Views\HSQ\HSQ_2.cshtml" />
+    <Content Include="Views\HSQ\HSQ_3.cshtml" />
+    <Content Include="Views\HSQ\HSQ_4.cshtml" />
     <Content Include="Views\Result\Index.cshtml" />
     <Content Include="Views\Shared\_ResultLayout.cshtml" />
     <Content Include="Views\Result\QNCN\index.cshtml" />
     <Content Include="Views\Result\SQ\index.cshtml" />
     <Content Include="Views\Result\HSQ\index.cshtml" />
-    <Content Include="Views\QNCN\QNCN1.cshtml" />
-    <Content Include="Views\QNCN\QNCN2.cshtml" />
-    <Content Include="Views\QNCN\QNCN3.cshtml" />
-    <Content Include="Views\QNCN\QNCN4.cshtml" />
-    <Content Include="Views\Individual\Individual1.cshtml" />
-    <Content Include="Views\Individual\Individual2.cshtml" />
+    <Content Include="Views\QNCN\QNCN_1.cshtml" />
+    <Content Include="Views\QNCN\QNCN_2.cshtml" />
+    <Content Include="Views\QNCN\QNCN_3.cshtml" />
+    <Content Include="Views\QNCN\QNCN_4.cshtml" />
+    <Content Include="Views\Individual\Individual_1.cshtml" />
+    <Content Include="Views\Individual\Individual_2.cshtml" />
     <Content Include="Views\Shared\Render.cshtml" />
+    <Content Include="Views\Result\Individual\10_Individual2.cshtml" />
+    <Content Include="Views\Result\Individual\11_Individual1.cshtml" />
+    <Content Include="Views\Result\Individual\49_Individual1.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

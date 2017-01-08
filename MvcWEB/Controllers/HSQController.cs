@@ -31,7 +31,7 @@ namespace MvcWEB.Controllers
             System.Diagnostics.Debug.WriteLine(model.HoTen);
             System.Diagnostics.Debug.WriteLine(model.ID);
             //choose random action
-            string rdmAction = "HSQ" + rdmView;
+            string rdmAction = "HSQ_" + rdmView;
 
             //return RedirectToAction(rdmAction);
             SessionHelper.SetSession(new UserSession() { UserName = model.HoTen, ID = model.ID, DeSo = rdmView });
@@ -49,7 +49,7 @@ namespace MvcWEB.Controllers
             string RePath = path.Replace("HSQ", "Views\\HSQ");
             var answer = new UserAnswer();
 
-            answer.Object = "HSQ" + model.DeSo;
+            answer.Object = "HSQ_" + model.DeSo;
             string correctAns = CorrectAnswerHelper.GetCorrectAnswer(answer.Object);
             
             answer.UAnswer = model.TraLoi;
@@ -95,7 +95,7 @@ namespace MvcWEB.Controllers
                     show.quality = "Không đạt yêu cầu";
                     break;
             }
-            string desAction = model.IDQN + "_HSQ" + model.DeSo;
+            string desAction = model.IDQN + "_HSQ_" + model.DeSo;
             show.fileName = desAction;
             show.type = "HSQ";
 
@@ -148,7 +148,7 @@ namespace MvcWEB.Controllers
 
         // Routing with random Examination
         [HttpGet]
-        public ActionResult HSQ1()
+        public ActionResult HSQ_1()
         {
             var session = SessionHelper.GetSession();
             var check = CheckStatus(session.ID);
@@ -165,7 +165,7 @@ namespace MvcWEB.Controllers
             return View();
         }
         [HttpGet]
-        public ActionResult HSQ2()
+        public ActionResult HSQ_2()
         {
             var session = SessionHelper.GetSession();
             if (session == null)
@@ -184,7 +184,7 @@ namespace MvcWEB.Controllers
             return View();
         }
         [HttpGet]
-        public ActionResult HSQ3()
+        public ActionResult HSQ_3()
         {
             var session = SessionHelper.GetSession();
             var check = CheckStatus(session.ID);
@@ -199,7 +199,7 @@ namespace MvcWEB.Controllers
             return View();
         }
         [HttpGet]
-        public ActionResult HSQ4()
+        public ActionResult HSQ_4()
         {
             var session = SessionHelper.GetSession();
             var check = CheckStatus(session.ID);
@@ -214,7 +214,7 @@ namespace MvcWEB.Controllers
             return View();
         }
         [HttpGet]
-        public ActionResult HSQ5()
+        public ActionResult HSQ_5()
         {
             var session = SessionHelper.GetSession();
             var check = CheckStatus(session.ID);
@@ -229,7 +229,7 @@ namespace MvcWEB.Controllers
             return View();
         }
         [HttpGet]
-        public ActionResult HSQ6()
+        public ActionResult HSQ_6()
         {
             var session = SessionHelper.GetSession();
             var check = CheckStatus(session.ID);
@@ -244,7 +244,7 @@ namespace MvcWEB.Controllers
             return View();
         }
         [HttpGet]
-        public ActionResult HSQ7()
+        public ActionResult HSQ_7()
         {
             var session = SessionHelper.GetSession();
             var check = CheckStatus(session.ID);
@@ -259,7 +259,7 @@ namespace MvcWEB.Controllers
             return View();
         }
         [HttpGet]
-        public ActionResult HSQ8()
+        public ActionResult HSQ_8()
         {
             var session = SessionHelper.GetSession();
             var check = CheckStatus(session.ID);
@@ -274,7 +274,7 @@ namespace MvcWEB.Controllers
             return View();
         }
         [HttpGet]
-        public ActionResult HSQ9()
+        public ActionResult HSQ_9()
         {
             var session = SessionHelper.GetSession();
             var check = CheckStatus(session.ID);
@@ -289,7 +289,7 @@ namespace MvcWEB.Controllers
             return View();
         }
         [HttpGet]
-        public ActionResult HSQ10()
+        public ActionResult HSQ_10()
         {
             var session = SessionHelper.GetSession();
             var check = CheckStatus(session.ID);
@@ -305,52 +305,52 @@ namespace MvcWEB.Controllers
         }
 
         [HttpPost]
-        public ActionResult HSQ1(KetQuaModel model)
+        public ActionResult HSQ_1(KetQuaModel model)
         {
             return RedirectToAction("MainAction", model);
         }
         [HttpPost]
-        public ActionResult HSQ2(KetQuaModel model)
+        public ActionResult HSQ_2(KetQuaModel model)
         {
             return RedirectToAction("MainAction", model);
         }
         [HttpPost]
-        public ActionResult HSQ3(KetQuaModel model)
+        public ActionResult HSQ_3(KetQuaModel model)
         {
             return RedirectToAction("MainAction", model);
         }
         [HttpPost]
-        public ActionResult HSQ4(KetQuaModel model)
+        public ActionResult HSQ_4(KetQuaModel model)
         {
             return RedirectToAction("MainAction", model);
         }
         [HttpPost]
-        public ActionResult HSQ5(KetQuaModel model)
+        public ActionResult HSQ_5(KetQuaModel model)
         {
             return RedirectToAction("MainAction", model);
         }
         [HttpPost]
-        public ActionResult HSQ6(KetQuaModel model)
+        public ActionResult HSQ_6(KetQuaModel model)
         {
             return RedirectToAction("MainAction", model);
         }
         [HttpPost]
-        public ActionResult HSQ7(KetQuaModel model)
+        public ActionResult HSQ_7(KetQuaModel model)
         {
             return RedirectToAction("MainAction", model);
         }
         [HttpPost]
-        public ActionResult HSQ8(KetQuaModel model)
+        public ActionResult HSQ_8(KetQuaModel model)
         {
             return RedirectToAction("MainAction", model);
         }
         [HttpPost]
-        public ActionResult HSQ9(KetQuaModel model)
+        public ActionResult HSQ_9(KetQuaModel model)
         {
             return RedirectToAction("MainAction", model);
         }
         [HttpPost]
-        public ActionResult HSQ10(KetQuaModel model)
+        public ActionResult HSQ_10(KetQuaModel model)
         {
             return RedirectToAction("MainAction", model);
         }

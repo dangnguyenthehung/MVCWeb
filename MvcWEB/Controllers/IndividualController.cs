@@ -26,11 +26,10 @@ namespace MvcWEB.Controllers
 
             //get Indicidual action
             int number = IndividualExamNumber(model.ID);
-            string rdmAction = "Individual" + number;
+            string rdmAction = "Individual_" + number;
 
             //return RedirectToAction(rdmAction);
             SessionHelper.SetSession(new UserSession() { UserName = model.HoTen, ID = model.ID, DeSo = number });
-
 
             return RedirectToAction(rdmAction);
         }
@@ -50,7 +49,7 @@ namespace MvcWEB.Controllers
             string RePath = path.Replace("Individual", "Views\\Individual");
             var answer = new UserAnswer();
 
-            answer.Object = "Individual" + model.DeSo;
+            answer.Object = "Individual_" + model.DeSo;
             string correctAns = CorrectAnswerHelper.GetCorrectAnswer(answer.Object);
             
             answer.UAnswer = model.TraLoi;
@@ -96,7 +95,7 @@ namespace MvcWEB.Controllers
                     show.quality = "Không đạt yêu cầu";
                     break;
             }
-            string desAction = model.IDQN + "_Individual" + model.DeSo;
+            string desAction = model.IDQN + "_Individual_" + model.DeSo;
             show.fileName = desAction;
             show.type = "Individual";
             return RedirectToAction("Index","Result",show);
@@ -142,7 +141,7 @@ namespace MvcWEB.Controllers
 
         // Routing with random Examination
         [HttpGet]
-        public ActionResult Individual1()
+        public ActionResult Individual_1()
         {
             var session = SessionHelper.GetSession();
             var check = CheckStatus(session.ID);
@@ -159,7 +158,7 @@ namespace MvcWEB.Controllers
             return View();
         }
         [HttpGet]
-        public ActionResult Individual2()
+        public ActionResult Individual_2()
         {
             var session = SessionHelper.GetSession();
             if (session == null)
@@ -178,7 +177,7 @@ namespace MvcWEB.Controllers
             return View();
         }
         [HttpGet]
-        public ActionResult Individual3()
+        public ActionResult Individual_3()
         {
             var session = SessionHelper.GetSession();
             var check = CheckStatus(session.ID);
@@ -193,7 +192,7 @@ namespace MvcWEB.Controllers
             return View();
         }
         [HttpGet]
-        public ActionResult Individual4()
+        public ActionResult Individual_4()
         {
             var session = SessionHelper.GetSession();
             var check = CheckStatus(session.ID);
@@ -208,7 +207,7 @@ namespace MvcWEB.Controllers
             return View();
         }
         [HttpGet]
-        public ActionResult Individual5()
+        public ActionResult Individual_5()
         {
             var session = SessionHelper.GetSession();
             var check = CheckStatus(session.ID);
@@ -223,7 +222,7 @@ namespace MvcWEB.Controllers
             return View();
         }
         [HttpGet]
-        public ActionResult Individual6()
+        public ActionResult Individual_6()
         {
             var session = SessionHelper.GetSession();
             var check = CheckStatus(session.ID);
@@ -238,7 +237,7 @@ namespace MvcWEB.Controllers
             return View();
         }
         [HttpGet]
-        public ActionResult Individual7()
+        public ActionResult Individual_7()
         {
             var session = SessionHelper.GetSession();
             var check = CheckStatus(session.ID);
@@ -253,7 +252,7 @@ namespace MvcWEB.Controllers
             return View();
         }
         [HttpGet]
-        public ActionResult Individual8()
+        public ActionResult Individual_8()
         {
             var session = SessionHelper.GetSession();
             var check = CheckStatus(session.ID);
@@ -268,7 +267,7 @@ namespace MvcWEB.Controllers
             return View();
         }
         [HttpGet]
-        public ActionResult Individual9()
+        public ActionResult Individual_9()
         {
             var session = SessionHelper.GetSession();
             var check = CheckStatus(session.ID);
@@ -283,7 +282,7 @@ namespace MvcWEB.Controllers
             return View();
         }
         [HttpGet]
-        public ActionResult Individual10()
+        public ActionResult Individual_10()
         {
             var session = SessionHelper.GetSession();
             var check = CheckStatus(session.ID);
@@ -298,7 +297,7 @@ namespace MvcWEB.Controllers
             return View();
         }
         [HttpGet]
-        public ActionResult Individual11()
+        public ActionResult Individual_11()
         {
             var session = SessionHelper.GetSession();
             var check = CheckStatus(session.ID);
@@ -315,7 +314,7 @@ namespace MvcWEB.Controllers
             return View();
         }
         [HttpGet]
-        public ActionResult Individual12()
+        public ActionResult Individual_12()
         {
             var session = SessionHelper.GetSession();
             if (session == null)
@@ -334,7 +333,7 @@ namespace MvcWEB.Controllers
             return View();
         }
         [HttpGet]
-        public ActionResult Individual13()
+        public ActionResult Individual_13()
         {
             var session = SessionHelper.GetSession();
             var check = CheckStatus(session.ID);
@@ -349,7 +348,7 @@ namespace MvcWEB.Controllers
             return View();
         }
         [HttpGet]
-        public ActionResult Individual14()
+        public ActionResult Individual_14()
         {
             var session = SessionHelper.GetSession();
             var check = CheckStatus(session.ID);
@@ -364,7 +363,7 @@ namespace MvcWEB.Controllers
             return View();
         }
         [HttpGet]
-        public ActionResult Individual15()
+        public ActionResult Individual_15()
         {
             var session = SessionHelper.GetSession();
             var check = CheckStatus(session.ID);
@@ -379,7 +378,7 @@ namespace MvcWEB.Controllers
             return View();
         }
         [HttpGet]
-        public ActionResult Individual16()
+        public ActionResult Individual_16()
         {
             var session = SessionHelper.GetSession();
             var check = CheckStatus(session.ID);
@@ -394,7 +393,7 @@ namespace MvcWEB.Controllers
             return View();
         }
         [HttpGet]
-        public ActionResult Individual17()
+        public ActionResult Individual_17()
         {
             var session = SessionHelper.GetSession();
             var check = CheckStatus(session.ID);
@@ -409,7 +408,7 @@ namespace MvcWEB.Controllers
             return View();
         }
         [HttpGet]
-        public ActionResult Individual18()
+        public ActionResult Individual_18()
         {
             var session = SessionHelper.GetSession();
             var check = CheckStatus(session.ID);
@@ -424,7 +423,7 @@ namespace MvcWEB.Controllers
             return View();
         }
         [HttpGet]
-        public ActionResult Individual19()
+        public ActionResult Individual_19()
         {
             var session = SessionHelper.GetSession();
             var check = CheckStatus(session.ID);
@@ -439,7 +438,7 @@ namespace MvcWEB.Controllers
             return View();
         }
         [HttpGet]
-        public ActionResult Individual20()
+        public ActionResult Individual_20()
         {
             var session = SessionHelper.GetSession();
             var check = CheckStatus(session.ID);
@@ -456,102 +455,102 @@ namespace MvcWEB.Controllers
 
 
         [HttpPost]
-        public ActionResult Individual1(KetQuaModel model)
+        public ActionResult Individual_1(KetQuaModel model)
         {
             return RedirectToAction("MainAction", model);
         }
         [HttpPost]
-        public ActionResult Individual2(KetQuaModel model)
+        public ActionResult Individual_2(KetQuaModel model)
         {
             return RedirectToAction("MainAction", model);
         }
         [HttpPost]
-        public ActionResult Individual3(KetQuaModel model)
+        public ActionResult Individual_3(KetQuaModel model)
         {
             return RedirectToAction("MainAction", model);
         }
         [HttpPost]
-        public ActionResult Individual4(KetQuaModel model)
+        public ActionResult Individual_4(KetQuaModel model)
         {
             return RedirectToAction("MainAction", model);
         }
         [HttpPost]
-        public ActionResult Individual5(KetQuaModel model)
+        public ActionResult Individual_5(KetQuaModel model)
         {
             return RedirectToAction("MainAction", model);
         }
         [HttpPost]
-        public ActionResult Individual6(KetQuaModel model)
+        public ActionResult Individual_6(KetQuaModel model)
         {
             return RedirectToAction("MainAction", model);
         }
         [HttpPost]
-        public ActionResult Individual7(KetQuaModel model)
+        public ActionResult Individual_7(KetQuaModel model)
         {
             return RedirectToAction("MainAction", model);
         }
         [HttpPost]
-        public ActionResult Individual8(KetQuaModel model)
+        public ActionResult Individual_8(KetQuaModel model)
         {
             return RedirectToAction("MainAction", model);
         }
         [HttpPost]
-        public ActionResult Individual9(KetQuaModel model)
+        public ActionResult Individual_9(KetQuaModel model)
         {
             return RedirectToAction("MainAction", model);
         }
         [HttpPost]
-        public ActionResult Individual10(KetQuaModel model)
+        public ActionResult Individual_10(KetQuaModel model)
         {
             return RedirectToAction("MainAction", model);
         }
         [HttpPost]
-        public ActionResult Individual11(KetQuaModel model)
+        public ActionResult Individual_11(KetQuaModel model)
         {
             return RedirectToAction("MainAction", model);
         }
         [HttpPost]
-        public ActionResult Individual12(KetQuaModel model)
+        public ActionResult Individual_12(KetQuaModel model)
         {
             return RedirectToAction("MainAction", model);
         }
         [HttpPost]
-        public ActionResult Individual13(KetQuaModel model)
+        public ActionResult Individual_13(KetQuaModel model)
         {
             return RedirectToAction("MainAction", model);
         }
         [HttpPost]
-        public ActionResult Individual14(KetQuaModel model)
+        public ActionResult Individual_14(KetQuaModel model)
         {
             return RedirectToAction("MainAction", model);
         }
         [HttpPost]
-        public ActionResult Individual15(KetQuaModel model)
+        public ActionResult Individual_15(KetQuaModel model)
         {
             return RedirectToAction("MainAction", model);
         }
         [HttpPost]
-        public ActionResult Individual16(KetQuaModel model)
+        public ActionResult Individual_16(KetQuaModel model)
         {
             return RedirectToAction("MainAction", model);
         }
         [HttpPost]
-        public ActionResult Individual17(KetQuaModel model)
+        public ActionResult Individual_17(KetQuaModel model)
         {
             return RedirectToAction("MainAction", model);
         }
         [HttpPost]
-        public ActionResult Individual18(KetQuaModel model)
+        public ActionResult Individual_18(KetQuaModel model)
         {
             return RedirectToAction("MainAction", model);
         }
         [HttpPost]
-        public ActionResult Individual19(KetQuaModel model)
+        public ActionResult Individual_19(KetQuaModel model)
         {
             return RedirectToAction("MainAction", model);
         }
         [HttpPost]
-        public ActionResult Individual20(KetQuaModel model)
+        public ActionResult Individual_20(KetQuaModel model)
         {
             return RedirectToAction("MainAction", model);
         }
