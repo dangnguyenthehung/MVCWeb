@@ -51,7 +51,9 @@ function countdown(){ // dong ho dem nguoc
             setTimeout(function(){
             	timeout.style.display = "none";
             }, 2000); // hien thi HET GIO khi het t.gian
-            LamXong();       
+            LamXong();
+            var form = document.getElementsByTagName("form");
+            form[0].submit();
             stopWatch(isDone); 
          };
        if(sec == 00)
