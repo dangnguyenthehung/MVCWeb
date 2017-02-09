@@ -46,16 +46,20 @@ namespace MvcAdmin.Controllers
             return RedirectToAction("Index");
         }
 
-        public int GetTotalExam()
+        private int GetTotalExam()
         {
             int total = 0;
             string path = "D:\\DeCaNhan\\";
+            if (!Directory.Exists(path))
+            {
+                Directory.CreateDirectory(path);
+            }
             int fCount = Directory.GetFiles(path, "*.cshtml", SearchOption.TopDirectoryOnly).Length;
             System.Diagnostics.Debug.WriteLine(fCount);
             total = fCount;
             return total;
         }
-        public IEnumerable<string> getExamList(int total)
+        private IEnumerable<string> getExamList(int total)
         {
             List<string> list = new List<string>();
             var i = 0;

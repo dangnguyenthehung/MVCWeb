@@ -1,6 +1,36 @@
 ﻿@model MvcAdmin.Models.PermissionMainModel
 
 @{
+    List<Model.Framework.ViewPermission> List_SQ = new List<Model.Framework.ViewPermission>();
+    List<Model.Framework.ViewPermission> List_QNCN = new List<Model.Framework.ViewPermission>();
+    List<Model.Framework.ViewPermission> List_HSQ = new List<Model.Framework.ViewPermission>();
+    List<Model.Framework.ViewPermission> List_BS = new List<Model.Framework.ViewPermission>();
+
+    foreach (var item in Model.PermissionList)
+    {
+        if (item.ThanhPhan == "SQ")
+        {
+            List_SQ.Add(item);
+        }
+        else if (item.ThanhPhan == "QNCN")
+        {
+            List_QNCN.Add(item);
+        }
+        else
+        {
+            if (item.CB != "B1" && item.CB != "B2")
+            {
+                List_HSQ.Add(item);
+            }
+            else
+            {
+                List_BS.Add(item);
+            }
+        }
+    }
+}
+
+@{
     ViewBag.Title = "Cấp quyền truy cập";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
@@ -25,11 +55,10 @@
     }
 </div>
 <ul class="nav nav-tabs permission">
-    <li class="active"><a data-toggle="tab" href="#SQ">SQ</a></li>
+    <li class="active"><a data-toggle="tab" href="#SQ">Sỹ Quan</a></li>
     <li><a data-toggle="tab" href="#QNCN">QNCN</a></li>
-    <li><a data-toggle="tab" href="#HSQ_TS">HSQ-cTS</a></li>
-    <li><a data-toggle="tab" href="#HSQ_TT">HSQ-cTT</a></li>
-    <li><a data-toggle="tab" href="#HSQ_dB_bBD">HSQ-dB-BĐ</a></li>
+    <li><a data-toggle="tab" href="#HSQ">Hạ sỹ quan</a></li>
+    <li><a data-toggle="tab" href="#BS">Binh sỹ</a></li>
 </ul>
 <div class="tab-content permission">
     <div id="SQ" class="tab-pane fade in active">
@@ -56,14 +85,14 @@
                 </th>
             </tr>
 
-            @foreach (var item in Model.PerList_SQ)
+            @foreach (var item in List_SQ)
             {
                 <tr class="table-row" id="r">
                     <td>
                         @Html.DisplayFor(modelItem => item.IDQN)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Hoten)
+                        @Html.DisplayFor(modelItem => item.HoTen)
                     </td>
                     <td class="permissionDisplay">
                         @Html.DisplayFor(modelItem => item.Permission)
@@ -124,14 +153,14 @@
                 </th>
             </tr>
 
-            @foreach (var item in Model.PerList_QNCN)
+            @foreach (var item in List_QNCN)
             {
                 <tr class="table-row" id="r">
                     <td>
                         @Html.DisplayFor(modelItem => item.IDQN)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Hoten)
+                        @Html.DisplayFor(modelItem => item.HoTen)
                     </td>
                     <td class="permissionDisplay">
                         @Html.DisplayFor(modelItem => item.Permission)
@@ -168,8 +197,8 @@
         </table>
     </div>
     
-    <div id="HSQ_TS" class="tab-pane fade">
-        <h3>Hạ sỹ quan Đại đội Trinh Sát</h3>
+    <div id="HSQ" class="tab-pane fade">
+        <h3>Hạ sỹ quan</h3>
         <table class="table">
             <tr>
                 <th>
@@ -192,14 +221,14 @@
                 </th>
             </tr>
 
-            @foreach (var item in Model.PerList_HSQ_TS)
+            @foreach (var item in List_HSQ)
             {
                 <tr class="table-row" id="r">
                     <td>
                         @Html.DisplayFor(modelItem => item.IDQN)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Hoten)
+                        @Html.DisplayFor(modelItem => item.HoTen)
                     </td>
                     <td class="permissionDisplay">
                         @Html.DisplayFor(modelItem => item.Permission)
@@ -236,8 +265,8 @@
         </table>
     </div>
     
-    <div id="HSQ_TT" class="tab-pane fade">
-        <h3>Hạ sỹ quan Đại đội Tiêu Tẩy</h3>
+    <div id="BS" class="tab-pane fade">
+        <h3>Binh SỸ</h3>
         <table class="table">
             <tr>
                 <th>
@@ -260,14 +289,14 @@
                 </th>
             </tr>
 
-            @foreach (var item in Model.PerList_HSQ_TT)
+            @foreach (var item in List_BS)
             {
                 <tr class="table-row" id="r">
                     <td>
                         @Html.DisplayFor(modelItem => item.IDQN)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Hoten)
+                        @Html.DisplayFor(modelItem => item.HoTen)
                     </td>
                     <td class="permissionDisplay">
                         @Html.DisplayFor(modelItem => item.Permission)
@@ -304,73 +333,6 @@
         </table>
     </div>
     
-    <div id="HSQ_dB_bBD" class="tab-pane fade">
-        <h3>Hạ sỹ quan Tiểu đoàn Bộ - Trung đội Bảo đảm</h3>
-        <table class="table">
-            <tr>
-                <th>
-                    IDQN
-                </th>
-                <th>
-                    Họ tên
-                </th>
-                <th>
-                    Quyền truy cập
-                </th>
-                <th>
-                    Lượt truy cập
-                </th>
-                <th>
-                    Cấp quyền
-                </th>
-                <th>
-                    Làm mới
-                </th>
-            </tr>
-
-            @foreach (var item in Model.PerList_HSQ_dB_BD)
-            {
-                <tr class="table-row" id="r">
-                    <td>
-                        @Html.DisplayFor(modelItem => item.IDQN)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Hoten)
-                    </td>
-                    <td class="permissionDisplay">
-                        @Html.DisplayFor(modelItem => item.Permission)
-                    </td>
-                    <td class="logDisplay">
-                        @Html.DisplayFor(modelItem => item.LogStatus)
-                    </td>
-
-                    <td>
-                        <div class="IDcontain">
-                            <div class="form-control hidden">
-                                @Html.TextBoxFor(model => model.CaptID, new { @class = "form-control ID", @id = item.IDQN, Value = item.IDQN })
-                            </div>
-                            <button type="submit" class="btn btn-accept" value="Accept">
-                                Accept
-                            </button>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="IDcontain">
-                            <div class="form-control hidden">
-                                @Html.TextBoxFor(model => model.CaptID, new { @class = "form-control ID", @id = item.IDQN, Value = item.IDQN })
-                            </div>
-                            <button type="submit" class="btn btn-refresh" value="Refresh">
-                                Refresh
-                            </button>
-                        </div>
-
-                    </td>
-
-                </tr>
-            }
-
-        </table>
-    </div>
 </div>
 
 
