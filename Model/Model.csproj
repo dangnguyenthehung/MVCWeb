@@ -58,7 +58,6 @@
     <Compile Include="Framework\DanhSach.cs" />
     <Compile Include="Framework\KetQuaKiemTra.cs" />
     <Compile Include="Framework\Permission.cs" />
-    <Compile Include="Framework\sysdiagram.cs" />
     <Compile Include="Framework\ViewIndividualExam.cs" />
     <Compile Include="Framework\ViewKQ.cs" />
     <Compile Include="Framework\ViewPermission.cs" />

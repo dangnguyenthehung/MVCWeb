@@ -44,5 +44,10 @@ namespace Model.Framework
         [Column(Order = 5)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int IDKQ { get; set; }
+
+        [Key]
+        [Column(Order = 6)]
+        [StringLength(5)]
+        public string CB { get; set; }
     }
 }

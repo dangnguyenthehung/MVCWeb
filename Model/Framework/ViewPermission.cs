@@ -32,5 +32,10 @@ namespace Model.Framework
         [Column(Order = 3)]
         [StringLength(20)]
         public string DonVi { get; set; }
+
+        [Key]
+        [Column(Order = 4)]
+        [StringLength(5)]
+        public string CB { get; set; }
     }
 }
