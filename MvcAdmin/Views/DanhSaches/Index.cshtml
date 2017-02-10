@@ -89,7 +89,7 @@
                     <td>
                         @Html.ActionLink("Chỉnh sửa", "Edit", new { id = item.IDQN }) |
                         @Html.ActionLink("Chi tiết", "Details", new { id = item.IDQN }) |
-                        @*@Html.ActionLink("Delete", "Delete", new { id = item.IDQN })*@
+                        @Html.ActionLink("Xóa", "Delete", new { id = item.IDQN })
                     </td>
                 </tr>
             }
@@ -139,8 +139,8 @@
                     </td>
                     <td>
                         @Html.ActionLink("Chỉnh sửa", "Edit", new { id = item.IDQN }) |
-                        @Html.ActionLink("Chi tiết", "Details", new { id = item.IDQN })
-                        @*@Html.ActionLink("Delete", "Delete", new { id = item.IDQN })*@
+                        @Html.ActionLink("Chi tiết", "Details", new { id = item.IDQN }) |
+                        @Html.ActionLink("Xóa", "Delete", new { id = item.IDQN })
                     </td>
                 </tr>
             }
@@ -167,7 +167,9 @@
                 <th>
                     Thành phần
                 </th>
-                <th></th>
+                <th>
+
+                </th>
             </tr>
 
             @foreach (var item in List_HSQ)
@@ -191,7 +193,15 @@
                     <td>
                         @Html.ActionLink("Chỉnh sửa", "Edit", new { id = item.IDQN }) |
                         @Html.ActionLink("Chi tiết", "Details", new { id = item.IDQN }) |
-                        @*@Html.ActionLink("Delete", "Delete", new { id = item.IDQN })*@
+                        @Html.ActionLink("Xóa", "Delete", new { id = item.IDQN })
+
+
+                        @*<div class="IDcontain">
+                            <button type="submit" class="btn btn-delete" value="Delete">
+                                @Html.ActionLink("Xóa", "Delete", new { IDKQ = item.IDKQ, IDQN = item.IDQN })
+                            </button>
+                        </div>*@
+
                     </td>
                 </tr>
             }
@@ -242,7 +252,7 @@
                     <td>
                         @Html.ActionLink("Chỉnh sửa", "Edit", new { id = item.IDQN }) |
                         @Html.ActionLink("Chi tiết", "Details", new { id = item.IDQN }) |
-                        @*@Html.ActionLink("Delete", "Delete", new { id = item.IDQN })*@
+                        @Html.ActionLink("Xóa", "Delete", new { id = item.IDQN })
                     </td>
                 </tr>
             }

@@ -125,9 +125,47 @@ namespace MvcAdmin.Controllers
 
             return Json(text, JsonRequestBehavior.AllowGet);
         }
-        // GET: DanhSaches/Delete/5
 
-        public ActionResult Delete(int? IDKQ, int? IDQN)
+        // GET: DanhSaches/Delete/5
+        public ActionResult Delete(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            // declare model
+            DanhSachMainModel model = new DanhSachMainModel();
+            //
+            List<DanhSach> List = context.List_ID(id);
+            DanhSach user = List[0];
+            List<ViewKQ> listKQ = context.List_Statistic_ID(id);
+            //
+            model.user = user;
+            model.listKQ = listKQ;
+            if (user == null)
+            {
+                return HttpNotFound();
+            }
+            return View(model);
+        }
+
+        //POST: DanhSaches/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            DanhSachModel model = new DanhSachModel();
+            model.Delete_user(id);
+            
+            return RedirectToAction("Index");
+            
+        }
+        // DeleteResult
+        public ActionResult DeleteResult(int? IDKQ, int? IDQN)
         {
             if (IDKQ == null || IDQN == null)
             {
@@ -147,9 +185,9 @@ namespace MvcAdmin.Controllers
         }
         
         //POST: DanhSaches/Delete/5
-        [HttpPost, ActionName("Delete")]
+        [HttpPost, ActionName("DeleteResult")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int? IDKQ, int? IDQN)
+        public ActionResult DeleteResultConfirmed(int? IDKQ, int? IDQN)
         {
             if (IDKQ == null)
             {

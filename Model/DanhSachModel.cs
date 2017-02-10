@@ -49,7 +49,7 @@ namespace Model
                 new SqlParameter("@DonVi", user.DonVi),
                 new SqlParameter("@ThanhPhan", user.ThanhPhan)
             };
-            var list = context.Database.ExecuteSqlCommand("Sp_InsertDanhSach @HoTen,@CB,@CV,@DonVi,@ThanhPhan", sqlParams);  
+            var command = context.Database.ExecuteSqlCommand("Sp_InsertDanhSach @HoTen,@CB,@CV,@DonVi,@ThanhPhan", sqlParams);  
         }
         public void Edit(DanhSach user)
         {
@@ -62,7 +62,7 @@ namespace Model
                 new SqlParameter("@DonVi", user.DonVi),
                 new SqlParameter("@ThanhPhan", user.ThanhPhan)
             };
-            var list = context.Database.ExecuteSqlCommand("Sp_EditDanhSach @IDQN,@HoTen,@CB,@CV,@DonVi,@ThanhPhan", sqlParams);
+            var command = context.Database.ExecuteSqlCommand("Sp_EditDanhSach @IDQN,@HoTen,@CB,@CV,@DonVi,@ThanhPhan", sqlParams);
         }
         public List<ViewKQ> List_Statistic_ID(int? id)
         {
@@ -78,6 +78,22 @@ namespace Model
             };
             var list = context.Database.SqlQuery<ViewKQ>("Sp_Statistic @IDQN", sqlParams).ToList();
             return list;
+        }
+        public void Delete_user (int? id)
+        {
+            if (id == null)
+            {
+                // do nothing
+            }
+            else
+            {
+                object[] sqlParams =
+                {
+                    new SqlParameter("@IDQN",id)
+                };
+                var command = context.Database.ExecuteSqlCommand("Sp_MoveUser @IDQN", sqlParams);
+            }
+
         }
 
     }

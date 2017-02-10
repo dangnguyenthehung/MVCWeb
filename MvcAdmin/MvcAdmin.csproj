@@ -381,12 +381,13 @@
     <Content Include="Views\ViewKQs\Index.cshtml" />
     <Content Include="Views\ViewPermissions\Index.cshtml" />
     <Content Include="Views\DanhSaches\Create.cshtml" />
-    <Content Include="Views\DanhSaches\Delete.cshtml" />
+    <Content Include="Views\DanhSaches\DeleteResult.cshtml" />
     <Content Include="Views\DanhSaches\Details.cshtml" />
     <Content Include="Views\DanhSaches\Edit.cshtml" />
     <Content Include="Views\DanhSaches\Index.cshtml" />
     <Content Include="Views\IndividualExams\Index.cshtml" />
     <Content Include="Views\DanhSaches\NoResult.cshtml" />
+    <Content Include="Views\DanhSaches\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
