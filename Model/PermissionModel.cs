@@ -1,4 +1,5 @@
 ﻿using Model.Framework;
+using Model.Objects;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -25,7 +26,7 @@ namespace Model
             var list = context.Database.SqlQuery<ViewPermission>("Sp_GetPermission @IDQN", sqlParams).ToList();
             return list;
         }
-        public ViewPermission GetOne(int id)
+        public PermissionObj GetOne(int id)
         {
             
             object[] sqlParams =
@@ -33,7 +34,13 @@ namespace Model
                 new SqlParameter("@IDQN",id)
             };
             var obj = context.Database.SqlQuery<ViewPermission>("Sp_GetPermission @IDQN", sqlParams).SingleOrDefault();
-            return obj;
+
+            var returnObj = new PermissionObj();
+            returnObj.IDQN = obj.IDQN;
+            returnObj.Permission = obj.Permission;
+            returnObj.LogStatus = obj.LogStatus;
+
+            return returnObj;
         }
         public void Accept(int ID)
         {

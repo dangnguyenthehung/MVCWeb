@@ -167,9 +167,7 @@
     </Compile>
     <Compile Include="Models\DanhSachMainModel.cs" />
     <Compile Include="Models\IndividualExamMainModel.cs" />
-    <Compile Include="Models\IndividualExamObj.cs" />
     <Compile Include="Models\PermissionMainModel.cs" />
-    <Compile Include="Models\PermissionObj.cs" />
     <Compile Include="Models\StatisticMainModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -10,6 +10,7 @@ using Model.Framework;
 using Model;
 using MvcAdmin.Models;
 using MvcAdmin.Code;
+using Model.Objects;
 
 namespace MvcAdmin.Controllers
 {
@@ -197,7 +198,7 @@ namespace MvcAdmin.Controllers
 
         public JsonResult LoadList(int id, string act)
         {
-            ViewPermission obj = new ViewPermission();
+            PermissionObj obj = new PermissionObj();
                
             if (act == "Accept")
             {

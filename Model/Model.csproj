@@ -62,6 +62,8 @@
     <Compile Include="Framework\ViewKQ.cs" />
     <Compile Include="Framework\ViewPermission.cs" />
     <Compile Include="KetQuaKiemTraModel.cs" />
+    <Compile Include="Objects\IndividualExamObj.cs" />
+    <Compile Include="Objects\PermissionObj.cs" />
     <Compile Include="PermissionModel.cs" />
     <Compile Include="IndividualExamModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
