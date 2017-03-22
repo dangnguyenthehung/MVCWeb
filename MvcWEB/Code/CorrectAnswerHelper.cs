@@ -14,7 +14,7 @@ namespace MvcWEB.Code
         {
             int count = 0;
             decimal mark = 0;
-            var correctAnswer = answer.CorrectAnswer;
+            var correctAnswer = answer.CorrectAnswer.Replace("\r","").Replace("\n","");
             var userAnswer = answer.UAnswer;
             string[] correctString = correctAnswer.Split('.');
             string[] userString = userAnswer.Split('.');
@@ -36,7 +36,7 @@ namespace MvcWEB.Code
                 {
                     wrongStr.Add(i+1);
                     string t = correctString[i].Remove(0,correctString[i].Length-1); // remove first char (1A -> A)
-                    string w = userString[i].Remove(0, correctString[i].Length - 1); ;
+                    string w = userString[i].Remove(0, userString[i].Length - 1); ;
                     wrongAns.Add(w);
                     trueAns.Add(t);
                 }
