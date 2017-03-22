@@ -303,7 +303,320 @@ namespace MvcWEB.Controllers
             }
             return View();
         }
+        [HttpGet]
+        public ActionResult HSQ_11()
+        {
+            var session = SessionHelper.GetSession();
+            var check = CheckStatus(session.ID);
+            if (check == 1)
+            {
+                // do nothing
+            }
+            else
+            {
+                return RedirectToAction("ChooseType", "ChooseType");
+            }
+            //System.Diagnostics.Debug.WriteLine(session.ID);
+            //System.Diagnostics.Debug.WriteLine(session.DeSo);
+            return View();
+        }
+        [HttpGet]
+        public ActionResult HSQ_12()
+        {
+            var session = SessionHelper.GetSession();
+            if (session == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            var check = CheckStatus(session.ID);
+            if (check == 1)
+            {
+                // do nothing
+            }
+            else
+            {
+                return RedirectToAction("ChooseType", "ChooseType");
+            }
+            return View();
+        }
+        [HttpGet]
+        public ActionResult HSQ_13()
+        {
+            var session = SessionHelper.GetSession();
+            var check = CheckStatus(session.ID);
+            if (check == 1)
+            {
+                // do nothing
+            }
+            else
+            {
+                return RedirectToAction("ChooseType", "ChooseType");
+            }
+            return View();
+        }
+        [HttpGet]
+        public ActionResult HSQ_14()
+        {
+            var session = SessionHelper.GetSession();
+            var check = CheckStatus(session.ID);
+            if (check == 1)
+            {
+                // do nothing
+            }
+            else
+            {
+                return RedirectToAction("ChooseType", "ChooseType");
+            }
+            return View();
+        }
+        [HttpGet]
+        public ActionResult HSQ_15()
+        {
+            var session = SessionHelper.GetSession();
+            var check = CheckStatus(session.ID);
+            if (check == 1)
+            {
+                // do nothing
+            }
+            else
+            {
+                return RedirectToAction("ChooseType", "ChooseType");
+            }
+            return View();
+        }
+        [HttpGet]
+        public ActionResult HSQ_16()
+        {
+            var session = SessionHelper.GetSession();
+            var check = CheckStatus(session.ID);
+            if (check == 1)
+            {
+                // do nothing
+            }
+            else
+            {
+                return RedirectToAction("ChooseType", "ChooseType");
+            }
+            return View();
+        }
+        [HttpGet]
+        public ActionResult HSQ_17()
+        {
+            var session = SessionHelper.GetSession();
+            var check = CheckStatus(session.ID);
+            if (check == 1)
+            {
+                // do nothing
+            }
+            else
+            {
+                return RedirectToAction("ChooseType", "ChooseType");
+            }
+            return View();
+        }
+        [HttpGet]
+        public ActionResult HSQ_18()
+        {
+            var session = SessionHelper.GetSession();
+            var check = CheckStatus(session.ID);
+            if (check == 1)
+            {
+                // do nothing
+            }
+            else
+            {
+                return RedirectToAction("ChooseType", "ChooseType");
+            }
+            return View();
+        }
+        [HttpGet]
+        public ActionResult HSQ_19()
+        {
+            var session = SessionHelper.GetSession();
+            var check = CheckStatus(session.ID);
+            if (check == 1)
+            {
+                // do nothing
+            }
+            else
+            {
+                return RedirectToAction("ChooseType", "ChooseType");
+            }
+            return View();
+        }
+        [HttpGet]
+        public ActionResult HSQ_20()
+        {
+            var session = SessionHelper.GetSession();
+            var check = CheckStatus(session.ID);
+            if (check == 1)
+            {
+                // do nothing
+            }
+            else
+            {
+                return RedirectToAction("ChooseType", "ChooseType");
+            }
+            return View();
+        }
+        [HttpGet]
+        public ActionResult HSQ_21()
+        {
+            var session = SessionHelper.GetSession();
+            var check = CheckStatus(session.ID);
+            if (check == 1)
+            {
+                // do nothing
+            }
+            else
+            {
+                return RedirectToAction("ChooseType", "ChooseType");
+            }
+            //System.Diagnostics.Debug.WriteLine(session.ID);
+            //System.Diagnostics.Debug.WriteLine(session.DeSo);
+            return View();
+        }
+        [HttpGet]
+        public ActionResult HSQ_22()
+        {
+            var session = SessionHelper.GetSession();
+            if (session == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            var check = CheckStatus(session.ID);
+            if (check == 1)
+            {
+                // do nothing
+            }
+            else
+            {
+                return RedirectToAction("ChooseType", "ChooseType");
+            }
+            return View();
+        }
+        [HttpGet]
+        public ActionResult HSQ_23()
+        {
+            var session = SessionHelper.GetSession();
+            var check = CheckStatus(session.ID);
+            if (check == 1)
+            {
+                // do nothing
+            }
+            else
+            {
+                return RedirectToAction("ChooseType", "ChooseType");
+            }
+            return View();
+        }
+        [HttpGet]
+        public ActionResult HSQ_24()
+        {
+            var session = SessionHelper.GetSession();
+            var check = CheckStatus(session.ID);
+            if (check == 1)
+            {
+                // do nothing
+            }
+            else
+            {
+                return RedirectToAction("ChooseType", "ChooseType");
+            }
+            return View();
+        }
+        [HttpGet]
+        public ActionResult HSQ_25()
+        {
+            var session = SessionHelper.GetSession();
+            var check = CheckStatus(session.ID);
+            if (check == 1)
+            {
+                // do nothing
+            }
+            else
+            {
+                return RedirectToAction("ChooseType", "ChooseType");
+            }
+            return View();
+        }
+        [HttpGet]
+        public ActionResult HSQ_26()
+        {
+            var session = SessionHelper.GetSession();
+            var check = CheckStatus(session.ID);
+            if (check == 1)
+            {
+                // do nothing
+            }
+            else
+            {
+                return RedirectToAction("ChooseType", "ChooseType");
+            }
+            return View();
+        }
+        [HttpGet]
+        public ActionResult HSQ_27()
+        {
+            var session = SessionHelper.GetSession();
+            var check = CheckStatus(session.ID);
+            if (check == 1)
+            {
+                // do nothing
+            }
+            else
+            {
+                return RedirectToAction("ChooseType", "ChooseType");
+            }
+            return View();
+        }
+        [HttpGet]
+        public ActionResult HSQ_28()
+        {
+            var session = SessionHelper.GetSession();
+            var check = CheckStatus(session.ID);
+            if (check == 1)
+            {
+                // do nothing
+            }
+            else
+            {
+                return RedirectToAction("ChooseType", "ChooseType");
+            }
+            return View();
+        }
+        [HttpGet]
+        public ActionResult HSQ_29()
+        {
+            var session = SessionHelper.GetSession();
+            var check = CheckStatus(session.ID);
+            if (check == 1)
+            {
+                // do nothing
+            }
+            else
+            {
+                return RedirectToAction("ChooseType", "ChooseType");
+            }
+            return View();
+        }
+        [HttpGet]
+        public ActionResult HSQ_30()
+        {
+            var session = SessionHelper.GetSession();
+            var check = CheckStatus(session.ID);
+            if (check == 1)
+            {
+                // do nothing
+            }
+            else
+            {
+                return RedirectToAction("ChooseType", "ChooseType");
+            }
+            return View();
+        }
 
+        // post
         [HttpPost]
         public ActionResult HSQ_1(KetQuaModel model)
         {
@@ -351,6 +664,106 @@ namespace MvcWEB.Controllers
         }
         [HttpPost]
         public ActionResult HSQ_10(KetQuaModel model)
+        {
+            return RedirectToAction("MainAction", model);
+        }
+        [HttpPost]
+        public ActionResult HSQ_11(KetQuaModel model)
+        {
+            return RedirectToAction("MainAction", model);
+        }
+        [HttpPost]
+        public ActionResult HSQ_12(KetQuaModel model)
+        {
+            return RedirectToAction("MainAction", model);
+        }
+        [HttpPost]
+        public ActionResult HSQ_13(KetQuaModel model)
+        {
+            return RedirectToAction("MainAction", model);
+        }
+        [HttpPost]
+        public ActionResult HSQ_14(KetQuaModel model)
+        {
+            return RedirectToAction("MainAction", model);
+        }
+        [HttpPost]
+        public ActionResult HSQ_15(KetQuaModel model)
+        {
+            return RedirectToAction("MainAction", model);
+        }
+        [HttpPost]
+        public ActionResult HSQ_16(KetQuaModel model)
+        {
+            return RedirectToAction("MainAction", model);
+        }
+        [HttpPost]
+        public ActionResult HSQ_17(KetQuaModel model)
+        {
+            return RedirectToAction("MainAction", model);
+        }
+        [HttpPost]
+        public ActionResult HSQ_18(KetQuaModel model)
+        {
+            return RedirectToAction("MainAction", model);
+        }
+        [HttpPost]
+        public ActionResult HSQ_19(KetQuaModel model)
+        {
+            return RedirectToAction("MainAction", model);
+        }
+        [HttpPost]
+        public ActionResult HSQ_20(KetQuaModel model)
+        {
+            return RedirectToAction("MainAction", model);
+        }
+        [HttpPost]
+        public ActionResult HSQ_21(KetQuaModel model)
+        {
+            return RedirectToAction("MainAction", model);
+        }
+        [HttpPost]
+        public ActionResult HSQ_22(KetQuaModel model)
+        {
+            return RedirectToAction("MainAction", model);
+        }
+        [HttpPost]
+        public ActionResult HSQ_23(KetQuaModel model)
+        {
+            return RedirectToAction("MainAction", model);
+        }
+        [HttpPost]
+        public ActionResult HSQ_24(KetQuaModel model)
+        {
+            return RedirectToAction("MainAction", model);
+        }
+        [HttpPost]
+        public ActionResult HSQ_25(KetQuaModel model)
+        {
+            return RedirectToAction("MainAction", model);
+        }
+        [HttpPost]
+        public ActionResult HSQ_26(KetQuaModel model)
+        {
+            return RedirectToAction("MainAction", model);
+        }
+        [HttpPost]
+        public ActionResult HSQ_27(KetQuaModel model)
+        {
+            return RedirectToAction("MainAction", model);
+        }
+        [HttpPost]
+        public ActionResult HSQ_28(KetQuaModel model)
+        {
+            return RedirectToAction("MainAction", model);
+        }
+        [HttpPost]
+        public ActionResult HSQ_29(KetQuaModel model)
+        {
+            return RedirectToAction("MainAction", model);
+        }
+        [HttpPost]
+        public ActionResult HSQ_30(KetQuaModel model)
         {
             return RedirectToAction("MainAction", model);
         }
