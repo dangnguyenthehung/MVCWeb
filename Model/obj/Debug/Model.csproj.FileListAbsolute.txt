@@ -18,3 +18,13 @@ D:\Project\MvcWEB\Model\bin\Debug\EntityFramework.SqlServer.xml
 D:\Project\MvcWEB\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
 D:\Project\MvcWEB\Model\obj\Debug\Model.dll
 D:\Project\MvcWEB\Model\obj\Debug\Model.pdb
+F:\MVCWeb\Model\bin\Debug\Model.dll.config
+F:\MVCWeb\Model\bin\Debug\Model.dll
+F:\MVCWeb\Model\bin\Debug\Model.pdb
+F:\MVCWeb\Model\bin\Debug\EntityFramework.dll
+F:\MVCWeb\Model\bin\Debug\EntityFramework.SqlServer.dll
+F:\MVCWeb\Model\bin\Debug\EntityFramework.xml
+F:\MVCWeb\Model\bin\Debug\EntityFramework.SqlServer.xml
+F:\MVCWeb\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+F:\MVCWeb\Model\obj\Debug\Model.dll
+F:\MVCWeb\Model\obj\Debug\Model.pdb

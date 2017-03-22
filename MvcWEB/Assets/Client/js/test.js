@@ -1,10 +1,20 @@
-		var traloi=new Array();
+		var traloi = new Array();
 		var isDone = false;
 		var isHide = true;
 		var qualtity = "";
 		var numClick = 0;
 		var time = 60;
-		var numberOfQuestion = 100;
+		var numberOfQuestion = document.getElementsByClassName( "question" ).length;
+		console.log( numberOfQuestion );
+
+		//$( function ()
+		//{
+        //    // count the number of question
+		//    var numberOfQuestion = $( '.question' ).length;
+
+		//    alert( numberOfQuestion );
+
+		//} );
 		
 function LamXong(){
     var userAnswerString = "";
