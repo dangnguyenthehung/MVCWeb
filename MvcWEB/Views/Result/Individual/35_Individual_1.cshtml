@@ -1,0 +1,429 @@
+﻿@{
+Layout = "~/Views/Shared/_ResultLayout.cshtml";
+} 
+@model MvcWEB.Models.ShowResultModel 
+<div class="info"><h1>Lý Quốc Bảo</h1>
+<h3>Điểm: </h3> 
+<h2>@Model.mark</h2><h3>Xếp loại: </h3> 
+<h2>@Model.quality</h2></div>
+<div class="wrongAns">
+<h1>Các câu trả lời sai:</h1>
+<div class="question">
+    <h3 id="2">
+        <b>
+            <span>2. </span>
+            Nét truyền thống quý báu đầu tiên của đảng ta là gì?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox invisible" type="radio" value="v1" name="q2" onclick="traloi[2]='A'">
+        A.  Kiên định Chủ nghĩa Mác – Lênin, tư tưởng Hồ Chí Minh, nắm vững ngọn cờ độc lập dân tộc và chủ nghĩa xã hội.
+    </p>
+    <p>
+        <input class="checkBox invisible" type="radio" value="v2" name="q2" onclick="traloi[2]='B'">
+        B. Tinh thần độc lập, tự chủ và sáng tạo
+    </p>
+    <p>
+        <input class="checkBox invisible" type="radio" value="v3" name="q2" onclick="traloi[2]='C'">
+        C. Kiên định nguyên tắc tập trung dân chủ trong tổ chức và hoạt động của đảng
+    </p>
+    <p>
+        <input class="checkBox invisible" type="radio" value="v4" name="q2" onclick="traloi[2]='D'">
+        D.  Bản lĩnh chính trị vững vàng, kiên định mục tiêu lý tưởng cách mạng
+    </p>
+    <div id="DapAn2"><h2 class='false'><span>Chọn: -, </span><b> Đáp án : A</b></h2></div>
+</div>
+<div class="question">
+    <h3 id="3">
+        <b>
+            <span>3. </span>
+            Cách mạng Việt Nam đã giành được bao nhiêu thắng lợi vĩ đại dưới sự lãnh đạo của Đảng (thành tựu mang tính khái quát)?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox invisible" type="radio" value="v1" name="q3" onclick="traloi[3]='A'">
+        A. 3
+    </p>
+    <p>
+        <input class="checkBox invisible" type="radio" value="v2" name="q3" onclick="traloi[3]='B'">
+        B. 4
+    </p>
+    <p>
+        <input class="checkBox invisible" type="radio" value="v3" name="q3" onclick="traloi[3]='C'">
+        C. 5
+    </p>
+    <p>
+        <input class="checkBox invisible" type="radio" value="v4" name="q3" onclick="traloi[3]='D'">
+        D. 6
+    </p>
+    <div id="DapAn3"><h2 class='false'><span>Chọn: -, </span><b> Đáp án : A</b></h2></div>
+</div>
+<div class="question">
+    <h3 id="4">
+        <b>
+            <span>4. </span>
+            Quy luật thành lập Đảng Cộng sản Việt Nam là gì?
+            <br />
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox invisible" type="radio" value="v1" name="q4" onclick="traloi[4]='A'">
+        A.  Chủ nghĩa Mác – Lênin kết hợp với Chủ nghĩa yêu nước
+    </p>
+    <p>
+        <input class="checkBox invisible" type="radio" value="v2" name="q4" onclick="traloi[4]='B'">
+        B.  Chủ nghĩa Mác – Lênin kết hợp với Phong trào công nhân
+    </p>
+    <p>
+        <input class="checkBox invisible" type="radio" value="v3" name="q4" onclick="traloi[4]='C'">
+        C.  Chủ nghĩa Mác–Lênin kết hợp với Phong trào công nhân và phong trào yêu nước.
+    </p>
+    <p>
+        <input class="checkBox invisible" type="radio" value="v4" name="q4" onclick="traloi[4]='D'">
+        D.  Chủ nghĩa Mác – Lê nin kết hợp với Chủ nghĩa yêu nước và phong trào công nhân.
+    </p>
+    <div id="DapAn4"><h2 class='false'><span>Chọn: -, </span><b> Đáp án : A</b></h2></div>
+</div>
+<div class="question">
+    <h3 id="5">
+        <b>
+            <span>5. </span>
+            Mục tiêu của cách mạng Việt Nam là gì ?
+
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox invisible" type="radio" value="v1" name="q5" onclick="traloi[5]='A'">
+        A. Dân giàu, nước mạnh, dân chủ, công bằng, văn minh
+    </p>
+    <p>
+        <input class="checkBox invisible" type="radio" value="v2" name="q5" onclick="traloi[5]='B'">
+        B. Độc lập dân tộc gắn liền chủ nghĩa xã hội
+        <br />
+    </p>
+    <p>
+        <input class="checkBox invisible" type="radio" value="v3" name="q5" onclick="traloi[5]='C'">
+        C. Xây dựng nước Việt Nam giàu mạnh
+        <br />
+    </p>
+    <p>
+        <input class="checkBox invisible" type="radio" value="v4" name="q5" onclick="traloi[5]='D'">
+        D. Giải phóng dân tộc
+        <br />
+    </p>
+    <div id="DapAn5"><h2 class='false'><span>Chọn: -, </span><b> Đáp án : B</b></h2></div>
+</div>
+<div class="question">
+    <h3 id="6">
+        <b>
+            <span>6. </span>
+            Đảng Cộng sản Việt Nam là đại biểu trung thành lợi ích của ai?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox invisible" type="radio" value="v1" name="q6" onclick="traloi[6]='A'">
+        A. Giai cấp công nhân
+    </p>
+    <p>
+        <input class="checkBox invisible" type="radio" value="v2" name="q6" onclick="traloi[6]='B'">
+        B.  Nhân dân lao động
+    </p>
+    <p>
+        <input class="checkBox invisible" type="radio" value="v3" name="q6" onclick="traloi[6]='C'">
+        C. Dân tộc
+    </p>
+    <p>
+        <input class="checkBox invisible" type="radio" value="v4" name="q6" onclick="traloi[6]='D'">
+        D. Cả 3 ý trên
+    </p>
+    <div id="DapAn6"><h2 class='false'><span>Chọn: -, </span><b> Đáp án : C</b></h2></div>
+</div>
+<div class="question">
+    <h3 id="7">
+        <b>
+            <span>7. </span>
+            Hiện nay, Đảng ta là đảng gì?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox invisible" type="radio" value="v1" name="q7" onclick="traloi[7]='A'">
+        A.Cầm quyền
+    </p>
+    <p>
+        <input class="checkBox invisible" type="radio" value="v2" name="q7" onclick="traloi[7]='B'">
+        B. Không cầm quyền
+    <p>
+        <input class="checkBox invisible" type="radio" value="v3" name="q7" onclick="traloi[7]='C'">
+        C. Hoạt động độc lập
+    </p>
+    <p>
+        <input class="checkBox invisible" type="radio" value="v4" name="q7" onclick="traloi[7]='D'">
+        D. Vừa cầm quyền vừa không cầm quyền
+        <div id="DapAn7"><h2 class='false'><span>Chọn: -, </span><b> Đáp án : C</b></h2></div>
+</div>
+<div class="question">
+    <h3 id="8">
+        <b>
+            <span>8. </span>
+            Theo Điều lệ Đảng hiện hành, nguyên tắc tập trung dân chủ có mấy nội dung?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox invisible" type="radio" value="v1" name="q8" onclick="traloi[8]='A'">
+        A. 4
+    </p>
+    <p>
+        <input class="checkBox invisible" type="radio" value="v2" name="q8" onclick="traloi[8]='B'">
+        B. 5
+    </p>
+    <p>
+        <input class="checkBox invisible" type="radio" value="v3" name="q8" onclick="traloi[8]='C'">
+        C. 6
+    </p>
+    <p>
+        <input class="checkBox invisible" type="radio" value="v4" name="q8" onclick="traloi[8]='D'">
+        D. 7
+    </p>
+    <div id="DapAn8"><h2 class='false'><span>Chọn: A, </span><b> Đáp án : B</b></h2></div>
+</div>
+<div class="question">
+    <h3 id="10">
+        <b>
+            <span>10. </span>
+            Đảng Cộng sản Việt Nam mang bản chất giai cấp, tầng lớp nào?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox invisible" type="radio" value="v1" name="q10" onclick="traloi[10]='A'">
+        A. Công nhân
+    </p>
+    <p>
+        <input class="checkBox invisible" type="radio" value="v2" name="q10" onclick="traloi[10]='B'">
+        B. Nông dân
+    </p>
+    <p>
+        <input class="checkBox invisible" type="radio" value="v3" name="q10" onclick="traloi[10]='C'">
+        C. Trí thức
+    </p>
+    <p>
+        <input class="checkBox invisible" type="radio" value="v4" name="q10" onclick="traloi[10]='D'">
+        D. Tiểu tư sản
+    </p>
+
+    <div id="DapAn10"><h2 class='false'><span>Chọn: -, </span><b> Đáp án : C</b></h2></div>
+</div>
+<div class="question">
+    <h3 id="11">
+        <b>
+            <span>11. </span>
+            Nguyên tắc tổ chức cơ bản của Đảng Cộng sản Việt Nam là gì?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox invisible" type="radio" value="v1" name="q11" onclick="traloi[11]='A'">
+        A.  Trung thành với Chủ nghĩa Mác – Lênin và tư tưởng Hồ Chí Minh
+    </p>
+    <p>
+        <input class="checkBox invisible" type="radio" value="v2" name="q11" onclick="traloi[11]='B'">
+        B. Tập trung dân chủ
+    </p>
+    <p>
+        <input class="checkBox invisible" type="radio" value="v3" name="q11" onclick="traloi[11]='C'">
+        C. Tự phê bình và phê bình
+    </p>
+    <p>
+        <input class="checkBox invisible" type="radio" value="v4" name="q11" onclick="traloi[11]='D'">
+        D. Tập thể lãnh đạo, cá nhân phụ trách
+    </p>
+    <div id="DapAn11"><h2 class='false'><span>Chọn: A, </span><b> Đáp án : D</b></h2></div>
+</div>
+<div class="question">
+    <h3 id="12">
+        <b>
+            <span>12. </span>
+            Đảng Cộng sản Việt Nam có mấy nguyên tắc hoạt động?
+
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox invisible" type="radio" value="v1" name="q12" onclick="traloi[12]='A'">
+        a. 2
+    </p>
+    <p>
+        <input class="checkBox invisible" type="radio" value="v2" name="q12" onclick="traloi[12]='B'">
+        b. 3
+    </p>
+    <p>
+        <input class="checkBox invisible" type="radio" value="v3" name="q12" onclick="traloi[12]='C'">
+        c. 4
+    </p>
+    <p>
+        <input class="checkBox invisible" type="radio" value="v4" name="q12" onclick="traloi[12]='D'">
+        D. 5
+    </p>
+
+    <div id="DapAn12"><h2 class='false'><span>Chọn: -, </span><b> Đáp án : C</b></h2></div>
+</div>
+<div class="question">
+    <h3 id="13">
+        <b>
+            <span>13. </span>
+            Nguyên tắc lãnh đạo cao nhất của đảng ta là gì ?
+
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox invisible" type="radio" value="v1" name="q13" onclick="traloi[13]='A'">
+        a.  Tập trung dân chủ
+    </p>
+    <p>
+        <input class="checkBox invisible" type="radio" value="v2" name="q13" onclick="traloi[13]='B'">
+        b.  Tập thể lãnh đạo, cá nhân phụ trách
+    </p>
+    <p>
+        <input class="checkBox invisible" type="radio" value="v3" name="q13" onclick="traloi[13]='C'">
+        c.  Tự phê bình và phê bình
+    </p>
+    <p>
+        <input class="checkBox invisible" type="radio" value="v4" name="q13" onclick="traloi[13]='D'">
+        d.  Gắn bó mật thiết với nhân dân
+    </p>
+
+    <div id="DapAn13"><h2 class='false'><span>Chọn: D, </span><b> Đáp án : B</b></h2></div>
+</div>
+<div class="question">
+    <h3 id="14">
+        <b>
+            <span>14. </span>
+            Đảng Cộng sản Việt Nam lấy …………… làm quy luật phát triển?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox invisible" type="radio" value="v1" name="q14" onclick="traloi[14]='A'">
+        a. Tự chỉnh đốn
+    </p>
+    <p>
+        <input class="checkBox invisible" type="radio" value="v2" name="q14" onclick="traloi[14]='B'">
+        b. Tự đấu tranh
+    </p>
+    <p>
+        <input class="checkBox invisible" type="radio" value="v3" name="q14" onclick="traloi[14]='C'">
+        c. Tự phê bình và phê bình
+    </p>
+    <p>
+        <input class="checkBox invisible" type="radio" value="v4" name="q14" onclick="traloi[14]='D'">
+        d. Tự soi, tự sửa
+    </p>
+
+    <div id="DapAn14"><h2 class='false'><span>Chọn: A, </span><b> Đáp án : D</b></h2></div>
+</div>
+<div class="question">
+    <h3 id="16">
+        <b>
+            <span>16. </span>
+            Nghị quyết của các cơ quan lãnh đạo của Đảng có giá trị thi hành khi nào?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox invisible" type="radio" value="v1" name="q16" onclick="traloi[16]='A'">
+        a. Có hơn 1/2 thành viên cơ quan đó tán thành
+    </p>
+    <p>
+        <input class="checkBox invisible" type="radio" value="v2" name="q16" onclick="traloi[16]='B'">
+        b. Có hơn 2/3 thành viên cơ quan đó tán thành
+    </p>
+    <p>
+        <input class="checkBox invisible" type="radio" value="v3" name="q16" onclick="traloi[16]='C'">
+        c. Có 3/4 thành viên cơ quan đó tán thành
+    </p>
+    <p>
+        <input class="checkBox invisible" type="radio" value="v4" name="q16" onclick="traloi[16]='D'">
+        d. Có 100% thành viên cơ quan đó tán thành
+    </p>
+
+
+    <div id="DapAn16"><h2 class='false'><span>Chọn: C, </span><b> Đáp án : A</b></h2></div>
+</div>
+<div class="question">
+    <h3 id="17">
+        <b>
+            <span>17. </span>
+            Hệ thống tổ chức đảng có mối quan hệ như thế nào với hệ thống tổ chức hành chính của nhà nước?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox invisible" type="radio" value="v1" name="q17" onclick="traloi[17]='A'">
+        a. Không liên quan
+    </p>
+    <p>
+        <input class="checkBox invisible" type="radio" value="v2" name="q17" onclick="traloi[17]='B'">
+        b. Hệ thống tổ chức đảng được thành lập tương ứng với hệ thống tổ chức hành chính của nhà nước
+    </p>
+
+    <div id="DapAn17"><h2 class='false'><span>Chọn: B, </span><b> Đáp án : D</b></h2></div>
+</div>
+<div class="question">
+    <h3 id="18">
+        <b>
+            <span>18. </span>
+            Cấp ủy viên đương nhiệm khi chuyển công tác thì thôi tham gia cấp ủy đương nhiệm ở đảng bộ, chi bộ đó?
+
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox invisible" type="radio" value="v1" name="q18" onclick="traloi[18]='A'">
+        a. Đúng
+    </p>
+    <p>
+        <input class="checkBox invisible" type="radio" value="v2" name="q18" onclick="traloi[18]='B'">
+        b. Sai
+    </p>
+
+    <div id="DapAn18"><h2 class='false'><span>Chọn: A, </span><b> Đáp án : D</b></h2></div>
+</div>
+<div class="question">
+    <h3 id="19">
+        <b>
+            <span>19. </span>
+            Chức năng của Ban Bí thư là gì?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox invisible" type="radio" value="v1" name="q19" onclick="traloi[19]='A'">
+        a. Lãnh đạo công việc thường xuyên của Đảng
+    </p>
+    <p>
+        <input class="checkBox invisible" type="radio" value="v2" name="q19" onclick="traloi[19]='B'">
+        b. Giúp việc cho Tổng Bí thư
+    </p>
+    <p>
+        <input class="checkBox invisible" type="radio" value="v3" name="q19" onclick="traloi[19]='C'">
+        c. Lãnh đạo công việc hàng ngày của Đảng
+    </p>
+    <p>
+        <input class="checkBox invisible" type="radio" value="v4" name="q19" onclick="traloi[19]='D'">
+        d. Giúp việc cho Ban Chấp hành Trung ương
+    </p>
+
+
+    <div id="DapAn19"><h2 class='false'><span>Chọn: A, </span><b> Đáp án : D</b></h2></div>
+</div>
+<div class="question">
+    <h3 id="20">
+        <b>
+            <span>20. </span>
+            Chi ủy, tổ đảng là tổ chức đảng?
+        </b>
+    </h3>
+    <p>
+        <input class="checkBox invisible" type="radio" value="v1" name="q20" onclick="traloi[20]='A'">
+        a.  Đúng
+    </p>
+    <p>
+        <input class="checkBox invisible" type="radio" value="v2" name="q20" onclick="traloi[20]='B'">
+        b. Sai
+    </p>
+
+    <div id="DapAn20"><h2 class='false'><span>Chọn: A, </span><b> Đáp án : B</b></h2></div>
+</div>
+</div>

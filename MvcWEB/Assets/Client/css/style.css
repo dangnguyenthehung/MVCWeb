@@ -104,12 +104,14 @@ p {
 	background-color: #C00;
 	cursor: pointer;
 }
-#check input {
+#check input,
+#check_mobile input {
 	height: 50px;
 	width: 135px;
 	background-color: #c00;
 }
-#check input:hover {
+#check input:hover,
+#check_mobile input:hover {
 	height: 50px;
 	width: 135px;
 	color: white;

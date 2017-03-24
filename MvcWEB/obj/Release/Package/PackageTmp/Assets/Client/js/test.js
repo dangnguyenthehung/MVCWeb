@@ -35,17 +35,17 @@ function Kiemtra() {
 	countArray();
 }
 function Kiemtra_Mobile() {
-	var navButtonLabel = document.getElementById("navButtonLabel");
-	if (isHide == true && numClick == 0) {
-		document.getElementById("checkedTracking").style.display = "inline";	
-		setTimeout(function() {
-			navButtonLabel.setAttribute("class","fa fa-arrow-left");
-		},1000);
-		isHide = false;
-		numClick++;
-	} else {
-		hideLeftPanel_Mobile();
-	}
+	//var navButtonLabel = document.getElementById("navButtonLabel");
+	//if (isHide == true && numClick == 0) {
+	//	document.getElementById("checkedTracking").style.display = "inline";	
+	//	setTimeout(function() {
+	//		navButtonLabel.setAttribute("class","fa fa-arrow-left");
+	//	},1000);
+	//	isHide = false;
+	//	numClick++;
+	//} else {
+	//	hideLeftPanel_Mobile();
+	//}
 	countArray_mobile();
 }
 function countdown(){ // dong ho dem nguoc

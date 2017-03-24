@@ -18,7 +18,7 @@
     </nav>
     <!-- /#sidebar-wrapper -->
     <div id="page-content-wrapper">
-        <button type="button" class="hamburger is-closed hidden-lg hidden-md" data-toggle="offcanvas" id="toggleButton">
+        <button type="button" class="hamburger is-closed hidden-lg hidden-md" data-toggle="offcanvas" id="toggleButton" onclick="Kiemtra_Mobile()">
             <span class="hamb-top"></span>
             <span class="hamb-middle"></span>
             <span class="hamb-bottom"></span>
@@ -26,9 +26,13 @@
         <div id="container">
 
             @RenderBody()
-            <div class="btndone" id="check">
+            <div class="btndone hidden-xs hidden-sm" id="check">
                 <input type="button" value="Kiểm tra" onclick="Kiemtra()">
             </div>
+            <!-- btn mobile -->
+            @*<div class="btndone visible-xs visible-sm" id="check_mobile">
+                <input type="button" value="Kiểm tra" onclick="Kiemtra_Mobile()">
+            </div>*@
 
             @using (Html.BeginForm())
             {
