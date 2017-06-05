@@ -42,7 +42,7 @@ namespace MvcAdmin.Code
             StatisticModel model = new StatisticModel();
             List<ViewKQ> newList = new List<ViewKQ>();
             initFlag(model);
-            string[] text = new string[2];
+            //string[] text = new string[2];
             var list = model.ListAll();
             int number = compare(list);
             if (number == 0)

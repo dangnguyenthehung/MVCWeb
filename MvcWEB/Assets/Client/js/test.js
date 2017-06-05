@@ -87,6 +87,7 @@ function begin (){
     //document.getElementById("toggleButton").removeAttribute("class");
     //document.getElementById("toggleButton").setAttribute("class", "hamburger is-closed hidden-lg hidden-md");
     document.getElementById("countdown").setAttribute("class", "countdownClock");
+    numberOfQuestion = document.getElementsByClassName("question").length;
 	countdown();
 };
 
