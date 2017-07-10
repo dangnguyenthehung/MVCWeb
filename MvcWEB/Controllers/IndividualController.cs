@@ -98,6 +98,10 @@ namespace MvcWEB.Controllers
             string desAction = model.IDQN + "_Individual_" + model.DeSo;
             show.fileName = desAction;
             show.type = "Individual";
+
+            var permission = new PermissionModel();
+            permission.SetLogStatus(model.IDQN, 2);
+
             return RedirectToAction("Index","Result",show);
         }
 
