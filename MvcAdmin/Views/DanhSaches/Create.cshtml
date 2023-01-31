@@ -7,15 +7,15 @@
 
 <h2>@ViewBag.Title</h2>
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
-            @Html.LabelFor(model => model.HoTen, "Họ tên",htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.HoTen, "Họ tên", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.HoTen, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.HoTen, "", new { @class = "text-danger" })
@@ -25,7 +25,37 @@
         <div class="form-group">
             @Html.LabelFor(model => model.CB, "Cấp bậc", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.CB, new { htmlAttributes = new { @class = "form-control" } })
+                <select name="CB" class="form-control">
+                    <option value="B1">Binh nhất</option>
+                    <option value="B2">Binh nhì</option>
+
+                    <option value="H1">Hạ sĩ</option>
+                    <option value="H2">Trung sĩ</option>
+                    <option value="H3">Thượng sĩ</option>
+
+                    <option value="1/">Thiếu úy</option>
+                    <option value="2/">Trung úy</option>
+                    <option value="3/">Thượng úy</option>
+                    <option value="4/">Đại úy</option>
+
+                    <option value="1//">Thiếu tá</option>
+                    <option value="2//">Trung tá</option>
+                    <option value="3//">Thượng tá</option>
+                    <option value="4//">Đại tá</option>
+
+                    <option value="1/CN">Thiếu úy CN</option>
+                    <option value="2/CN">Trung úy CN</option>
+                    <option value="3/CN">Thượng úy CN</option>
+                    <option value="4/CN">Đại úy CN</option>
+
+                    <option value="1//CN">Thiếu tá CN</option>
+                    <option value="2//CN">Trung tá CN</option>
+                    <option value="3//CN">Thượng tá CN</option>
+                    <option value="4//CN">Đại tá CN</option>
+
+
+                </select>
+                @*@Html.EditorFor(model => model.CB, new { htmlAttributes = new { @class = "form-control" } })*@
                 @Html.ValidationMessageFor(model => model.CB, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -33,7 +63,31 @@
         <div class="form-group">
             @Html.LabelFor(model => model.CV, "Chức vụ", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.CV, new { htmlAttributes = new { @class = "form-control" } })
+                <select name="CV" class="form-control">
+                    <option value="CS">Chiến sĩ</option>
+                    <option value="at">Tiểu đội trưởng</option>
+                    <option value="bt">Trung đội trưởng</option>
+                    <option value="bp">Trung đội phó</option>
+                    <option value="ct">Đại đội trưởng</option>
+                    <option value="cp">Đại đội phó</option>
+                    <option value="ctv">Chính trị viên</option>
+                    <option value="ctvp">Chính trị viên phó</option>
+
+                    <option value="CNCT">Chủ nhiệm chính trị</option>
+                    <option value="pCNCT">Phó Chủ nhiệm chính trị</option>
+
+                    <option value="TLTM">Trợ lý tham mưu</option>
+                    <option value="TLHC">Trợ lý hậu cần</option>
+                    <option value="TLKT">Trợ lý kỹ thuật</option>
+                    <option value="NVKT">NV kỹ thuật</option>
+                    <option value="NVHC">NV hậu cần</option>
+                    <option value="TC">Tài chính</option>
+                    <option value="CY">Cơ yếu</option>
+
+                    <option value="LX">Lái xe</option>
+                    <option value="YT">Y tế</option>
+                </select>
+                @*@Html.EditorFor(model => model.CV, new { htmlAttributes = new { @class = "form-control" } })*@
                 @Html.ValidationMessageFor(model => model.CV, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -49,7 +103,12 @@
         <div class="form-group">
             @Html.LabelFor(model => model.ThanhPhan, "Thành phần", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.ThanhPhan, new { htmlAttributes = new { @class = "form-control" } })
+                <select name="ThanhPhan" class="form-control">
+                    <option value="HSQ">Hạ sỹ quan - Binh sỹ</option>
+                    <option value="SQ">Sỹ quan</option>
+                    <option value="QNCN">Quân nhân chuyên nghiệp</option>
+                </select>
+                @*@Html.EditorFor(model => model.ThanhPhan, new { htmlAttributes = new { @class = "form-control" } })*@
                 @Html.ValidationMessageFor(model => model.ThanhPhan, "", new { @class = "text-danger" })
             </div>
         </div>
